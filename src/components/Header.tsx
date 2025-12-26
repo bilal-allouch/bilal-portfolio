@@ -13,6 +13,7 @@ export default function Header() {
           <li className="hover:text-accent cursor-pointer transition">Skills</li>
           <li className="hover:text-accent cursor-pointer transition">Projects</li>
           <li className="hover:text-accent cursor-pointer transition">Contact</li>
+          <a className="hover:text-white" href="#skills">Skills</a>
         </ul>
       </nav>
     </header>
