@@ -1,73 +1,56 @@
-# React + TypeScript + Vite
+# Bilal Allouch — Portfolio (FR/EN)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Professional and modern portfolio website built with **React + TypeScript + Vite**, featuring a clean structure, responsive UI, and interactive visuals.
 
-Currently, two official plugins are available:
+## 🎯 Goal
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I am a **second-year preparatory cycle student in Computer Science (CESI Rouen)** and I am looking for a **12–15 weeks internship (April 7 – July 24, 2026)** to discover the professional world, collaborate with experienced teams and strengthen my skills through a concrete project.
 
-## React Compiler
+## 🌍 Languages
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* 🇫🇷 French
+* 🇬🇧 English
 
-## Expanding the ESLint configuration
+## ✨ Main features (planned)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* Responsive design (desktop & mobile)
+* Modern UI (glassmorphism, blue theme)
+* Projects split by **CPI A1** and **CPI A2**
+* Skills split into **Technical** and **Soft skills**
+* Contact section with quick links (Email, GitHub, LinkedIn)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🧩 Tech stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+* **React** + **TypeScript**
+* **Vite**
+* Styling: **Tailwind CSS** (next steps)
+* Animations: **Framer Motion** (next steps)
+* 3D / background: **Three.js (React Three Fiber)** (next steps)
+* Versioning: **Git & GitHub**
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Run locally
+
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📁 Project structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```text
+src/
+  components/   # Reusable UI components
+  sections/     # Page sections (Hero, About, Projects, Skills, Contact)
+  layouts/      # Layout components (Header, Footer)
+  data/         # Content & data (projects, skills, profile)
+  hooks/        # Custom hooks
+  styles/       # Global styles
 ```
+
+## 👤 Author
+
+**Bilal Allouch**
+
+📧 [bilalallouch20@hotmail.com](mailto:bilalallouch20@hotmail.com)
+🔗 GitHub: [https://github.com/bilal-allouch](https://github.com/bilal-allouch)
+🔗 LinkedIn: [https://www.linkedin.com/in/bilalallouch](https://www.linkedin.com/in/bilalallouch)
