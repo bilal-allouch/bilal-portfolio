@@ -1,10 +1,12 @@
-function App() {
+import MainLayout from "./layouts/MainLayout";
+import Header from "./components/Header";
+import Hero from "./sections/Hero";
+
+export default function App() {
   return (
-    <div>
-      <h1>Bilal Allouch — Portfolio</h1>
-      <p>Étudiant en informatique — CESI Rouen</p>
-    </div>
+    <MainLayout>
+      <Header />
+      <Hero />
+    </MainLayout>
   );
 }
-
-export default App;
