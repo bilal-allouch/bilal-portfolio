@@ -1,3 +1,5 @@
+// src/data/skills.ts
+
 export type SkillCategory = {
   titleFr: string;
   titleEn: string;
@@ -97,6 +99,22 @@ export const SKILLS: SkillCategory[] = [
       "Power Automate (bases)",
       "Microsoft 365",
       "Power BI (bases)",
+    ],
+  },
+
+  // ✅ NOUVELLE CARTE : important pour recruteurs
+  {
+    titleFr: "Travail en équipe & Professionnalisme",
+    titleEn: "Teamwork & Professionalism",
+    items: [
+      "Travail en équipe (groupes renouvelés à chaque projet CESI)",
+      "Rôle de chef d’équipe (organisation, répartition, suivi)",
+      "Adaptabilité : leader ou membre selon le besoin",
+      "Communication claire (points réguliers, feedback)",
+      "Documentation (README, schémas, livrables)",
+      "Qualité & fiabilité (tests, validation, intégration)",
+      "Rigueur, respect des délais, sens des responsabilités",
+      "Présentation / démonstration (oral, soutenance)",
     ],
   },
 ];

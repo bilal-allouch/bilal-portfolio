@@ -1,7 +1,7 @@
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 pt-28">
-      {/* Background gradient (nuances de bleu) */}
+      {/* Background gradient */}
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.35),transparent_55%),radial-gradient(circle_at_bottom,rgba(14,165,233,0.25),transparent_55%),radial-gradient(circle_at_left,rgba(99,102,241,0.20),transparent_55%)]" />
 
       {/* Glass card */}
@@ -11,24 +11,55 @@ export default function Hero() {
         <h1 className="text-3xl md:text-5xl font-bold leading-tight">
           Bilal Allouch
           <span className="block text-white/70 mt-2 text-xl md:text-2xl font-medium">
-            Étudiant en informatique — CESI Rouen
+            Étudiant en informatique — CESI (école d’ingénieurs) — Rouen
           </span>
         </h1>
 
+        {/* ⭐ Objectifs (Stage + Alternance) */}
+        <div className="mt-6 rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur">
+          <p className="text-xs tracking-[0.22em] text-white/60">OBJECTIFS</p>
+
+          <div className="mt-3 flex flex-wrap gap-3">
+            <span className="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm text-white/90">
+              🎯 Stage — 12 à 15 semaines (7 avril → 24 juillet 2026)
+            </span>
+            <span className="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm text-white/90">
+              🚀 Alternance — Cycle ingénieur informatique (à partir de septembre 2026)
+            </span>
+          </div>
+
+          <p className="mt-4 text-white/80 leading-relaxed">
+            Je cherche un <strong>stage</strong> pour 2026, puis une <strong>alternance</strong> en informatique
+            pour intégrer le <strong>cycle ingénieur</strong> (dès <strong>septembre 2026</strong>).
+          </p>
+        </div>
+
         <p className="mt-6 text-white/80 leading-relaxed">
           <strong>FR :</strong> Étudiant en deuxième année du cycle préparatoire en informatique au CESI Rouen,
-          je recherche un stage de <strong>12 à 15 semaines</strong> (<strong>7 avril – 24 juillet 2026</strong>)
+          je recherche un <strong>stage de 12 à 15 semaines</strong> (<strong>7 avril – 24 juillet 2026</strong>)
           afin de découvrir le monde professionnel, collaborer avec des équipes expérimentées et développer mes compétences.
+          <strong> À l’issue du stage, je recherche également une alternance</strong> pour intégrer le
+          <strong> cycle ingénieur informatique</strong> à partir de <strong>septembre 2026</strong>.
         </p>
 
         <p className="mt-4 text-white/70 leading-relaxed">
           <strong>EN :</strong> Second-year preparatory-cycle student in Computer Science at CESI Rouen,
           looking for a <strong>12–15 week internship</strong> (<strong>April 7 – July 24, 2026</strong>)
           to gain professional experience, collaborate with experienced teams, and strengthen my skills through real projects.
+          <strong> After the internship, I am also looking for a work-study program</strong> to join the
+          <strong> engineering cycle in Computer Science</strong> starting <strong>September 2026</strong>.
         </p>
+
 
         {/* Buttons */}
         <div className="mt-8 flex flex-col sm:flex-row gap-3">
+          <a
+            href="mailto:bilalallouch20@hotmail.com?subject=Stage%20(Avril-Juillet%202026)%20%2B%20Alternance%20(Septembre%202026)%20-%20Informatique"
+            className="px-5 py-3 rounded-xl bg-white text-black hover:opacity-90 transition text-sm font-semibold"
+          >
+            Me contacter (Stage + Alternance)
+          </a>
+
           <a
             href="https://github.com/bilal-allouch"
             target="_blank"
@@ -45,13 +76,6 @@ export default function Hero() {
             className="px-5 py-3 rounded-xl bg-accent/20 hover:bg-accent/30 border border-accent/30 transition text-sm font-medium"
           >
             LinkedIn
-          </a>
-
-          <a
-            href="mailto:bilalallouch20@hotmail.com"
-            className="px-5 py-3 rounded-xl bg-white text-black hover:opacity-90 transition text-sm font-semibold"
-          >
-            Me contacter
           </a>
         </div>
 

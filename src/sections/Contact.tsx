@@ -47,28 +47,31 @@ export default function Contact() {
               <span className="text-white font-semibold">LinkedIn :</span>{" "}
               <a
                 className="text-white/90 hover:text-white underline underline-offset-4"
-                href="#"
-                onClick={(e) => e.preventDefault()}
+                href="https://www.linkedin.com/in/bilalallouch"
+                target="_blank"
+                rel="noreferrer"
               >
-                (ajouter ton lien)
+                linkedin.com/in/bilalallouch
               </a>
             </p>
           </div>
         </div>
 
-        {/* Call to action */}
+        {/* Availability */}
         <div className="rounded-2xl border border-white/10 bg-white/5 p-7 shadow-[0_0_0_1px_rgba(255,255,255,0.03)] backdrop-blur">
           <h3 className="text-xl font-semibold">Disponibilité</h3>
-          <p className="mt-1 text-sm text-white/60">Internship</p>
+          <p className="mt-1 text-sm text-white/60">Internship / Apprenticeship</p>
 
           <div className="mt-5 space-y-3 text-white/85 leading-relaxed">
             <p>
               <span className="text-white font-semibold">FR :</span> Stage 12 à 15
-              semaines (7 avril – 24 juillet 2026).
+              semaines (7 avril – 24 juillet 2026) • Alternance à partir de{" "}
+              <span className="font-semibold">septembre 2026</span>.
             </p>
             <p>
               <span className="text-white font-semibold">EN :</span> 12–15 week
-              internship (April 7 – July 24, 2026).
+              internship (April 7 – July 24, 2026) • Apprenticeship starting{" "}
+              <span className="font-semibold">September 2026</span>.
             </p>
           </div>
 
@@ -78,6 +81,15 @@ export default function Contact() {
               className="rounded-xl bg-white px-4 py-2 text-sm font-semibold text-black hover:bg-white/90 transition"
             >
               Envoyer un email
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/bilalallouch"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-xl border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-white/90 hover:bg-white/10 transition"
+            >
+              Voir LinkedIn
             </a>
 
             <a
