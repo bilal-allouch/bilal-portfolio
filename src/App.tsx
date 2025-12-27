@@ -14,7 +14,7 @@ export default function App() {
     <MainLayout>
       <Header />
 
-      <main>
+      <main id="top">
         <Hero />
         <About />
         <Skills />
@@ -24,3 +24,4 @@ export default function App() {
     </MainLayout>
   );
 }
+
