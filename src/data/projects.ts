@@ -113,4 +113,19 @@ export const PROJECTS: Project[] = [
   // =========================
   // INDIVIDUEL — (on ajoutera après)
   // =========================
+
+    // =========================
+  // INDIVIDUEL — Projets personnels
+  // =========================
+  {
+    id: "snake-sfml",
+    track: "INDI",
+    title: "Snake — SFML (C++17) : jeu rétro, architecture propre",
+    subtitle: "C++17 / SFML / Clean Architecture / UML",
+    fr: "Reproduction moderne du Snake en C++17 avec SFML, construite avec une architecture orientée objet claire : boucle de jeu, gestion d’états (Start/Playing/Pause/Game Over), collisions (murs + self), spawn de nourriture sur cases libres, score et difficulté progressive. Projet documenté (UML + commits structurés) pour mettre en avant la maintenabilité et l’extensibilité.",
+    en: "Modern Snake implementation in C++17 with SFML, built with a clean OOP design: game loop, state management (Start/Playing/Pause/Game Over), wall/self collisions, food spawning on free cells, scoring and progressive difficulty. Documented with UML and structured commits to highlight maintainability and extensibility.",
+    tags: ["C++17", "SFML", "OOP", "Game Loop", "State Machine", "UML", "CMake"],
+    githubUrl: "https://github.com/bilal-allouch/snake-sfml",
+  },
+
 ];
