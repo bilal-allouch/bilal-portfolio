@@ -1,4 +1,3 @@
-// src/layouts/MainLayout.tsx
 import type { ReactNode } from "react";
 
 interface MainLayoutProps {
@@ -7,7 +6,7 @@ interface MainLayoutProps {
 
 export default function MainLayout({ children }: MainLayoutProps) {
   return (
-    <div className="min-h-screen flex flex-col pt-20">
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-primary to-secondary pt-20">
       {children}
     </div>
   );

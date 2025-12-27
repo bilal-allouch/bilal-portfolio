@@ -10,7 +10,7 @@ export type Project = {
   fr: string;
   en: string;
   tags: string[];
-  githubUrl: string;
+  githubUrl: string; // laisser "" si pas de repo
 };
 
 export const TRACKS: { id: ProjectTrack; title: string; desc: string }[] = [
@@ -21,8 +21,8 @@ export const TRACKS: { id: ProjectTrack; title: string; desc: string }[] = [
   },
   {
     id: "A2",
-    title: "A2 — Projets académiques (Développement / Web / Réseau)",
-    desc: "Projets CESI orientés développement logiciel et applications.",
+    title: "A2 — Projets académiques (Développement / Embarqué / Réseau)",
+    desc: "Projets CESI orientés développement logiciel, systèmes embarqués et réseaux.",
   },
   {
     id: "INDI",
@@ -77,8 +77,38 @@ export const PROJECTS: Project[] = [
   },
 
   // =========================
-  // A2 — (on ajoutera après)
+  // A2 — Projets académiques
   // =========================
+  {
+    id: "worldwide-weather-watcher",
+    track: "A2",
+    title: "Worldwide Weather Watcher — Station météo embarquée",
+    subtitle: "Arduino (ATmega328P) / Capteurs / SD / RTC",
+    fr: "Développement d’un prototype de station météo embarquée : acquisition capteurs (BME280 + luminosité), horodatage RTC, enregistrement CSV sur carte SD, LED de diagnostic, console série, gestion de modes (Standard/Économique/Maintenance/Configuration) et sauvegarde des paramètres en EEPROM avec contrôle CRC. Travail en équipe (rôle de coordination/intégration).",
+    en: "Built an embedded weather-station prototype: sensor acquisition (BME280 + light), RTC timestamping, CSV logging to SD, LED diagnostics, serial console, multiple operating modes (Standard/Eco/Maintenance/Config), and settings persistence in EEPROM with CRC validation. Team project with coordination/integration responsibilities.",
+    tags: ["Arduino", "Embedded", "I2C", "SPI", "SD", "RTC", "EEPROM"],
+    githubUrl: "https://github.com/bilal-allouch/worldwide-weather-watcher",
+  },
+  {
+    id: "game-of-life-poo-cpp",
+    track: "A2",
+    title: "Game of Life — Application C++ (POO) avec SFML",
+    subtitle: "C++ / SFML / MVC / Design Patterns",
+    fr: "Implémentation du Jeu de la Vie avec une architecture orientée objet et extensible : MVC, patterns Observer & Strategy, lecture de grille depuis fichier, double rendu (console + SFML), arrêt automatique (stabilité / itérations max) et tests unitaires intégrés pour valider les évolutions de la grille.",
+    en: "Implemented Conway’s Game of Life with a clean OOP architecture: MVC, Observer & Strategy patterns, file-based grid loading, dual rendering (console + SFML), auto-stop conditions (stable state / max iterations), and built-in unit tests to validate grid evolution.",
+    tags: ["C++", "SFML", "OOP", "MVC", "Observer", "Strategy", "Testing"],
+    githubUrl: "https://github.com/bilal-allouch/game-of-life-poo-cpp",
+  },
+  {
+    id: "funkytown-networking",
+    track: "A2",
+    title: "FunkyTown — Conception & déploiement d’un réseau multi-sites",
+    subtitle: "Cisco Packet Tracer / VLAN / Routage / IPv6",
+    fr: "Réalisation d’une maquette réseau complète pour plusieurs organisations : segmentation VLAN (VTP, VLSM), routage inter-VLAN, DHCP/DNS, Wi-Fi (invités/entreprise), sécurisation (accès SSH/telnet, durcissement), EtherChannel, et interconnexion IPv6 via tunnel vers un datacenter cloud. Production des livrables : cartographie, plan d’adressage et stratégie de déploiement.",
+    en: "Designed and implemented a full multi-site network lab: VLAN segmentation (VTP, VLSM), inter-VLAN routing, DHCP/DNS, Wi-Fi (guest/enterprise), security hardening (SSH/telnet access, controls), EtherChannel, and IPv6 tunneling to a cloud datacenter. Delivered documentation: topology maps, addressing plan, and deployment strategy.",
+    tags: ["Networking", "Cisco", "Packet Tracer", "VLAN", "DHCP", "DNS", "IPv6", "Routing"],
+    githubUrl: "",
+  },
 
   // =========================
   // INDIVIDUEL — (on ajoutera après)
