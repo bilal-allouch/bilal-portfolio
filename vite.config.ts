@@ -1,7 +1,8 @@
+// vite.config.ts
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  base: "/bilal-portfolio/",
   plugins: [react()],
+  base: "/bilal-portfolio/", // IMPORTANT: nom exact du repo
 });
