@@ -2,638 +2,616 @@
 <html lang="fr" data-theme="dark">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bilal Allouch | Développeur Web — Stage & Alternance 2026</title>
-    <meta name="description"
-        content="Portfolio de Bilal Allouch, étudiant ingénieur au CESI Rouen. Développeur web (HTML, CSS, JavaScript, PHP). Recherche stage 12-15 semaines et alternance 2026." />
-    <meta name="author" content="Bilal Allouch" />
-    <meta name="keywords" content="développeur web, stage, alternance, HTML, CSS, JavaScript, portfolio, CESI, Rouen" />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        media="print" onload="this.media='all'" />
-    <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    </noscript>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bilal Allouch | Développeur Web — Stage & Alternance 2026</title>
+  <meta name="description"
+    content="Portfolio de Bilal Allouch, étudiant ingénieur au CESI Rouen. Développeur web (HTML, CSS, JavaScript, PHP). Recherche stage 12-15 semaines et alternance 2026." />
+  <meta name="author" content="Bilal Allouch" />
+  <meta name="keywords"
+    content="développeur web, stage, alternance, HTML, CSS, JavaScript, portfolio, CESI, Rouen" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <!-- PRELOAD : charge l'image hero en priorité absolue → améliore le score LCP -->
+  <link rel="preload" as="image" href="assets/img/bilal-avatar.webp" type="image/webp" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  </noscript>
 </head>
 
 <body>
 
-    <!-- Skip link — Accessibilité clavier -->
-    <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+  <!-- Skip link — Accessibilité clavier -->
+  <a class="skip-link" href="#main-content">Aller au contenu principal</a>
 
-    <!-- ====================================================
+  <!-- ====================================================
        NAVBAR
   ==================================================== -->
-    <header class="topbar" role="banner">
-        <div class="nav container">
+  <header class="topbar" role="banner">
+    <div class="nav container">
 
-            <a class="brand" href="#home" aria-label="Bilal Allouch — Retour à l'accueil">
-                Portfolio<span class="dot" aria-hidden="true">.</span>
-            </a>
+      <a class="brand" href="#home" aria-label="Bilal Allouch — Retour à l'accueil">
+        Portfolio<span class="dot" aria-hidden="true">.</span>
+      </a>
 
-            <!-- Burger (mobile uniquement) -->
-            <button class="burger" id="burger" aria-label="Ouvrir le menu de navigation" aria-expanded="false"
-                aria-controls="mobile-menu" type="button">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </button>
+      <!-- Burger (mobile uniquement) -->
+      <button
+        class="burger"
+        id="burger"
+        aria-label="Ouvrir le menu de navigation"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        type="button">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
 
-            <!-- Liens desktop -->
-            <nav class="links" id="desktop-nav" aria-label="Navigation principale">
-                <a class="link is-active" href="#home" data-i18n="home">Accueil</a>
-                <a class="link" href="#about" data-i18n="about">À propos</a>
-                <a class="link" href="#skills" data-i18n="skills">Compétences</a>
-                <a class="link" href="#projects" data-i18n="projects">Projets</a>
-                <a class="link" href="#contact" data-i18n="contact">Contact</a>
-            </nav>
+      <!-- Liens desktop -->
+      <nav class="links" id="desktop-nav" aria-label="Navigation principale">
+        <a class="link is-active" href="#home" data-i18n="home">Accueil</a>
+        <a class="link" href="#about" data-i18n="about">À propos</a>
+        <a class="link" href="#skills" data-i18n="skills">Compétences</a>
+        <a class="link" href="#projects" data-i18n="projects">Projets</a>
+        <a class="link" href="#contact" data-i18n="contact">Contact</a>
+      </nav>
 
-            <!-- Boutons actions -->
-            <div class="actions" role="group" aria-label="Paramètres et contact">
-                <button class="icon-btn" id="theme-btn" aria-label="Basculer thème clair/sombre"
-                    type="button">☀️</button>
-                <button class="pill-btn" id="lang-btn" aria-label="Changer la langue" type="button">EN</button>
-                <a class="pill-cta" href="#contact" data-i18n="hire">Me contacter</a>
-            </div>
-        </div>
-    </header>
+      <!-- Boutons actions -->
+      <div class="actions" role="group" aria-label="Paramètres et contact">
+        <button class="icon-btn" id="theme-btn" aria-label="Basculer thème clair/sombre" type="button">☀️</button>
+        <button class="pill-btn" id="lang-btn" aria-label="Changer la langue" type="button">EN</button>
+        <a class="pill-cta" href="#contact" data-i18n="hire">Me contacter</a>
+      </div>
+    </div>
+  </header>
 
-    <!-- ====================================================
+  <!-- ====================================================
        MENU MOBILE
   ==================================================== -->
-    <div class="mobile-menu" id="mobile-menu" aria-hidden="true" role="dialog" aria-label="Menu de navigation mobile">
-        <div class="mobile-card">
-            <div class="mobile-top">
-                <span class="mobile-brand">Portfolio<span class="dot" aria-hidden="true">.</span></span>
-                <div class="mobile-actions">
-                    <button class="icon-btn" id="theme-btn-m" aria-label="Basculer le thème" type="button">☀️</button>
-                    <button class="pill-btn" id="lang-btn-m" aria-label="Changer la langue" type="button">EN</button>
-                    <button class="close-btn" id="close-menu" aria-label="Fermer le menu" type="button">✕</button>
-                </div>
-            </div>
-            <nav class="mobile-links" aria-label="Navigation mobile">
-                <a class="m-link" href="#home" data-i18n="home">Accueil</a>
-                <a class="m-link" href="#about" data-i18n="about">À propos</a>
-                <a class="m-link" href="#skills" data-i18n="skills">Compétences</a>
-                <a class="m-link" href="#projects" data-i18n="projects">Projets</a>
-                <a class="m-link" href="#contact" data-i18n="contact">Contact</a>
-            </nav>
-            <a class="mobile-cta" href="#contact" data-i18n="hire">Me contacter</a>
+  <div
+    class="mobile-menu"
+    id="mobile-menu"
+    aria-hidden="true"
+    role="dialog"
+    aria-label="Menu de navigation mobile">
+    <div class="mobile-card">
+      <div class="mobile-top">
+        <span class="mobile-brand">Portfolio<span class="dot" aria-hidden="true">.</span></span>
+        <div class="mobile-actions">
+          <button class="icon-btn" id="theme-btn-m" aria-label="Basculer le thème" type="button">☀️</button>
+          <button class="pill-btn" id="lang-btn-m" aria-label="Changer la langue" type="button">EN</button>
+          <button class="close-btn" id="close-menu" aria-label="Fermer le menu" type="button">✕</button>
         </div>
+      </div>
+      <nav class="mobile-links" aria-label="Navigation mobile">
+        <a class="m-link" href="#home" data-i18n="home">Accueil</a>
+        <a class="m-link" href="#about" data-i18n="about">À propos</a>
+        <a class="m-link" href="#skills" data-i18n="skills">Compétences</a>
+        <a class="m-link" href="#projects" data-i18n="projects">Projets</a>
+        <a class="m-link" href="#contact" data-i18n="contact">Contact</a>
+      </nav>
+      <a class="mobile-cta" href="#contact" data-i18n="hire">Me contacter</a>
     </div>
+  </div>
 
-    <!-- ====================================================
+  <!-- ====================================================
        CONTENU PRINCIPAL
   ==================================================== -->
-    <main id="main-content">
+  <main id="main-content">
 
-        <!-- HERO -->
-        <section class="hero" id="home" aria-labelledby="hero-title">
-            <div class="container hero-grid">
+    <!-- HERO -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="container hero-grid">
 
-                <div class="hero-left">
-                    <div class="socials" role="list" aria-label="Réseaux sociaux">
-                        <a class="social" href="https://github.com/bilal-allouch" target="_blank"
-                            rel="noopener noreferrer" role="listitem"
-                            aria-label="Profil GitHub (ouvre un nouvel onglet)">GitHub</a>
-                        <a class="social" href="https://www.linkedin.com/in/bilalallouch/" target="_blank"
-                            rel="noopener noreferrer" role="listitem"
-                            aria-label="Profil LinkedIn (ouvre un nouvel onglet)">LinkedIn</a>
-                        <a class="social" href="https://vimeo.com/user249616007" target="_blank"
-                            rel="noopener noreferrer" role="listitem"
-                            aria-label="Profil Vimeo (ouvre un nouvel onglet)">Vimeo</a>
-                    </div>
+        <div class="hero-left">
+          <div class="socials" role="list" aria-label="Réseaux sociaux">
+            <a class="social" href="https://github.com/bilal-allouch" target="_blank"
+              rel="noopener noreferrer" role="listitem"
+              aria-label="Profil GitHub (ouvre un nouvel onglet)">GitHub</a>
+            <a class="social" href="https://www.linkedin.com/in/bilalallouch/" target="_blank"
+              rel="noopener noreferrer" role="listitem"
+              aria-label="Profil LinkedIn (ouvre un nouvel onglet)">LinkedIn</a>
+            <a class="social" href="https://vimeo.com/user249616007" target="_blank"
+              rel="noopener noreferrer" role="listitem"
+              aria-label="Profil Vimeo (ouvre un nouvel onglet)">Vimeo</a>
+          </div>
 
-                    <h1 class="hero-title" id="hero-title">
-                        <span data-i18n="hi">Bonjour, je suis</span>
-                        <span class="accent"> Bilal Allouch</span>
-                    </h1>
+          <h1 class="hero-title" id="hero-title">
+            <span data-i18n="hi">Bonjour, je suis</span>
+            <span class="accent"> Bilal Allouch</span>
+          </h1>
 
-                    <p class="hero-desc">
-                        <span data-i18n="descriptionStart">Étudiant en informatique à CESI (école d'ingénieurs) à Rouen,
-                            je suis actuellement à la recherche d'un </span>
-                        <strong class="highlight" data-i18n="descriptionStrong1">stage de 12 à 15 semaines</strong>
-                        <span data-i18n="descriptionMiddle"> entre avril et juillet 2026 afin de contribuer à des
-                            projets concrets et développer mes compétences techniques au sein d'une équipe. À l'issue de
-                            ce stage, je souhaite poursuivre mon parcours par une </span>
-                        <strong class="highlight" data-i18n="descriptionStrong2">alternance en informatique à partir de
-                            septembre 2026</strong>
-                        <span data-i18n="descriptionEnd"> dans le cadre de mon cycle ingénieur.</span>
-                    </p>
+          <p class="hero-desc">
+            <span data-i18n="descriptionStart">Étudiant en informatique à CESI (école d'ingénieurs) à Rouen, je suis actuellement à la recherche d'un </span>
+            <strong class="highlight" data-i18n="descriptionStrong1">stage de 12 à 15 semaines</strong>
+            <span data-i18n="descriptionMiddle"> entre avril et juillet 2026 afin de contribuer à des projets concrets et développer mes compétences techniques au sein d'une équipe. À l'issue de ce stage, je souhaite poursuivre mon parcours par une </span>
+            <strong class="highlight" data-i18n="descriptionStrong2">alternance en informatique à partir de septembre 2026</strong>
+            <span data-i18n="descriptionEnd"> dans le cadre de mon cycle ingénieur.</span>
+          </p>
 
-                    <div class="hero-buttons">
-                        <a class="btn primary" href="assets/docs/Bilal-Allouch-CV.pdf" download="Bilal-Allouch-CV.pdf"
-                            aria-label="Télécharger le CV (PDF)">
-                            <span data-i18n="download">Télécharger CV</span>
-                        </a>
-                        <a class="btn ghost" href="#contact" aria-label="Aller à la section contact">
-                            <span data-i18n="contactme">Me contacter</span>
-                        </a>
-                    </div>
-                </div>
+          <div class="hero-buttons">
+            <a class="btn primary" href="assets/docs/Bilal-Allouch-CV.pdf"
+              download="Bilal-Allouch-CV.pdf"
+              aria-label="Télécharger le CV (PDF)">
+              <span data-i18n="download">Télécharger CV</span>
+            </a>
+            <a class="btn ghost" href="#contact" aria-label="Aller à la section contact">
+              <span data-i18n="contactme">Me contacter</span>
+            </a>
+          </div>
+        </div>
 
-                <!-- Photo de profil — WebP pour les performances -->
-                <div class="hero-right" aria-hidden="true">
-                    <div class="avatar-wrap">
-                        <img src="assets/img/bilal-avatar.webp" alt="Photo de profil de Bilal Allouch" width="360"
-                            height="480" loading="eager" fetchpriority="high" />
-                    </div>
-                </div>
+        <!-- Photo de profil — WebP + eager + fetchpriority pour le score LCP -->
+        <div class="hero-right" aria-hidden="true">
+          <div class="avatar-wrap">
+            <img
+              src="assets/img/bilal-avatar.webp"
+              alt="Photo de profil de Bilal Allouch"
+              width="380"
+              height="380"
+              loading="eager"
+              fetchpriority="high" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+
+        <div class="about-left">
+          <div class="about-image" aria-hidden="true">
+            <!-- WebP : plus léger et même qualité -->
+            <img
+              src="assets/img/bilal-avatar2.webp"
+              alt="Illustration de Bilal Allouch"
+              width="320"
+              height="320"
+              loading="lazy" />
+          </div>
+        </div>
+
+        <div class="about-right">
+          <h2 class="section-title" id="about-title">
+            <span data-i18n="aboutTitle">À propos de moi</span>
+          </h2>
+          <p class="about-text" data-i18n="aboutDescription">
+            Je suis étudiant en informatique au CESI (école d'ingénieurs) à Rouen, actuellement en cycle
+            préparatoire (Bac+2). Passionné par le développement informatique et les nouvelles technologies,
+            j'ai réalisé plusieurs projets personnels dans différents domaines comme le développement web,
+            les réseaux et la programmation.
+          </p>
+          <div class="about-stats" role="list">
+            <div class="stat" role="listitem"><h3>4+</h3><p data-i18n="education">Années d'étude</p></div>
+            <div class="stat" role="listitem"><h3>3+</h3><p data-i18n="experience">Année d'expérience</p></div>
+            <div class="stat" role="listitem"><h3>10+</h3><p data-i18n="projectsDone">Projets réalisés</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <h2 class="section-title center" id="skills-title">
+          <span data-i18n="skillsTitle">Mes compétences</span>
+        </h2>
+        <p class="skills-subtitle" data-i18n="skillsSubtitle">
+          Technologies et outils que j'utilise dans mes projets.
+        </p>
+        <div class="skills-grid">
+
+          <div class="skill-card">
+            <h3 data-i18n="programming">Programmation</h3>
+            <div class="chips">
+              <span class="chip">C</span><span class="chip">C++</span><span class="chip">C#</span>
+              <span class="chip">Python</span><span class="chip">PHP</span>
+              <span class="chip">JavaScript</span><span class="chip">SQL</span>
+              <span class="chip" data-i18n="tagOOP">POO</span>
+              <span class="chip" data-i18n="tagDataStructures">Structures de données</span>
+              <span class="chip" data-i18n="tagAlgorithms">Algorithmes</span>
             </div>
-        </section>
+          </div>
 
-        <!-- ABOUT -->
-        <section class="about" id="about" aria-labelledby="about-title">
-            <div class="container about-grid">
-
-                <div class="about-left">
-                    <div class="about-image" aria-hidden="true">
-                        <!-- WebP : plus léger et même qualité -->
-                        <img src="assets/img/bilal-avatar2.webp" alt="Illustration de Bilal Allouch" width="320"
-                            height="320" loading="lazy" />
-                    </div>
-                </div>
-
-                <div class="about-right">
-                    <h2 class="section-title" id="about-title">
-                        <span data-i18n="aboutTitle">À propos de moi</span>
-                    </h2>
-                    <p class="about-text" data-i18n="aboutDescription">
-                        Je suis étudiant en informatique au CESI (école d'ingénieurs) à Rouen, actuellement en cycle
-                        préparatoire (Bac+2). Passionné par le développement informatique et les nouvelles technologies,
-                        j'ai réalisé plusieurs projets personnels dans différents domaines comme le développement web,
-                        les réseaux et la programmation.
-                    </p>
-                    <div class="about-stats" role="list">
-                        <div class="stat" role="listitem">
-                            <h3>4+</h3>
-                            <p data-i18n="education">Années d'étude</p>
-                        </div>
-                        <div class="stat" role="listitem">
-                            <h3>3+</h3>
-                            <p data-i18n="experience">Année d'expérience</p>
-                        </div>
-                        <div class="stat" role="listitem">
-                            <h3>10+</h3>
-                            <p data-i18n="projectsDone">Projets réalisés</p>
-                        </div>
-                    </div>
-                </div>
+          <div class="skill-card">
+            <h3 data-i18n="webdev">Développement Web</h3>
+            <div class="chips">
+              <span class="chip">HTML5</span><span class="chip">CSS3</span>
+              <span class="chip">JavaScript</span><span class="chip">PHP</span>
+              <span class="chip">MVC</span>
+              <span class="chip" data-i18n="tagResponsive">Responsive</span>
+              <span class="chip">REST</span>
             </div>
-        </section>
+          </div>
 
-        <!-- SKILLS -->
-        <section class="skills" id="skills" aria-labelledby="skills-title">
-            <div class="container">
-                <h2 class="section-title center" id="skills-title">
-                    <span data-i18n="skillsTitle">Mes compétences</span>
-                </h2>
-                <p class="skills-subtitle" data-i18n="skillsSubtitle">
-                    Technologies et outils que j'utilise dans mes projets.
-                </p>
-                <div class="skills-grid">
-
-                    <div class="skill-card">
-                        <h3 data-i18n="programming">Programmation</h3>
-                        <div class="chips">
-                            <span class="chip">C</span><span class="chip">C++</span><span class="chip">C#</span>
-                            <span class="chip">Python</span><span class="chip">PHP</span>
-                            <span class="chip">JavaScript</span><span class="chip">SQL</span>
-                            <span class="chip" data-i18n="tagOOP">POO</span>
-                            <span class="chip" data-i18n="tagDataStructures">Structures de données</span>
-                            <span class="chip" data-i18n="tagAlgorithms">Algorithmes</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <h3 data-i18n="webdev">Développement Web</h3>
-                        <div class="chips">
-                            <span class="chip">HTML5</span><span class="chip">CSS3</span>
-                            <span class="chip">JavaScript</span><span class="chip">PHP</span>
-                            <span class="chip">MVC</span>
-                            <span class="chip" data-i18n="tagResponsive">Responsive</span>
-                            <span class="chip">REST</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <h3 data-i18n="databases">Bases de données</h3>
-                        <div class="chips">
-                            <span class="chip">MySQL</span><span class="chip">PostgreSQL</span>
-                            <span class="chip">SQLite</span><span class="chip">MongoDB</span>
-                            <span class="chip" data-i18n="tagSqlQueries">Requêtes SQL</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <h3 data-i18n="networks">Réseaux & Systèmes</h3>
-                        <div class="chips">
-                            <span class="chip">TCP/IP</span><span class="chip">VLAN</span>
-                            <span class="chip">DHCP</span><span class="chip">DNS</span>
-                            <span class="chip">NAT/PAT</span><span class="chip">Linux</span>
-                            <span class="chip">Bash</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <h3 data-i18n="embedded">Systèmes embarqués</h3>
-                        <div class="chips">
-                            <span class="chip">Arduino</span><span class="chip">ATmega328</span>
-                            <span class="chip" data-i18n="tagSensors">Capteurs</span>
-                            <span class="chip">UART</span><span class="chip">I2C</span><span class="chip">SPI</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <h3 data-i18n="tools">Outils</h3>
-                        <div class="chips">
-                            <span class="chip">Git</span><span class="chip">GitHub</span>
-                            <span class="chip">VS Code</span><span class="chip">VirtualBox</span>
-                            <span class="chip">Wireshark</span><span class="chip">Packet Tracer</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-card">
-                        <h3 data-i18n="teamwork">Travail en équipe</h3>
-                        <div class="chips">
-                            <span class="chip" data-i18n="tagCollaboration">Collaboration</span>
-                            <span class="chip" data-i18n="tagCommunication">Communication</span>
-                            <span class="chip" data-i18n="tagOrganization">Organisation</span>
-                            <span class="chip" data-i18n="tagProblemSolving">Problem Solving</span>
-                            <span class="chip" data-i18n="tagTeamwork">Travail en groupe</span>
-                        </div>
-                    </div>
-                </div>
+          <div class="skill-card">
+            <h3 data-i18n="databases">Bases de données</h3>
+            <div class="chips">
+              <span class="chip">MySQL</span><span class="chip">PostgreSQL</span>
+              <span class="chip">SQLite</span><span class="chip">MongoDB</span>
+              <span class="chip" data-i18n="tagSqlQueries">Requêtes SQL</span>
             </div>
-        </section>
+          </div>
 
-        <!-- PROJECTS -->
-        <section class="projects" id="projects" aria-labelledby="projects-title">
-            <div class="container">
-                <div class="projects-head">
-                    <p class="kicker" data-i18n="projectsKicker" aria-hidden="true">PROJECTS / PROJETS</p>
-                    <div class="projects-title-row">
-                        <h2 class="section-title" id="projects-title">
-                            <span data-i18n="projectsTitle">Projets</span>
-                        </h2>
-                        <div class="projects-tabs" role="tablist" aria-label="Filtrer les projets">
-                            <button class="tab is-active" type="button" role="tab" data-project-tab="a1"
-                                aria-selected="true" aria-controls="group-a1" data-i18n="projectsTabA1">A1</button>
-                            <button class="tab" type="button" role="tab" data-project-tab="a2" aria-selected="false"
-                                aria-controls="group-a2" data-i18n="projectsTabA2">A2</button>
-                            <button class="tab" type="button" role="tab" data-project-tab="indi" aria-selected="false"
-                                aria-controls="group-indi" data-i18n="projectsTabIndi">INDI</button>
-                        </div>
-                    </div>
-                    <p class="projects-subtitle" data-i18n="projectsSubtitle">
-                        Sélection de projets académiques et personnels.
-                    </p>
-                </div>
-
-                <!-- GROUPE A1 -->
-                <div class="projects-group is-active" id="group-a1" data-project-group="a1" role="tabpanel">
-                    <div class="projects-banner">
-                        <h3 class="projects-group-title" data-i18n="a1Title">A1 — Projets académiques (Ingénierie /
-                            Sciences)</h3>
-                        <p class="projects-group-desc" data-i18n="a1Desc">Projets CESI en équipe : électronique,
-                            simulation, signal et bases de données.</p>
-                    </div>
-
-                    <div class="projects-row" data-project-row="a1" role="list" aria-label="Projets A1">
-
-                        <article class="project-card" role="listitem">
-                            <div class="project-media">
-                                <img src="assets/img/projects/a1/strongbox3000.jpg"
-                                    alt="Prototype Strongbox 3000 — Coffre-fort sécurisé Arduino" width="400"
-                                    height="170" loading="lazy" />
-                            </div>
-                            <div class="project-body">
-                                <h4 class="project-title" data-i18n="pA1StrongboxTitle">Strongbox 3000 — Prototype de
-                                    coffre-fort sécurisé</h4>
-                                <p class="project-meta" data-i18n="pA1StrongboxMeta">Arduino / Logique / Électronique
-                                </p>
-                                <p class="project-desc" data-i18n="pA1StrongboxDesc">Conception d'un prototype de
-                                    coffre-fort sécurisé : modélisation logique (tables de vérité, Karnaugh),
-                                    réalisation d'un circuit de validation, et développement Arduino pour identifier le
-                                    modèle de carte et gérer l'authentification.</p>
-                                <div class="project-tags">
-                                    <span class="tag">Arduino</span>
-                                    <span class="tag" data-i18n="tagElectronics">Électronique</span>
-                                    <span class="tag" data-i18n="tagLogic">Logique</span>
-                                    <span class="tag">POC</span>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="project-card" role="listitem">
-                            <div class="project-media">
-                                <img src="assets/img/projects/a1/fast-and-furious.jpg"
-                                    alt="Simulation numérique Fast & Furious" width="400" height="170" loading="lazy" />
-                            </div>
-                            <div class="project-body">
-                                <h4 class="project-title" data-i18n="pA1FastTitle">Fast & Furious — Simulation numérique
-                                    d'un circuit</h4>
-                                <p class="project-meta" data-i18n="pA1FastMeta">Python / Jupyter / Modélisation</p>
-                                <p class="project-desc" data-i18n="pA1FastDesc">Étude physique d'un circuit (pente,
-                                    looping, saut) et résolution numérique sous Python : calcul des vitesses minimales,
-                                    tracés (vitesse, trajectoire), comparaison de modèles et recommandations à partir
-                                    des résultats.</p>
-                                <div class="project-tags">
-                                    <span class="tag">Python</span><span class="tag">Jupyter</span>
-                                    <span class="tag" data-i18n="tagSimulation">Simulation</span>
-                                    <span class="tag" data-i18n="tagModeling">Modélisation</span>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="project-card" role="listitem">
-                            <div class="project-media">
-                                <img src="assets/img/projects/a1/escape-no-game.jpg"
-                                    alt="Escape No Game — Signal sonore" width="400" height="170" loading="lazy" />
-                            </div>
-                            <div class="project-body">
-                                <h4 class="project-title" data-i18n="pA1EscapeTitle">Escape No Game — Communication
-                                    discrète par signal sonore</h4>
-                                <p class="project-meta" data-i18n="pA1EscapeMeta">Traitement du signal / Jupyter /
-                                    Simulation</p>
-                                <p class="project-desc" data-i18n="pA1EscapeDesc">POC de transmission d'un message via
-                                    hautes fréquences : définition de la chaîne émission/réception, filtrage et analyse
-                                    fréquentielle, puis modélisation numérique sous Python (trames, détection d'erreur,
-                                    reconstruction du message).</p>
-                                <div class="project-tags">
-                                    <span class="tag" data-i18n="tagSignal">Signal</span>
-                                    <span class="tag">Python</span><span class="tag">Jupyter</span><span
-                                        class="tag">POC</span>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="project-card" role="listitem">
-                            <div class="project-media">
-                                <img src="assets/img/projects/a1/qualite-air.jpg" alt="Base de données qualité de l'air"
-                                    width="400" height="170" loading="lazy" />
-                            </div>
-                            <div class="project-body">
-                                <h4 class="project-title" data-i18n="pA1AirTitle">Qualité de l'air — Base de données
-                                    relationnelle</h4>
-                                <p class="project-meta" data-i18n="pA1AirMeta">MySQL / Modélisation / SQL</p>
-                                <p class="project-desc" data-i18n="pA1AirDesc">Conception et réalisation d'une base
-                                    relationnelle pour centraliser des données publiques de capteurs : modélisation
-                                    MCD/MLD/MPD, peuplement réaliste, requêtes SQL avancées (jointures, agrégats) et
-                                    gestion des droits (admin/user).</p>
-                                <div class="project-tags">
-                                    <span class="tag">MySQL</span><span class="tag">SQL</span>
-                                    <span class="tag" data-i18n="tagModeling">Modélisation</span><span
-                                        class="tag">Data</span>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <div class="projects-arrows" role="group" aria-label="Navigation projets A1">
-                        <button class="arrow-btn" type="button" data-project-prev="a1" aria-label="Précédent">‹</button>
-                        <button class="arrow-btn" type="button" data-project-next="a1" aria-label="Suivant">›</button>
-                    </div>
-                </div>
-
-                <!-- GROUPE A2 -->
-                <div class="projects-group is-hidden" id="group-a2" data-project-group="a2" role="tabpanel">
-                    <div class="projects-banner">
-                        <h3 class="projects-group-title" data-i18n="a2Title">A2 — Projets académiques (Développement /
-                            Embarqué / Réseau)</h3>
-                        <p class="projects-group-desc" data-i18n="a2Desc">Projets CESI orientés développement logiciel,
-                            systèmes embarqués et réseaux.</p>
-                    </div>
-
-                    <div class="projects-row" data-project-row="a2" role="list" aria-label="Projets A2">
-
-                        <article class="project-card" role="listitem">
-                            <div class="project-media">
-                                <img src="assets/img/projects/a2/worldwide-weather-watcher.jpg"
-                                    alt="Station météo embarquée Worldwide Weather Watcher" width="400" height="170"
-                                    loading="lazy" />
-                            </div>
-                            <div class="project-body">
-                                <h4 class="project-title" data-i18n="pA2WeatherTitle">Worldwide Weather Watcher —
-                                    Station météo embarquée</h4>
-                                <p class="project-meta" data-i18n="pA2WeatherMeta">Arduino (ATmega328P) / Capteurs / SD
-                                    / RTC</p>
-                                <p class="project-desc" data-i18n="pA2WeatherDesc">Développement d'un prototype de
-                                    station météo embarquée : acquisition capteurs (BME280 + luminosité), horodatage
-                                    RTC, enregistrement CSV sur carte SD, LED de diagnostic, console série, gestion de
-                                    modes et sauvegarde des paramètres en EEPROM avec contrôle CRC. Travail en équipe.
-                                </p>
-                                <div class="project-actions">
-                                    <a class="project-btn"
-                                        href="https://github.com/bilal-allouch/worldwide-weather-watcher"
-                                        target="_blank" rel="noopener noreferrer"
-                                        aria-label="Code source sur GitHub">GitHub</a>
-                                </div>
-                                <div class="project-tags">
-                                    <span class="tag">Arduino</span>
-                                    <span class="tag" data-i18n="tagEmbedded">Embarqué</span>
-                                    <span class="tag">I2C</span><span class="tag">SPI</span>
-                                    <span class="tag">SD</span><span class="tag">RTC</span><span
-                                        class="tag">EEPROM</span>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="project-card" role="listitem">
-                            <div class="project-media">
-                                <img src="assets/img/projects/a2/game-of-life.jpg" alt="Game of Life C++ SFML"
-                                    width="400" height="170" loading="lazy" />
-                            </div>
-                            <div class="project-body">
-                                <h4 class="project-title" data-i18n="pA2GOLTitle">Game of Life — Application C++ (POO)
-                                    avec SFML</h4>
-                                <p class="project-meta" data-i18n="pA2GOLMeta">C++ / SFML / MVC / Design Patterns</p>
-                                <p class="project-desc" data-i18n="pA2GOLDesc">Implémentation du Jeu de la Vie avec une
-                                    architecture orientée objet et extensible : MVC, patterns Observer & Strategy,
-                                    lecture de grille depuis fichier, double rendu (console + SFML), arrêt automatique
-                                    et tests unitaires intégrés.</p>
-                                <div class="project-actions">
-                                    <a class="project-btn" href="https://github.com/bilal-allouch/game-of-life-poo-cpp"
-                                        target="_blank" rel="noopener noreferrer"
-                                        aria-label="Code source sur GitHub">GitHub</a>
-                                </div>
-                                <div class="project-tags">
-                                    <span class="tag">C++</span><span class="tag">SFML</span>
-                                    <span class="tag">OOP</span><span class="tag">MVC</span>
-                                    <span class="tag">Observer</span><span class="tag">Strategy</span>
-                                    <span class="tag" data-i18n="tagTesting">Tests</span>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="project-card" role="listitem">
-                            <div class="project-media">
-                                <img src="assets/img/projects/a2/funkytown.jpg" alt="FunkyTown réseau multi-sites Cisco"
-                                    width="400" height="170" loading="lazy" />
-                            </div>
-                            <div class="project-body">
-                                <h4 class="project-title" data-i18n="pA2FunkyTitle">FunkyTown — Conception & déploiement
-                                    d'un réseau multi-sites</h4>
-                                <p class="project-meta" data-i18n="pA2FunkyMeta">Cisco Packet Tracer / VLAN / Routage /
-                                    IPv6</p>
-                                <p class="project-desc" data-i18n="pA2FunkyDesc">Réalisation d'une maquette réseau
-                                    complète pour plusieurs organisations : segmentation VLAN (VTP, VLSM), routage
-                                    inter-VLAN, DHCP/DNS, Wi-Fi, sécurisation (SSH/telnet), EtherChannel, et
-                                    interconnexion IPv6 via tunnel vers un datacenter cloud.</p>
-                                <div class="project-tags">
-                                    <span class="tag" data-i18n="tagNetworking">Réseaux</span>
-                                    <span class="tag">Cisco</span><span class="tag">Packet Tracer</span>
-                                    <span class="tag">VLAN</span><span class="tag">DHCP</span>
-                                    <span class="tag">DNS</span><span class="tag">IPv6</span>
-                                    <span class="tag" data-i18n="tagRouting">Routage</span>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <div class="projects-arrows" role="group" aria-label="Navigation projets A2">
-                        <button class="arrow-btn" type="button" data-project-prev="a2" aria-label="Précédent">‹</button>
-                        <button class="arrow-btn" type="button" data-project-next="a2" aria-label="Suivant">›</button>
-                    </div>
-                </div>
-
-                <!-- GROUPE INDI -->
-                <div class="projects-group is-hidden" id="group-indi" data-project-group="indi" role="tabpanel">
-                    <div class="projects-banner">
-                        <h3 class="projects-group-title" data-i18n="indiTitle">Individuel — Projets personnels</h3>
-                        <p class="projects-group-desc" data-i18n="indiDesc">Projets réalisés en autonomie pour
-                            progresser et expérimenter.</p>
-                    </div>
-
-                    <div class="projects-row" data-project-row="indi" role="list" aria-label="Projets individuels">
-                        <article class="project-card" role="listitem">
-                            <div class="project-media">
-                                <img src="assets/img/projects/indi/snake.jpg" alt="Snake C++17 SFML architecture propre"
-                                    width="400" height="170" loading="lazy" />
-                            </div>
-                            <div class="project-body">
-                                <h4 class="project-title" data-i18n="pIndiSnakeTitle">Snake — SFML (C++17) : jeu rétro,
-                                    architecture propre</h4>
-                                <p class="project-meta" data-i18n="pIndiSnakeMeta">C++17 / SFML / Clean Architecture /
-                                    UML</p>
-                                <p class="project-desc" data-i18n="pIndiSnakeDesc">Reproduction moderne du Snake en
-                                    C++17 avec SFML : boucle de jeu, gestion d'états (Start/Playing/Pause/Game Over),
-                                    collisions, génération de nourriture, score et difficulté progressive. Documenté
-                                    avec UML et commits structurés.</p>
-                                <div class="project-actions">
-                                    <a class="project-btn" href="#" target="_blank" rel="noopener noreferrer"
-                                        aria-label="Code source sur GitHub">GitHub</a>
-                                </div>
-                                <div class="project-tags">
-                                    <span class="tag">C++17</span><span class="tag">SFML</span>
-                                    <span class="tag">OOP</span><span class="tag">Game Loop</span>
-                                    <span class="tag">State Machine</span><span class="tag">UML</span><span
-                                        class="tag">CMake</span>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <div class="projects-arrows" role="group" aria-label="Navigation projets individuels">
-                        <button class="arrow-btn" type="button" data-project-prev="indi"
-                            aria-label="Précédent">‹</button>
-                        <button class="arrow-btn" type="button" data-project-next="indi" aria-label="Suivant">›</button>
-                    </div>
-                </div>
+          <div class="skill-card">
+            <h3 data-i18n="networks">Réseaux & Systèmes</h3>
+            <div class="chips">
+              <span class="chip">TCP/IP</span><span class="chip">VLAN</span>
+              <span class="chip">DHCP</span><span class="chip">DNS</span>
+              <span class="chip">NAT/PAT</span><span class="chip">Linux</span>
+              <span class="chip">Bash</span>
             </div>
-        </section>
+          </div>
 
-        <!-- CONTACT -->
-        <section class="contact" id="contact" aria-labelledby="contact-title">
-            <div class="container">
-                <div class="contact-head">
-                    <h2 class="section-title center" id="contact-title">
-                        <span data-i18n="contactTitle">Contact</span>
-                    </h2>
-                    <p class="contact-subtitle" data-i18n="contactSubtitle">
-                        Retrouvez ici mes coordonnées pour échanger facilement.
-                    </p>
-                </div>
-
-                <div class="contact-grid">
-                    <div class="contact-visual" aria-hidden="true">
-                        <div class="contact-image-wrap">
-                            <!-- WebP : contact-avatar.png (1731 KB) → contact-avatar.webp (294 KB) -->
-                            <img src="assets/img/contact-avatar.webp" alt="Illustration de contact" width="420"
-                                height="420" loading="lazy" />
-                        </div>
-                    </div>
-
-                    <div class="contact-card">
-                        <h3 class="contact-card-title" data-i18n="contactInfoTitle">Coordonnées</h3>
-                        <p class="contact-card-subtitle" data-i18n="contactInfoSubtitle">Détails de contact</p>
-
-                        <address class="contact-list" style="font-style: normal;">
-
-                            <div class="contact-item">
-                                <div class="contact-icon" aria-hidden="true">✉</div>
-                                <div class="contact-text">
-                                    <span class="contact-label" data-i18n="emailLabel">Email</span>
-                                    <a href="mailto:bilalallouch20@hotmail.com" class="contact-link">
-                                        bilalallouch20@hotmail.com
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="contact-item">
-                                <div class="contact-icon" aria-hidden="true">☎</div>
-                                <div class="contact-text">
-                                    <span class="contact-label" data-i18n="phoneLabel">Téléphone</span>
-                                    <a href="tel:+33753911049" class="contact-link">+33 7 53 91 10 49</a>
-                                </div>
-                            </div>
-
-                            <div class="contact-item">
-                                <div class="contact-icon" aria-hidden="true"><i class="fab fa-github"></i></div>
-                                <div class="contact-text">
-                                    <span class="contact-label">GitHub</span>
-                                    <a href="https://github.com/bilal-allouch" class="contact-link" target="_blank"
-                                        rel="noopener noreferrer" aria-label="Profil GitHub (ouvre un nouvel onglet)">
-                                        github.com/bilal-allouch
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="contact-item">
-                                <div class="contact-icon" aria-hidden="true">in</div>
-                                <div class="contact-text">
-                                    <span class="contact-label" data-i18n="linkedinLabel">LinkedIn</span>
-                                    <a href="https://linkedin.com/in/bilalallouch" class="contact-link" target="_blank"
-                                        rel="noopener noreferrer" aria-label="Profil LinkedIn (ouvre un nouvel onglet)">
-                                        linkedin.com/in/bilalallouch
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="contact-item">
-                                <div class="contact-icon" aria-hidden="true">▶</div>
-                                <div class="contact-text">
-                                    <span class="contact-label" data-i18n="vimeoLabel">Vimeo</span>
-                                    <a href="https://vimeo.com/user249616007" class="contact-link" target="_blank"
-                                        rel="noopener noreferrer" aria-label="Profil Vimeo (ouvre un nouvel onglet)">
-                                        vimeo.com/user249616007
-                                    </a>
-                                </div>
-                            </div>
-
-                        </address>
-                    </div>
-                </div>
+          <div class="skill-card">
+            <h3 data-i18n="embedded">Systèmes embarqués</h3>
+            <div class="chips">
+              <span class="chip">Arduino</span><span class="chip">ATmega328</span>
+              <span class="chip" data-i18n="tagSensors">Capteurs</span>
+              <span class="chip">UART</span><span class="chip">I2C</span><span class="chip">SPI</span>
             </div>
-        </section>
+          </div>
 
-    </main>
+          <div class="skill-card">
+            <h3 data-i18n="tools">Outils</h3>
+            <div class="chips">
+              <span class="chip">Git</span><span class="chip">GitHub</span>
+              <span class="chip">VS Code</span><span class="chip">VirtualBox</span>
+              <span class="chip">Wireshark</span><span class="chip">Packet Tracer</span>
+            </div>
+          </div>
 
-    <script src="assets/js/translate.js"></script>
-    <script src="assets/js/script.js"></script>
+          <div class="skill-card">
+            <h3 data-i18n="teamwork">Travail en équipe</h3>
+            <div class="chips">
+              <span class="chip" data-i18n="tagCollaboration">Collaboration</span>
+              <span class="chip" data-i18n="tagCommunication">Communication</span>
+              <span class="chip" data-i18n="tagOrganization">Organisation</span>
+              <span class="chip" data-i18n="tagProblemSolving">Problem Solving</span>
+              <span class="chip" data-i18n="tagTeamwork">Travail en groupe</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="projects-head">
+          <p class="kicker" data-i18n="projectsKicker" aria-hidden="true">PROJECTS / PROJETS</p>
+          <div class="projects-title-row">
+            <h2 class="section-title" id="projects-title">
+              <span data-i18n="projectsTitle">Projets</span>
+            </h2>
+            <div class="projects-tabs" role="tablist" aria-label="Filtrer les projets">
+              <button class="tab is-active" type="button" role="tab"
+                data-project-tab="a1" aria-selected="true" aria-controls="group-a1"
+                data-i18n="projectsTabA1">A1</button>
+              <button class="tab" type="button" role="tab"
+                data-project-tab="a2" aria-selected="false" aria-controls="group-a2"
+                data-i18n="projectsTabA2">A2</button>
+              <button class="tab" type="button" role="tab"
+                data-project-tab="indi" aria-selected="false" aria-controls="group-indi"
+                data-i18n="projectsTabIndi">INDI</button>
+            </div>
+          </div>
+          <p class="projects-subtitle" data-i18n="projectsSubtitle">
+            Sélection de projets académiques et personnels.
+          </p>
+        </div>
+
+        <!-- GROUPE A1 -->
+        <div class="projects-group is-active" id="group-a1" data-project-group="a1" role="tabpanel">
+          <div class="projects-banner">
+            <h3 class="projects-group-title" data-i18n="a1Title">A1 — Projets académiques (Ingénierie / Sciences)</h3>
+            <p class="projects-group-desc" data-i18n="a1Desc">Projets CESI en équipe : électronique, simulation, signal et bases de données.</p>
+          </div>
+
+          <div class="projects-row" data-project-row="a1" role="list" aria-label="Projets A1">
+
+            <article class="project-card" role="listitem">
+              <div class="project-media">
+                <img src="assets/img/projects/a1/strongbox3000.jpg"
+                  alt="Prototype Strongbox 3000 — Coffre-fort sécurisé Arduino"
+                  width="400" height="170" loading="lazy" />
+              </div>
+              <div class="project-body">
+                <h4 class="project-title" data-i18n="pA1StrongboxTitle">Strongbox 3000 — Prototype de coffre-fort sécurisé</h4>
+                <p class="project-meta" data-i18n="pA1StrongboxMeta">Arduino / Logique / Électronique</p>
+                <p class="project-desc" data-i18n="pA1StrongboxDesc">Conception d'un prototype de coffre-fort sécurisé : modélisation logique (tables de vérité, Karnaugh), réalisation d'un circuit de validation, et développement Arduino pour identifier le modèle de carte et gérer l'authentification.</p>
+                <div class="project-tags">
+                  <span class="tag">Arduino</span>
+                  <span class="tag" data-i18n="tagElectronics">Électronique</span>
+                  <span class="tag" data-i18n="tagLogic">Logique</span>
+                  <span class="tag">POC</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" role="listitem">
+              <div class="project-media">
+                <img src="assets/img/projects/a1/fast-and-furious.jpg"
+                  alt="Simulation numérique Fast & Furious"
+                  width="400" height="170" loading="lazy" />
+              </div>
+              <div class="project-body">
+                <h4 class="project-title" data-i18n="pA1FastTitle">Fast & Furious — Simulation numérique d'un circuit</h4>
+                <p class="project-meta" data-i18n="pA1FastMeta">Python / Jupyter / Modélisation</p>
+                <p class="project-desc" data-i18n="pA1FastDesc">Étude physique d'un circuit (pente, looping, saut) et résolution numérique sous Python : calcul des vitesses minimales, tracés (vitesse, trajectoire), comparaison de modèles et recommandations à partir des résultats.</p>
+                <div class="project-tags">
+                  <span class="tag">Python</span><span class="tag">Jupyter</span>
+                  <span class="tag" data-i18n="tagSimulation">Simulation</span>
+                  <span class="tag" data-i18n="tagModeling">Modélisation</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" role="listitem">
+              <div class="project-media">
+                <img src="assets/img/projects/a1/escape-no-game.jpg"
+                  alt="Escape No Game — Signal sonore"
+                  width="400" height="170" loading="lazy" />
+              </div>
+              <div class="project-body">
+                <h4 class="project-title" data-i18n="pA1EscapeTitle">Escape No Game — Communication discrète par signal sonore</h4>
+                <p class="project-meta" data-i18n="pA1EscapeMeta">Traitement du signal / Jupyter / Simulation</p>
+                <p class="project-desc" data-i18n="pA1EscapeDesc">POC de transmission d'un message via hautes fréquences : définition de la chaîne émission/réception, filtrage et analyse fréquentielle, puis modélisation numérique sous Python (trames, détection d'erreur, reconstruction du message).</p>
+                <div class="project-tags">
+                  <span class="tag" data-i18n="tagSignal">Signal</span>
+                  <span class="tag">Python</span><span class="tag">Jupyter</span><span class="tag">POC</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" role="listitem">
+              <div class="project-media">
+                <img src="assets/img/projects/a1/qualite-air.jpg"
+                  alt="Base de données qualité de l'air"
+                  width="400" height="170" loading="lazy" />
+              </div>
+              <div class="project-body">
+                <h4 class="project-title" data-i18n="pA1AirTitle">Qualité de l'air — Base de données relationnelle</h4>
+                <p class="project-meta" data-i18n="pA1AirMeta">MySQL / Modélisation / SQL</p>
+                <p class="project-desc" data-i18n="pA1AirDesc">Conception et réalisation d'une base relationnelle pour centraliser des données publiques de capteurs : modélisation MCD/MLD/MPD, peuplement réaliste, requêtes SQL avancées (jointures, agrégats) et gestion des droits (admin/user).</p>
+                <div class="project-tags">
+                  <span class="tag">MySQL</span><span class="tag">SQL</span>
+                  <span class="tag" data-i18n="tagModeling">Modélisation</span><span class="tag">Data</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="projects-arrows" role="group" aria-label="Navigation projets A1">
+            <button class="arrow-btn" type="button" data-project-prev="a1" aria-label="Précédent">‹</button>
+            <button class="arrow-btn" type="button" data-project-next="a1" aria-label="Suivant">›</button>
+          </div>
+        </div>
+
+        <!-- GROUPE A2 -->
+        <div class="projects-group is-hidden" id="group-a2" data-project-group="a2" role="tabpanel">
+          <div class="projects-banner">
+            <h3 class="projects-group-title" data-i18n="a2Title">A2 — Projets académiques (Développement / Embarqué / Réseau)</h3>
+            <p class="projects-group-desc" data-i18n="a2Desc">Projets CESI orientés développement logiciel, systèmes embarqués et réseaux.</p>
+          </div>
+
+          <div class="projects-row" data-project-row="a2" role="list" aria-label="Projets A2">
+
+            <article class="project-card" role="listitem">
+              <div class="project-media">
+                <img src="assets/img/projects/a2/worldwide-weather-watcher.jpg"
+                  alt="Station météo embarquée Worldwide Weather Watcher"
+                  width="400" height="170" loading="lazy" />
+              </div>
+              <div class="project-body">
+                <h4 class="project-title" data-i18n="pA2WeatherTitle">Worldwide Weather Watcher — Station météo embarquée</h4>
+                <p class="project-meta" data-i18n="pA2WeatherMeta">Arduino (ATmega328P) / Capteurs / SD / RTC</p>
+                <p class="project-desc" data-i18n="pA2WeatherDesc">Développement d'un prototype de station météo embarquée : acquisition capteurs (BME280 + luminosité), horodatage RTC, enregistrement CSV sur carte SD, LED de diagnostic, console série, gestion de modes et sauvegarde des paramètres en EEPROM avec contrôle CRC. Travail en équipe.</p>
+                <div class="project-actions">
+                  <a class="project-btn" href="https://github.com/bilal-allouch/worldwide-weather-watcher"
+                    target="_blank" rel="noopener noreferrer"
+                    aria-label="Code source sur GitHub">GitHub</a>
+                </div>
+                <div class="project-tags">
+                  <span class="tag">Arduino</span>
+                  <span class="tag" data-i18n="tagEmbedded">Embarqué</span>
+                  <span class="tag">I2C</span><span class="tag">SPI</span>
+                  <span class="tag">SD</span><span class="tag">RTC</span><span class="tag">EEPROM</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" role="listitem">
+              <div class="project-media">
+                <img src="assets/img/projects/a2/game-of-life.jpg"
+                  alt="Game of Life C++ SFML"
+                  width="400" height="170" loading="lazy" />
+              </div>
+              <div class="project-body">
+                <h4 class="project-title" data-i18n="pA2GOLTitle">Game of Life — Application C++ (POO) avec SFML</h4>
+                <p class="project-meta" data-i18n="pA2GOLMeta">C++ / SFML / MVC / Design Patterns</p>
+                <p class="project-desc" data-i18n="pA2GOLDesc">Implémentation du Jeu de la Vie avec une architecture orientée objet et extensible : MVC, patterns Observer & Strategy, lecture de grille depuis fichier, double rendu (console + SFML), arrêt automatique et tests unitaires intégrés.</p>
+                <div class="project-actions">
+                  <a class="project-btn" href="https://github.com/bilal-allouch/game-of-life-poo-cpp"
+                    target="_blank" rel="noopener noreferrer"
+                    aria-label="Code source sur GitHub">GitHub</a>
+                </div>
+                <div class="project-tags">
+                  <span class="tag">C++</span><span class="tag">SFML</span>
+                  <span class="tag">OOP</span><span class="tag">MVC</span>
+                  <span class="tag">Observer</span><span class="tag">Strategy</span>
+                  <span class="tag" data-i18n="tagTesting">Tests</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card" role="listitem">
+              <div class="project-media">
+                <img src="assets/img/projects/a2/funkytown.jpg"
+                  alt="FunkyTown réseau multi-sites Cisco"
+                  width="400" height="170" loading="lazy" />
+              </div>
+              <div class="project-body">
+                <h4 class="project-title" data-i18n="pA2FunkyTitle">FunkyTown — Conception & déploiement d'un réseau multi-sites</h4>
+                <p class="project-meta" data-i18n="pA2FunkyMeta">Cisco Packet Tracer / VLAN / Routage / IPv6</p>
+                <p class="project-desc" data-i18n="pA2FunkyDesc">Réalisation d'une maquette réseau complète pour plusieurs organisations : segmentation VLAN (VTP, VLSM), routage inter-VLAN, DHCP/DNS, Wi-Fi, sécurisation (SSH/telnet), EtherChannel, et interconnexion IPv6 via tunnel vers un datacenter cloud.</p>
+                <div class="project-tags">
+                  <span class="tag" data-i18n="tagNetworking">Réseaux</span>
+                  <span class="tag">Cisco</span><span class="tag">Packet Tracer</span>
+                  <span class="tag">VLAN</span><span class="tag">DHCP</span>
+                  <span class="tag">DNS</span><span class="tag">IPv6</span>
+                  <span class="tag" data-i18n="tagRouting">Routage</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="projects-arrows" role="group" aria-label="Navigation projets A2">
+            <button class="arrow-btn" type="button" data-project-prev="a2" aria-label="Précédent">‹</button>
+            <button class="arrow-btn" type="button" data-project-next="a2" aria-label="Suivant">›</button>
+          </div>
+        </div>
+
+        <!-- GROUPE INDI -->
+        <div class="projects-group is-hidden" id="group-indi" data-project-group="indi" role="tabpanel">
+          <div class="projects-banner">
+            <h3 class="projects-group-title" data-i18n="indiTitle">Individuel — Projets personnels</h3>
+            <p class="projects-group-desc" data-i18n="indiDesc">Projets réalisés en autonomie pour progresser et expérimenter.</p>
+          </div>
+
+          <div class="projects-row" data-project-row="indi" role="list" aria-label="Projets individuels">
+            <article class="project-card" role="listitem">
+              <div class="project-media">
+                <img src="assets/img/projects/indi/snake.jpg"
+                  alt="Snake C++17 SFML architecture propre"
+                  width="400" height="170" loading="lazy" />
+              </div>
+              <div class="project-body">
+                <h4 class="project-title" data-i18n="pIndiSnakeTitle">Snake — SFML (C++17) : jeu rétro, architecture propre</h4>
+                <p class="project-meta" data-i18n="pIndiSnakeMeta">C++17 / SFML / Clean Architecture / UML</p>
+                <p class="project-desc" data-i18n="pIndiSnakeDesc">Reproduction moderne du Snake en C++17 avec SFML : boucle de jeu, gestion d'états (Start/Playing/Pause/Game Over), collisions, génération de nourriture, score et difficulté progressive. Documenté avec UML et commits structurés.</p>
+                <div class="project-actions">
+                  <a class="project-btn" href="#" target="_blank" rel="noopener noreferrer"
+                    aria-label="Code source sur GitHub">GitHub</a>
+                </div>
+                <div class="project-tags">
+                  <span class="tag">C++17</span><span class="tag">SFML</span>
+                  <span class="tag">OOP</span><span class="tag">Game Loop</span>
+                  <span class="tag">State Machine</span><span class="tag">UML</span><span class="tag">CMake</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="projects-arrows" role="group" aria-label="Navigation projets individuels">
+            <button class="arrow-btn" type="button" data-project-prev="indi" aria-label="Précédent">‹</button>
+            <button class="arrow-btn" type="button" data-project-next="indi" aria-label="Suivant">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-head">
+          <h2 class="section-title center" id="contact-title">
+            <span data-i18n="contactTitle">Contact</span>
+          </h2>
+          <p class="contact-subtitle" data-i18n="contactSubtitle">
+            Retrouvez ici mes coordonnées pour échanger facilement.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-visual" aria-hidden="true">
+            <div class="contact-image-wrap">
+              <!-- WebP : contact-avatar.png (1731 KB) → contact-avatar.webp (294 KB) -->
+              <img
+                src="assets/img/contact-avatar.webp"
+                alt="Illustration de contact"
+                width="420"
+                height="420"
+                loading="lazy" />
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <h3 class="contact-card-title" data-i18n="contactInfoTitle">Coordonnées</h3>
+            <p class="contact-card-subtitle" data-i18n="contactInfoSubtitle">Détails de contact</p>
+
+            <address class="contact-list" style="font-style: normal;">
+
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">✉</div>
+                <div class="contact-text">
+                  <span class="contact-label" data-i18n="emailLabel">Email</span>
+                  <a href="/cdn-cgi/l/email-protection#e98b80858885888585869c8a81dbd9a981869d84888085c78a8684" class="contact-link">
+                    <span class="__cf_email__" data-cfemail="0c6e65606d606d606063796f643e3c4c646378616d6560226f6361">[email&#160;protected]</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">☎</div>
+                <div class="contact-text">
+                  <span class="contact-label" data-i18n="phoneLabel">Téléphone</span>
+                  <a href="tel:+33753911049" class="contact-link">+33 7 53 91 10 49</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true"><i class="fab fa-github"></i></div>
+                <div class="contact-text">
+                  <span class="contact-label">GitHub</span>
+                  <a href="https://github.com/bilal-allouch" class="contact-link"
+                    target="_blank" rel="noopener noreferrer"
+                    aria-label="Profil GitHub (ouvre un nouvel onglet)">
+                    github.com/bilal-allouch
+                  </a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">in</div>
+                <div class="contact-text">
+                  <span class="contact-label" data-i18n="linkedinLabel">LinkedIn</span>
+                  <a href="https://linkedin.com/in/bilalallouch" class="contact-link"
+                    target="_blank" rel="noopener noreferrer"
+                    aria-label="Profil LinkedIn (ouvre un nouvel onglet)">
+                    linkedin.com/in/bilalallouch
+                  </a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon" aria-hidden="true">▶</div>
+                <div class="contact-text">
+                  <span class="contact-label" data-i18n="vimeoLabel">Vimeo</span>
+                  <a href="https://vimeo.com/user249616007" class="contact-link"
+                    target="_blank" rel="noopener noreferrer"
+                    aria-label="Profil Vimeo (ouvre un nouvel onglet)">
+                    vimeo.com/user249616007
+                  </a>
+                </div>
+              </div>
+
+            </address>
+          </div><!-- fin contact-card -->
+        </div><!-- fin contact-grid -->
+      </div><!-- fin container -->
+    </section><!-- fin contact -->
+
+  </main><!-- fin contenu principal -->
+
+  <!-- Scripts — placés en bas pour ne pas bloquer le rendu -->
+  <script src="assets/js/translate.js"></script>
+  <script src="assets/js/script.js"></script>
 
 </body>
-
 </html>
