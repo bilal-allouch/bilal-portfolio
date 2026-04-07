@@ -11,7 +11,7 @@
   <meta name="keywords"
     content="développeur web, stage, alternance, HTML, CSS, JavaScript, portfolio, CESI, Rouen" />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-  <!-- PRELOAD : charge l'image hero en priorité absolue → améliore le score LCP -->
+  <!-- PRELOAD : charge l'image hero en priorité absolue pour le score LCP -->
   <link rel="preload" as="image" href="assets/img/bilal-avatar.webp" type="image/webp" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet"
@@ -28,30 +28,18 @@
   <!-- Skip link — Accessibilité clavier -->
   <a class="skip-link" href="#main-content">Aller au contenu principal</a>
 
-  <!-- ====================================================
-       NAVBAR
-  ==================================================== -->
+  <!-- NAVBAR -->
   <header class="topbar" role="banner">
     <div class="nav container">
-
       <a class="brand" href="#home" aria-label="Bilal Allouch — Retour à l'accueil">
         Portfolio<span class="dot" aria-hidden="true">.</span>
       </a>
-
-      <!-- Burger (mobile uniquement) -->
-      <button
-        class="burger"
-        id="burger"
-        aria-label="Ouvrir le menu de navigation"
-        aria-expanded="false"
-        aria-controls="mobile-menu"
-        type="button">
+      <button class="burger" id="burger" aria-label="Ouvrir le menu de navigation"
+        aria-expanded="false" aria-controls="mobile-menu" type="button">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
       </button>
-
-      <!-- Liens desktop -->
       <nav class="links" id="desktop-nav" aria-label="Navigation principale">
         <a class="link is-active" href="#home" data-i18n="home">Accueil</a>
         <a class="link" href="#about" data-i18n="about">À propos</a>
@@ -59,8 +47,6 @@
         <a class="link" href="#projects" data-i18n="projects">Projets</a>
         <a class="link" href="#contact" data-i18n="contact">Contact</a>
       </nav>
-
-      <!-- Boutons actions -->
       <div class="actions" role="group" aria-label="Paramètres et contact">
         <button class="icon-btn" id="theme-btn" aria-label="Basculer thème clair/sombre" type="button">☀️</button>
         <button class="pill-btn" id="lang-btn" aria-label="Changer la langue" type="button">EN</button>
@@ -69,15 +55,9 @@
     </div>
   </header>
 
-  <!-- ====================================================
-       MENU MOBILE
-  ==================================================== -->
-  <div
-    class="mobile-menu"
-    id="mobile-menu"
-    aria-hidden="true"
-    role="dialog"
-    aria-label="Menu de navigation mobile">
+  <!-- MENU MOBILE -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true"
+    role="dialog" aria-label="Menu de navigation mobile">
     <div class="mobile-card">
       <div class="mobile-top">
         <span class="mobile-brand">Portfolio<span class="dot" aria-hidden="true">.</span></span>
@@ -98,12 +78,10 @@
     </div>
   </div>
 
-  <!-- ====================================================
-       CONTENU PRINCIPAL
-  ==================================================== -->
+  <!-- CONTENU PRINCIPAL -->
   <main id="main-content">
 
-    <!-- HERO -->
+    <!-- ======== HERO ======== -->
     <section class="hero" id="home" aria-labelledby="hero-title">
       <div class="container hero-grid">
 
@@ -135,8 +113,7 @@
 
           <div class="hero-buttons">
             <a class="btn primary" href="assets/docs/Bilal-Allouch-CV.pdf"
-              download="Bilal-Allouch-CV.pdf"
-              aria-label="Télécharger le CV (PDF)">
+              download="Bilal-Allouch-CV.pdf" aria-label="Télécharger le CV (PDF)">
               <span data-i18n="download">Télécharger CV</span>
             </a>
             <a class="btn ghost" href="#contact" aria-label="Aller à la section contact">
@@ -145,7 +122,7 @@
           </div>
         </div>
 
-        <!-- Photo de profil — WebP + eager + fetchpriority pour le score LCP -->
+        <!-- Photo hero : eager + fetchpriority pour le LCP — PAS de lazy -->
         <div class="hero-right" aria-hidden="true">
           <div class="avatar-wrap">
             <img
@@ -160,19 +137,17 @@
       </div>
     </section>
 
-    <!-- ABOUT -->
+    <!-- ======== ABOUT ======== -->
     <section class="about" id="about" aria-labelledby="about-title">
       <div class="container about-grid">
 
         <div class="about-left">
           <div class="about-image" aria-hidden="true">
-            <!-- WebP : plus léger et même qualité -->
             <img
               src="assets/img/bilal-avatar2.webp"
               alt="Illustration de Bilal Allouch"
               width="320"
-              height="320"
-              loading="lazy" />
+              height="320" />
           </div>
         </div>
 
@@ -195,7 +170,7 @@
       </div>
     </section>
 
-    <!-- SKILLS -->
+    <!-- ======== SKILLS ======== -->
     <section class="skills" id="skills" aria-labelledby="skills-title">
       <div class="container">
         <h2 class="section-title center" id="skills-title">
@@ -205,7 +180,6 @@
           Technologies et outils que j'utilise dans mes projets.
         </p>
         <div class="skills-grid">
-
           <div class="skill-card">
             <h3 data-i18n="programming">Programmation</h3>
             <div class="chips">
@@ -217,7 +191,6 @@
               <span class="chip" data-i18n="tagAlgorithms">Algorithmes</span>
             </div>
           </div>
-
           <div class="skill-card">
             <h3 data-i18n="webdev">Développement Web</h3>
             <div class="chips">
@@ -228,7 +201,6 @@
               <span class="chip">REST</span>
             </div>
           </div>
-
           <div class="skill-card">
             <h3 data-i18n="databases">Bases de données</h3>
             <div class="chips">
@@ -237,7 +209,6 @@
               <span class="chip" data-i18n="tagSqlQueries">Requêtes SQL</span>
             </div>
           </div>
-
           <div class="skill-card">
             <h3 data-i18n="networks">Réseaux & Systèmes</h3>
             <div class="chips">
@@ -247,7 +218,6 @@
               <span class="chip">Bash</span>
             </div>
           </div>
-
           <div class="skill-card">
             <h3 data-i18n="embedded">Systèmes embarqués</h3>
             <div class="chips">
@@ -256,7 +226,6 @@
               <span class="chip">UART</span><span class="chip">I2C</span><span class="chip">SPI</span>
             </div>
           </div>
-
           <div class="skill-card">
             <h3 data-i18n="tools">Outils</h3>
             <div class="chips">
@@ -265,7 +234,6 @@
               <span class="chip">Wireshark</span><span class="chip">Packet Tracer</span>
             </div>
           </div>
-
           <div class="skill-card">
             <h3 data-i18n="teamwork">Travail en équipe</h3>
             <div class="chips">
@@ -280,7 +248,7 @@
       </div>
     </section>
 
-    <!-- PROJECTS -->
+    <!-- ======== PROJECTS ======== -->
     <section class="projects" id="projects" aria-labelledby="projects-title">
       <div class="container">
         <div class="projects-head">
@@ -312,14 +280,13 @@
             <h3 class="projects-group-title" data-i18n="a1Title">A1 — Projets académiques (Ingénierie / Sciences)</h3>
             <p class="projects-group-desc" data-i18n="a1Desc">Projets CESI en équipe : électronique, simulation, signal et bases de données.</p>
           </div>
-
           <div class="projects-row" data-project-row="a1" role="list" aria-label="Projets A1">
 
             <article class="project-card" role="listitem">
               <div class="project-media">
                 <img src="assets/img/projects/a1/strongbox3000.jpg"
                   alt="Prototype Strongbox 3000 — Coffre-fort sécurisé Arduino"
-                  width="400" height="170" loading="lazy" />
+                  width="400" height="170" />
               </div>
               <div class="project-body">
                 <h4 class="project-title" data-i18n="pA1StrongboxTitle">Strongbox 3000 — Prototype de coffre-fort sécurisé</h4>
@@ -338,7 +305,7 @@
               <div class="project-media">
                 <img src="assets/img/projects/a1/fast-and-furious.jpg"
                   alt="Simulation numérique Fast & Furious"
-                  width="400" height="170" loading="lazy" />
+                  width="400" height="170" />
               </div>
               <div class="project-body">
                 <h4 class="project-title" data-i18n="pA1FastTitle">Fast & Furious — Simulation numérique d'un circuit</h4>
@@ -355,8 +322,8 @@
             <article class="project-card" role="listitem">
               <div class="project-media">
                 <img src="assets/img/projects/a1/escape-no-game.jpg"
-                  alt="Escape No Game — Signal sonore"
-                  width="400" height="170" loading="lazy" />
+                  alt="Escape No Game — Signal sonore haute fréquence"
+                  width="400" height="170" />
               </div>
               <div class="project-body">
                 <h4 class="project-title" data-i18n="pA1EscapeTitle">Escape No Game — Communication discrète par signal sonore</h4>
@@ -373,7 +340,7 @@
               <div class="project-media">
                 <img src="assets/img/projects/a1/qualite-air.jpg"
                   alt="Base de données qualité de l'air"
-                  width="400" height="170" loading="lazy" />
+                  width="400" height="170" />
               </div>
               <div class="project-body">
                 <h4 class="project-title" data-i18n="pA1AirTitle">Qualité de l'air — Base de données relationnelle</h4>
@@ -386,7 +353,6 @@
               </div>
             </article>
           </div>
-
           <div class="projects-arrows" role="group" aria-label="Navigation projets A1">
             <button class="arrow-btn" type="button" data-project-prev="a1" aria-label="Précédent">‹</button>
             <button class="arrow-btn" type="button" data-project-next="a1" aria-label="Suivant">›</button>
@@ -399,14 +365,13 @@
             <h3 class="projects-group-title" data-i18n="a2Title">A2 — Projets académiques (Développement / Embarqué / Réseau)</h3>
             <p class="projects-group-desc" data-i18n="a2Desc">Projets CESI orientés développement logiciel, systèmes embarqués et réseaux.</p>
           </div>
-
           <div class="projects-row" data-project-row="a2" role="list" aria-label="Projets A2">
 
             <article class="project-card" role="listitem">
               <div class="project-media">
                 <img src="assets/img/projects/a2/worldwide-weather-watcher.jpg"
                   alt="Station météo embarquée Worldwide Weather Watcher"
-                  width="400" height="170" loading="lazy" />
+                  width="400" height="170" />
               </div>
               <div class="project-body">
                 <h4 class="project-title" data-i18n="pA2WeatherTitle">Worldwide Weather Watcher — Station météo embarquée</h4>
@@ -414,8 +379,7 @@
                 <p class="project-desc" data-i18n="pA2WeatherDesc">Développement d'un prototype de station météo embarquée : acquisition capteurs (BME280 + luminosité), horodatage RTC, enregistrement CSV sur carte SD, LED de diagnostic, console série, gestion de modes et sauvegarde des paramètres en EEPROM avec contrôle CRC. Travail en équipe.</p>
                 <div class="project-actions">
                   <a class="project-btn" href="https://github.com/bilal-allouch/worldwide-weather-watcher"
-                    target="_blank" rel="noopener noreferrer"
-                    aria-label="Code source sur GitHub">GitHub</a>
+                    target="_blank" rel="noopener noreferrer" aria-label="Code source sur GitHub">GitHub</a>
                 </div>
                 <div class="project-tags">
                   <span class="tag">Arduino</span>
@@ -430,7 +394,7 @@
               <div class="project-media">
                 <img src="assets/img/projects/a2/game-of-life.jpg"
                   alt="Game of Life C++ SFML"
-                  width="400" height="170" loading="lazy" />
+                  width="400" height="170" />
               </div>
               <div class="project-body">
                 <h4 class="project-title" data-i18n="pA2GOLTitle">Game of Life — Application C++ (POO) avec SFML</h4>
@@ -438,8 +402,7 @@
                 <p class="project-desc" data-i18n="pA2GOLDesc">Implémentation du Jeu de la Vie avec une architecture orientée objet et extensible : MVC, patterns Observer & Strategy, lecture de grille depuis fichier, double rendu (console + SFML), arrêt automatique et tests unitaires intégrés.</p>
                 <div class="project-actions">
                   <a class="project-btn" href="https://github.com/bilal-allouch/game-of-life-poo-cpp"
-                    target="_blank" rel="noopener noreferrer"
-                    aria-label="Code source sur GitHub">GitHub</a>
+                    target="_blank" rel="noopener noreferrer" aria-label="Code source sur GitHub">GitHub</a>
                 </div>
                 <div class="project-tags">
                   <span class="tag">C++</span><span class="tag">SFML</span>
@@ -454,7 +417,7 @@
               <div class="project-media">
                 <img src="assets/img/projects/a2/funkytown.jpg"
                   alt="FunkyTown réseau multi-sites Cisco"
-                  width="400" height="170" loading="lazy" />
+                  width="400" height="170" />
               </div>
               <div class="project-body">
                 <h4 class="project-title" data-i18n="pA2FunkyTitle">FunkyTown — Conception & déploiement d'un réseau multi-sites</h4>
@@ -470,7 +433,6 @@
               </div>
             </article>
           </div>
-
           <div class="projects-arrows" role="group" aria-label="Navigation projets A2">
             <button class="arrow-btn" type="button" data-project-prev="a2" aria-label="Précédent">‹</button>
             <button class="arrow-btn" type="button" data-project-next="a2" aria-label="Suivant">›</button>
@@ -483,13 +445,12 @@
             <h3 class="projects-group-title" data-i18n="indiTitle">Individuel — Projets personnels</h3>
             <p class="projects-group-desc" data-i18n="indiDesc">Projets réalisés en autonomie pour progresser et expérimenter.</p>
           </div>
-
           <div class="projects-row" data-project-row="indi" role="list" aria-label="Projets individuels">
             <article class="project-card" role="listitem">
               <div class="project-media">
                 <img src="assets/img/projects/indi/snake.jpg"
                   alt="Snake C++17 SFML architecture propre"
-                  width="400" height="170" loading="lazy" />
+                  width="400" height="170" />
               </div>
               <div class="project-body">
                 <h4 class="project-title" data-i18n="pIndiSnakeTitle">Snake — SFML (C++17) : jeu rétro, architecture propre</h4>
@@ -507,7 +468,6 @@
               </div>
             </article>
           </div>
-
           <div class="projects-arrows" role="group" aria-label="Navigation projets individuels">
             <button class="arrow-btn" type="button" data-project-prev="indi" aria-label="Précédent">‹</button>
             <button class="arrow-btn" type="button" data-project-next="indi" aria-label="Suivant">›</button>
@@ -516,7 +476,7 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
+    <!-- ======== CONTACT ======== -->
     <section class="contact" id="contact" aria-labelledby="contact-title">
       <div class="container">
         <div class="contact-head">
@@ -531,13 +491,11 @@
         <div class="contact-grid">
           <div class="contact-visual" aria-hidden="true">
             <div class="contact-image-wrap">
-              <!-- WebP : contact-avatar.png (1731 KB) → contact-avatar.webp (294 KB) -->
               <img
                 src="assets/img/contact-avatar.webp"
                 alt="Illustration de contact"
                 width="420"
-                height="420"
-                loading="lazy" />
+                height="420" />
             </div>
           </div>
 
@@ -551,8 +509,9 @@
                 <div class="contact-icon" aria-hidden="true">✉</div>
                 <div class="contact-text">
                   <span class="contact-label" data-i18n="emailLabel">Email</span>
-                  <a href="/cdn-cgi/l/email-protection#e98b80858885888585869c8a81dbd9a981869d84888085c78a8684" class="contact-link">
-                    <span class="__cf_email__" data-cfemail="0c6e65606d606d606063796f643e3c4c646378616d6560226f6361">[email&#160;protected]</span>
+                  <a href="mailto:bilalallouch20@hotmail.com" class="contact-link"
+                    aria-label="Envoyer un email">
+                    bilalallouch20@hotmail.com
                   </a>
                 </div>
               </div>
@@ -602,14 +561,13 @@
               </div>
 
             </address>
-          </div><!-- fin contact-card -->
-        </div><!-- fin contact-grid -->
-      </div><!-- fin container -->
-    </section><!-- fin contact -->
+          </div>
+        </div>
+      </div>
+    </section>
 
-  </main><!-- fin contenu principal -->
+  </main>
 
-  <!-- Scripts — placés en bas pour ne pas bloquer le rendu -->
   <script src="assets/js/translate.js"></script>
   <script src="assets/js/script.js"></script>
 
