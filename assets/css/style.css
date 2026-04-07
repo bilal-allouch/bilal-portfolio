@@ -1,6 +1,30 @@
-/* =========================
-   RESET
-========================= */
+/* ================================================================
+   STYLE.CSS — Portfolio Bilal Allouch
+   ----------------------------------------------------------------
+   APPROCHE : MOBILE-FIRST
+   On écrit d'abord les styles pour mobile (le plus petit écran),
+   puis on ajoute des media queries avec min-width pour agrandir.
+
+   CORRECTIONS INCLUSES :
+   ✅ Navbar mobile : padding horizontal ajouté
+   ✅ Cartes projets : GitHub et tags toujours au même niveau
+   ✅ Image avatar : border-radius concentriques + object-fit
+   ✅ Boutons ronds : icônes parfaitement centrées
+   ✅ Menu mobile : ne déborde plus à gauche
+
+   STRUCTURE :
+     1. Reset & Variables CSS
+     2. Styles globaux
+     3. BASE — Mobile (320px+)
+     4. TABLETTE (min-width: 640px)
+     5. TABLETTE LARGE (min-width: 768px)
+     6. DESKTOP (min-width: 1024px)
+     7. GRAND ÉCRAN (min-width: 1200px)
+================================================================ */
+
+/* ================================================================
+   1. RESET
+================================================================ */
 *,
 *::before,
 *::after {
@@ -13,38 +37,41 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ================================================================
+   2. VARIABLES CSS
+================================================================ */
 :root {
   --bg: #060a15;
   --text: #eaf0ff;
   --muted: rgba(234, 240, 255, 0.74);
   --stroke: rgba(255, 255, 255, 0.1);
-
   --panel: rgba(255, 255, 255, 0.06);
   --panel-2: rgba(255, 255, 255, 0.09);
-
   --accent: #ff8a00;
   --accent-soft: rgba(255, 138, 0, 0.16);
-
   --shadow: 0 18px 60px rgba(0, 0, 0, 0.45);
   --radius: 22px;
 
-  --nav-h: 86px;
-  --page-pad: 18px;
+  /* Layout mobile */
+  --nav-h: 70px;
+  --page-pad: 16px;
   --container-max: 1180px;
 }
 
+/* Thème clair */
 html[data-theme="light"] {
   --bg: #f6f7fb;
   --text: #0c1326;
   --muted: rgba(12, 19, 38, 0.72);
   --stroke: rgba(0, 0, 0, 0.1);
-
   --panel: rgba(0, 0, 0, 0.04);
   --panel-2: rgba(0, 0, 0, 0.06);
-
   --shadow: 0 18px 60px rgba(0, 0, 0, 0.16);
 }
 
+/* ================================================================
+   3. STYLES GLOBAUX
+================================================================ */
 body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   min-height: 100vh;
@@ -56,11 +83,7 @@ body {
     var(--bg);
 }
 
-/* =========================
-   GLOBAL
-========================= */
-main,
-section {
+main, section {
   padding-left: var(--page-pad);
   padding-right: var(--page-pad);
 }
@@ -70,45 +93,60 @@ section {
   margin: 0 auto;
 }
 
-#home,
-#about,
-#skills,
-#projects,
-#contact {
+#home, #about, #skills, #projects, #contact {
   scroll-margin-top: calc(var(--nav-h) + 18px);
 }
 
-.accent,
-.dot,
-.highlight {
-  color: var(--accent);
-}
+.accent, .dot, .highlight { color: var(--accent); }
+.highlight { font-weight: 900; }
+.center { text-align: center; }
 
-.highlight {
+/* Skip link — Accessibilité clavier */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #1a0f00;
   font-weight: 900;
+  z-index: 9999;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 16px;
 }
 
-.center {
-  text-align: center;
-}
+/* ================================================================
+   4. BASE — MOBILE (320px+)
+================================================================ */
 
-/* =========================
-   NAVBAR
-========================= */
+/* ===================
+   NAVBAR — Mobile
+=================== */
 .topbar {
   position: sticky;
   top: 0;
   z-index: 999;
-  padding: 18px 0;
+  padding: 14px 0;
   backdrop-filter: blur(14px);
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent);
+}
+
+/* FIX MOBILE — padding horizontal pour éviter que la navbar
+   soit collée aux bords gauche et droite de l'écran */
+.topbar .container {
+  padding-left: var(--page-pad);
+  padding-right: var(--page-pad);
 }
 
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 14px;
+  gap: 8px;
   min-width: 0;
 }
 
@@ -116,23 +154,16 @@ section {
   text-decoration: none;
   font-weight: 900;
   color: var(--text);
-  font-size: 20px;
+  font-size: 17px;
   flex-shrink: 0;
+  max-width: 110px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
+/* Liens desktop — cachés sur mobile */
 .links {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  padding: 10px 14px;
-  border-radius: 999px;
-  border: 1px solid var(--stroke);
-  background: rgba(0, 0, 0, 0.18);
-  box-shadow: var(--shadow);
-}
-
-html[data-theme="light"] .links {
-  background: rgba(255, 255, 255, 0.65);
+  display: none;
 }
 
 .link {
@@ -144,45 +175,44 @@ html[data-theme="light"] .links {
   border-radius: 999px;
   transition: 0.2s;
 }
-
-.link:hover {
-  color: var(--text);
-  background: var(--panel);
-}
-
-.link.is-active {
-  color: var(--accent);
-  background: var(--accent-soft);
-}
+.link:hover { color: var(--text); background: var(--panel); }
+.link.is-active { color: var(--accent); background: var(--accent-soft); }
 
 .actions {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   flex-shrink: 0;
 }
 
+/* Bouton CTA "Me contacter" — caché sur mobile */
+.actions .pill-cta {
+  display: none;
+}
+
+/* FIX CENTRAGE ICÔNES — les émojis et textes sont parfaitement
+   centrés dans les boutons ronds grâce à inline-flex + line-height */
 .icon-btn,
 .pill-btn {
-  height: 42px;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
   border-radius: 999px;
   border: 1px solid var(--stroke);
   background: var(--panel);
   color: var(--text);
   cursor: pointer;
   font-weight: 900;
-}
-
-.icon-btn {
-  width: 42px;
-}
-
-.pill-btn {
-  padding: 0 14px;
+  font-size: 16px;        /* Taille fixe pour l'icône */
+  line-height: 1;         /* Supprime l'espace vertical autour du texte */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .pill-cta {
-  height: 42px;
+  height: 40px;
   padding: 0 18px;
   border-radius: 999px;
   background: var(--accent);
@@ -190,15 +220,19 @@ html[data-theme="light"] .links {
   text-decoration: none;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   font-weight: 900;
   box-shadow: 0 12px 34px rgba(255, 138, 0, 0.24);
 }
 
-/* Burger */
+/* Burger — visible sur mobile uniquement */
 .burger {
-  display: none;
-  width: 44px;
-  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
   border-radius: 14px;
   border: 1px solid var(--stroke);
   background: var(--panel);
@@ -209,35 +243,25 @@ html[data-theme="light"] .links {
 
 .burger span {
   position: absolute;
-  left: 12px;
-  right: 12px;
+  left: 10px;
+  right: 10px;
   height: 2px;
   background: var(--text);
   border-radius: 2px;
 }
+.burger span:nth-child(1) { top: 13px; }
+.burger span:nth-child(2) { top: 19px; opacity: 0.85; }
+.burger span:nth-child(3) { top: 25px; }
 
-.burger span:nth-child(1) {
-  top: 14px;
-}
-
-.burger span:nth-child(2) {
-  top: 21px;
-  opacity: 0.85;
-}
-
-.burger span:nth-child(3) {
-  top: 28px;
-}
-
-/* =========================
-   MOBILE MENU
-========================= */
+/* ===================
+   MENU MOBILE
+=================== */
 .mobile-menu {
   position: fixed;
   inset: 0;
   display: none;
   place-items: start center;
-  padding: 90px var(--page-pad) 20px;
+  padding: 80px var(--page-pad) 20px;
   background: rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(10px);
   z-index: 2000;
@@ -247,8 +271,10 @@ html[data-theme="light"] .links {
   display: grid;
 }
 
+/* FIX MENU MOBILE — utilisation de calc(100vw) pour éviter
+   que la carte déborde à gauche ou à droite de l'écran */
 .mobile-card {
-  width: min(420px, 100%);
+  width: min(420px, calc(100vw - 32px));
   border-radius: 22px;
   border: 1px solid var(--stroke);
   background: rgba(0, 0, 0, 0.35);
@@ -280,6 +306,7 @@ html[data-theme="light"] .mobile-card {
   gap: 10px;
 }
 
+/* FIX CENTRAGE — même correctif que .icon-btn */
 .close-btn {
   width: 42px;
   height: 42px;
@@ -289,6 +316,11 @@ html[data-theme="light"] .mobile-card {
   color: var(--text);
   cursor: pointer;
   font-weight: 900;
+  font-size: 16px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .mobile-links {
@@ -308,11 +340,7 @@ html[data-theme="light"] .mobile-card {
   text-align: center;
   transition: 0.2s;
 }
-
-.m-link:hover,
-.m-link.is-active {
-  background: var(--panel-2);
-}
+.m-link:hover, .m-link.is-active { background: var(--panel-2); }
 
 .mobile-cta {
   display: flex;
@@ -328,18 +356,18 @@ html[data-theme="light"] .mobile-card {
   box-shadow: 0 12px 34px rgba(255, 138, 0, 0.22);
 }
 
-/* =========================
-   HERO
-========================= */
+/* ===================
+   HERO — Mobile (1 colonne)
+=================== */
 .hero {
-  padding-top: calc(var(--nav-h) - 10px);
-  padding-bottom: 40px;
+  padding-top: 22px;
+  padding-bottom: 30px;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 44px;
+  grid-template-columns: 1fr;
+  gap: 22px;
   align-items: center;
 }
 
@@ -361,32 +389,33 @@ html[data-theme="light"] .mobile-card {
   background: var(--panel);
   transition: 0.2s;
 }
-
 .social:hover {
   transform: translateY(-2px);
   background: var(--panel-2);
 }
 
 .hero-title {
-  font-size: clamp(32px, 4.4vw, 58px);
-  line-height: 1.05;
+  font-size: clamp(26px, 8vw, 40px);
+  line-height: 1.08;
 }
 
 .hero-desc {
   margin-top: 14px;
   color: var(--muted);
   line-height: 1.75;
-  max-width: 70ch;
+  max-width: 100%;
 }
 
+/* Boutons empilés sur mobile */
 .hero-buttons {
   display: flex;
-  gap: 14px;
+  flex-direction: column;
+  gap: 12px;
   margin-top: 26px;
-  flex-wrap: wrap;
 }
 
 .btn {
+  width: 100%;
   height: 48px;
   padding: 0 18px;
   border-radius: 999px;
@@ -398,60 +427,60 @@ html[data-theme="light"] .mobile-card {
   border: 1px solid transparent;
   transition: 0.2s;
 }
-
 .btn.primary {
   background: var(--accent);
   color: #1a0f00;
   box-shadow: 0 12px 34px rgba(255, 138, 0, 0.22);
 }
-
-.btn.primary:hover {
-  transform: translateY(-2px);
-}
-
+.btn.primary:hover { transform: translateY(-2px); }
 .btn.ghost {
   background: transparent;
   border-color: rgba(255, 138, 0, 0.55);
   color: var(--text);
 }
+.btn.ghost:hover { background: rgba(255, 138, 0, 0.1); }
 
-.btn.ghost:hover {
-  background: rgba(255, 138, 0, 0.1);
-}
-
+/* Cadre de la photo de profil */
 .avatar-wrap {
-  width: min(360px, 100%);
-  margin-left: auto;
+  width: 100%;
   padding: 18px;
-  border-radius: calc(var(--radius) + 6px);
+  border-radius: calc(var(--radius) + 6px); /* = 28px */
   border: 1px solid var(--stroke);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
   box-shadow: var(--shadow);
 }
 
+/* FIX CARRÉ HERO IMAGE :
+   aspect-ratio: 1 → cadre carré
+   object-fit: cover → remplit le carré (rogne le bas de la photo portrait)
+   object-position: center top → garde le visage visible */
 .avatar-wrap img {
   width: 100%;
   display: block;
-  border-radius: var(--radius);
+  border-radius: calc(var(--radius) + 6px - 18px); /* = 10px */
+  object-fit: cover;
+  object-position: center top;
+  aspect-ratio: 1; /* CARRÉ */
 }
 
-/* =========================
-   ABOUT
-========================= */
+/* ===================
+   ABOUT — Mobile (1 colonne)
+=================== */
 .about {
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  grid-template-columns: 1fr;
+  gap: 22px;
   align-items: center;
+  text-align: center;
 }
 
 .section-title {
-  font-size: 48px;
+  font-size: clamp(32px, 8vw, 48px);
   margin-bottom: 20px;
   color: var(--accent);
 }
@@ -459,13 +488,12 @@ html[data-theme="light"] .mobile-card {
 .about-text {
   color: var(--muted);
   line-height: 1.8;
-  max-width: 520px;
-  margin-bottom: 30px;
+  max-width: 100%;
+  margin: 0 auto 30px;
 }
 
 .about-image {
-  width: min(420px, 100%);
-  margin-right: auto;
+  width: 100%;
   padding: 18px;
   border-radius: calc(var(--radius) + 6px);
   border: 1px solid var(--stroke);
@@ -475,69 +503,62 @@ html[data-theme="light"] .mobile-card {
   justify-content: center;
 }
 
+/* FIX CARRÉ ABOUT IMAGE :
+   aspect-ratio: 1 → même format carré que la photo hero
+   object-fit: contain → montre l'illustration complète (Python, puce)
+   sans la rogner, avec fond transparent autour si besoin */
 .about-image img {
   width: 100%;
   max-width: 320px;
-  border-radius: 18px;
+  border-radius: calc(var(--radius) + 6px - 18px); /* = 10px */
+  display: block;
+  object-fit: contain;
+  aspect-ratio: 1; /* MÊME CARRÉ que le hero */
 }
 
 .about-stats {
   display: flex;
-  gap: 40px;
+  gap: 24px;
   margin-top: 20px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
-.stat h3 {
-  font-size: 32px;
-  color: var(--accent);
-}
+.stat h3 { font-size: 32px; color: var(--accent); }
+.stat p { color: var(--muted); font-size: 14px; }
 
-.stat p {
-  color: var(--muted);
-  font-size: 14px;
-}
-
-/* =========================
-   SKILLS
-========================= */
+/* ===================
+   SKILLS — Mobile (1 colonne)
+=================== */
 .skills {
-  padding: 100px var(--page-pad);
+  padding: 80px 0;
 }
 
 .skills-subtitle {
   text-align: center;
   color: var(--muted);
   max-width: 600px;
-  margin: 10px auto 60px;
+  margin: 10px auto 34px;
 }
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
+  grid-template-columns: 1fr;
+  gap: 18px;
   max-width: 1100px;
   margin: 0 auto;
 }
 
 .skill-card {
-  padding: 30px;
-  border-radius: 20px;
+  padding: 22px;
+  border-radius: 18px;
   border: 1px solid var(--stroke);
   background: var(--panel);
   box-shadow: var(--shadow);
   transition: 0.25s;
 }
-
-.skill-card:hover {
-  transform: translateY(-5px);
-  background: var(--panel-2);
-}
-
-.skill-card h3 {
-  margin-bottom: 10px;
-  color: var(--accent);
-}
+.skill-card:hover { transform: translateY(-5px); background: var(--panel-2); }
+.skill-card h3 { margin-bottom: 10px; color: var(--accent); }
 
 .chips {
   display: flex;
@@ -562,26 +583,17 @@ html[data-theme="light"] .mobile-card {
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.25);
   transition: 0.2s;
 }
+html[data-theme="light"] .chip { background: rgba(255, 255, 255, 0.65); }
+.chip:hover { transform: translateY(-2px); background: rgba(255, 255, 255, 0.1); }
 
-html[data-theme="light"] .chip {
-  background: rgba(255, 255, 255, 0.65);
-}
-
-.chip:hover {
-  transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.1);
-}
-
-/* =========================
-   PROJECTS
-========================= */
+/* ===================
+   PROJECTS — Mobile (scroll horizontal)
+=================== */
 .projects {
-  padding: 100px 0;
+  padding: 80px 0;
 }
 
-.projects-head {
-  margin-bottom: 22px;
-}
+.projects-head { margin-bottom: 18px; }
 
 .kicker {
   letter-spacing: 0.22em;
@@ -593,9 +605,9 @@ html[data-theme="light"] .chip {
 
 .projects-title-row {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 16px;
+  gap: 14px;
   flex-wrap: wrap;
 }
 
@@ -615,14 +627,16 @@ html[data-theme="light"] .chip {
   background: rgba(0, 0, 0, 0.18);
   backdrop-filter: blur(12px);
   box-shadow: var(--shadow);
-  flex-wrap: wrap;
+  width: 100%;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  scrollbar-width: none;
 }
-
-html[data-theme="light"] .projects-tabs {
-  background: rgba(255, 255, 255, 0.65);
-}
+.projects-tabs::-webkit-scrollbar { display: none; }
+html[data-theme="light"] .projects-tabs { background: rgba(255, 255, 255, 0.65); }
 
 .tab {
+  flex: 0 0 auto;
   border: 1px solid var(--stroke);
   background: var(--panel);
   color: var(--text);
@@ -632,12 +646,7 @@ html[data-theme="light"] .projects-tabs {
   cursor: pointer;
   transition: 0.2s;
 }
-
-.tab:hover {
-  background: var(--panel-2);
-  transform: translateY(-1px);
-}
-
+.tab:hover { background: var(--panel-2); transform: translateY(-1px); }
 .tab.is-active {
   background: var(--accent);
   color: #1a0f00;
@@ -645,13 +654,8 @@ html[data-theme="light"] .projects-tabs {
   box-shadow: 0 12px 34px rgba(255, 138, 0, 0.22);
 }
 
-.projects-group {
-  margin-top: 22px;
-}
-
-.projects-group.is-hidden {
-  display: none;
-}
+.projects-group { margin-top: 22px; }
+.projects-group.is-hidden { display: none; }
 
 .projects-banner {
   border-radius: calc(var(--radius) + 6px);
@@ -660,25 +664,19 @@ html[data-theme="light"] .projects-tabs {
   box-shadow: var(--shadow);
   padding: 22px;
   margin-bottom: 14px;
+  width: 100%;
 }
 
-.projects-group-title {
-  font-size: 20px;
-  font-weight: 950;
-  margin-bottom: 6px;
-}
+.projects-group-title { font-size: 18px; font-weight: 950; margin-bottom: 6px; }
+.projects-group-desc { color: var(--muted); line-height: 1.7; }
 
-.projects-group-desc {
-  color: var(--muted);
-  line-height: 1.7;
-}
-
+/* Scroll horizontal des cartes */
 .projects-row {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: minmax(340px, 420px);
+  grid-auto-columns: calc(100vw - (var(--page-pad) * 2) - 6px);
   justify-content: start;
-  gap: 22px;
+  gap: 16px;
   overflow-x: auto;
   overflow-y: hidden;
   padding: 10px 2px 18px;
@@ -687,10 +685,7 @@ html[data-theme="light"] .projects-tabs {
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 }
-
-.projects-row::-webkit-scrollbar {
-  display: none;
-}
+.projects-row::-webkit-scrollbar { display: none; }
 
 .project-card {
   scroll-snap-align: start;
@@ -705,18 +700,17 @@ html[data-theme="light"] .projects-tabs {
   display: flex;
   flex-direction: column;
 }
-
 .project-card:hover {
   transform: translateY(-4px);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.04));
 }
 
+/* Image du projet */
 .project-media {
-  height: 180px;
+  height: 170px;
   background: rgba(255, 255, 255, 0.05);
   border-bottom: 1px solid var(--stroke);
 }
-
 .project-media img {
   width: 100%;
   height: 100%;
@@ -724,43 +718,31 @@ html[data-theme="light"] .projects-tabs {
   display: block;
 }
 
-/* body */
+/* Corps de la carte */
 .project-body {
-  padding: 18px 18px 16px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
-  flex: 1;
+  flex: 1; /* Prend tout l'espace disponible */
 }
 
-.project-title {
-  font-size: 18px;
-  font-weight: 950;
-  line-height: 1.25;
-  margin-bottom: 8px;
-}
+.project-title { font-size: 18px; font-weight: 950; line-height: 1.25; margin-bottom: 8px; }
+.project-meta { color: var(--muted); font-weight: 800; font-size: 13px; margin-bottom: 12px; }
 
-.project-meta {
-  color: var(--muted);
-  font-weight: 800;
-  font-size: 13px;
-  margin-bottom: 12px;
-}
-
+/* FIX ALIGNEMENT CARTES :
+   flex: 1 fait grandir la description pour remplir l'espace.
+   Résultat → le bouton GitHub et les tags sont toujours
+   au même niveau sur toutes les cartes, quelle que soit
+   la longueur du texte */
 .project-desc {
+  flex: 1;
   color: var(--muted);
   line-height: 1.75;
 }
 
-/* footer stable */
-.project-footer {
-  margin-top: auto;
-  padding-top: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
+/* Bouton GitHub — espace au-dessus après la description */
 .project-actions {
+  margin-top: 16px;
   display: flex;
   justify-content: flex-end;
 }
@@ -782,13 +764,11 @@ html[data-theme="light"] .projects-tabs {
   text-decoration: none;
   transition: 0.2s;
 }
+.project-btn:hover { transform: translateY(-1px); background: rgba(255, 255, 255, 0.1); }
 
-.project-btn:hover {
-  transform: translateY(-1px);
-  background: rgba(255, 255, 255, 0.1);
-}
-
+/* Tags — espace constant au-dessus (après GitHub ou après desc) */
 .project-tags {
+  margin-top: 14px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -805,18 +785,13 @@ html[data-theme="light"] .projects-tabs {
   font-size: 12px;
   color: var(--text);
 }
-
 html[data-theme="light"] .project-tags .tag {
   background: rgba(0, 0, 0, 0.04);
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.projects-arrows {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  margin-top: 10px;
-}
+/* Boutons ‹ › — cachés sur mobile */
+.projects-arrows { display: none; }
 
 .arrow-btn {
   width: 44px;
@@ -829,42 +804,27 @@ html[data-theme="light"] .project-tags .tag {
   font-size: 22px;
   font-weight: 900;
   transition: 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
+.arrow-btn:hover { background: var(--panel-2); transform: translateY(-1px); }
 
-.arrow-btn:hover {
-  background: var(--panel-2);
-  transform: translateY(-1px);
-}
-
-/* =========================
-   CONTACT
-========================= */
-.contact {
-  padding: 100px 0;
-}
-
-.contact-head {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.contact-subtitle {
-  color: var(--muted);
-  margin-top: 10px;
-  line-height: 1.7;
-}
+/* ===================
+   CONTACT — Mobile (1 colonne)
+=================== */
+.contact { padding: 80px 0; }
+.contact-head { text-align: center; margin-bottom: 40px; }
+.contact-subtitle { color: var(--muted); margin-top: 10px; line-height: 1.7; }
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 34px;
+  grid-template-columns: 1fr;
+  gap: 22px;
   align-items: center;
 }
 
-.contact-visual {
-  display: flex;
-  justify-content: center;
-}
+.contact-visual { display: flex; justify-content: center; }
 
 .contact-image-wrap {
   width: min(420px, 100%);
@@ -875,11 +835,13 @@ html[data-theme="light"] .project-tags .tag {
   box-shadow: var(--shadow);
 }
 
+/* FIX BORDER-RADIUS — image contact suit le cadre */
 .contact-image-wrap img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: var(--radius);
+  border-radius: calc(var(--radius) + 6px - 18px); /* = 10px */
+  object-fit: cover;
 }
 
 .contact-card {
@@ -887,39 +849,28 @@ html[data-theme="light"] .project-tags .tag {
   border: 1px solid var(--stroke);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
   box-shadow: var(--shadow);
-  padding: 30px;
+  padding: 22px;
 }
 
-.contact-card-title {
-  font-size: 34px;
-  font-weight: 900;
-  margin-bottom: 8px;
-}
-
-.contact-card-subtitle {
-  color: var(--muted);
-  margin-bottom: 28px;
-}
-
-.contact-list {
-  display: grid;
-  gap: 18px;
-}
+.contact-card-title { font-size: 24px; font-weight: 900; margin-bottom: 8px; }
+.contact-card-subtitle { color: var(--muted); margin-bottom: 28px; }
+.contact-list { display: grid; gap: 18px; }
 
 .contact-item {
   display: flex;
-  align-items: flex-start;
-  gap: 16px;
+  align-items: center;
+  gap: 12px;
 }
 
 .contact-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 16px;
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1;
   font-weight: 800;
   border: 1px solid var(--stroke);
@@ -927,607 +878,150 @@ html[data-theme="light"] .project-tags .tag {
   flex-shrink: 0;
 }
 
-.contact-text {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  min-width: 0;
-}
-
-.contact-label {
-  color: var(--muted);
-  font-size: 14px;
-  font-weight: 700;
-}
-
+.contact-text { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.contact-label { color: var(--muted); font-size: 14px; font-weight: 700; }
 .contact-link {
   color: var(--text);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 900;
   text-decoration: none;
   word-break: break-word;
+  line-height: 1.45;
   transition: 0.2s;
 }
+.contact-link:hover { color: var(--accent); }
 
-.contact-link:hover {
-  color: var(--accent);
-}
+/* ================================================================
+   5. TABLETTE (min-width: 640px)
+================================================================ */
+@media (min-width: 640px) {
+  :root { --page-pad: 18px; }
 
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 900px) {
-  :root {
-    --page-pad: 20px;
-    --nav-h: 74px;
-  }
-
-  .topbar {
-    padding: 12px 0;
-  }
-
-  .container {
-    width: min(100% - 24px, 1180px);
-    margin-inline: auto;
-  }
-
-  .nav {
-    gap: 10px;
-    align-items: center;
-  }
-
-  .brand {
-    font-size: 18px;
-    flex: 0 0 auto;
-    margin-right: auto;
-  }
-
-  .links {
-    display: none;
-  }
-
-  .burger {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .actions {
-    margin-left: 0;
-    gap: 8px;
-    align-items: center;
-    flex: 0 0 auto;
-  }
-
-  .actions .pill-cta {
-    display: none;
-  }
-
-  .icon-btn,
-  .pill-btn,
-  .burger {
-    width: 42px;
-    height: 42px;
-    min-width: 42px;
-    flex-shrink: 0;
-  }
-
-  .pill-btn {
-    padding: 0;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .hero {
-    padding-top: 28px;
-    padding-bottom: 26px;
-  }
-
-  .hero-grid,
-  .about-grid,
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-grid {
-    gap: 22px;
-  }
-
-  .about-grid {
-    gap: 26px;
-    text-align: center;
-  }
-
-  .contact-grid {
-    gap: 24px;
-  }
-
-  .avatar-wrap,
-  .about-image,
-  .contact-image-wrap,
-  .contact-card,
-  .projects-banner,
-  .skill-card {
-    width: 100%;
-    margin-inline: auto;
-  }
-
-  .about-text {
-    margin-inline: auto;
-  }
-
-  .about-stats {
-    justify-content: center;
-  }
-
-  .projects {
-    padding: 80px 0;
-  }
-
-  .projects-tabs {
-    width: 100%;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-
-  .projects-tabs::-webkit-scrollbar {
-    display: none;
-  }
-
-  .tab {
-    flex: 0 0 auto;
-  }
-
-  .projects-row {
-    grid-auto-columns: minmax(320px, 88%);
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .projects-arrows {
-    display: none;
-  }
-
-  .contact {
-    padding: 80px 0;
-  }
-
-  .contact-card {
-    padding: 24px;
-  }
-
-  .contact-card-title {
-    font-size: 28px;
-  }
-
-  .contact-image-wrap {
-    max-width: 380px;
-  }
-
-  .contact-item {
-    align-items: center;
-  }
-
-  .contact-text {
-    min-width: 0;
-  }
-
-  .contact-link {
-    word-break: break-word;
-  }
-}
-
-@media (max-width: 520px) {
-  :root {
-    --page-pad: 18px;
-  }
-
-  main,
-  section {
-    padding-left: var(--page-pad);
-    padding-right: var(--page-pad);
-  }
-
-  .container {
-    width: 100%;
-  }
-
-  .brand {
-    font-size: 16px;
-    max-width: 105px;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-
-  .nav {
-    gap: 8px;
-  }
-
-  .actions {
-    gap: 8px;
-  }
-
-  .icon-btn,
-  .pill-btn,
-  .burger {
-    width: 40px;
-    height: 40px;
-    min-width: 40px;
-  }
-
-  .hero-title {
-    font-size: clamp(28px, 8vw, 40px);
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .btn {
-    width: 100%;
-  }
-
-  .skills {
-    padding: 80px var(--page-pad);
-  }
-
+  /* Skills : 2 colonnes */
   .skills-grid {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-  .skill-card {
-    padding: 22px;
-    border-radius: 18px;
-  }
-
-  .skills-subtitle {
-    margin-bottom: 34px;
-  }
-
-  .projects-title-row {
-    align-items: flex-start;
-  }
-
-  .projects-row {
-    grid-auto-columns: calc(100vw - (var(--page-pad) * 2) - 6px);
-    gap: 16px;
-  }
-
-  .project-media {
-    height: 170px;
-  }
-
-  .project-body {
-    padding: 16px;
-  }
-
-  .contact-card,
-  .contact-image-wrap {
-    border-radius: 20px;
-  }
-
-  .contact-card {
-    padding: 20px;
-  }
-
-  .contact-item {
-    gap: 12px;
-  }
-
-  .contact-icon {
-    width: 46px;
-    height: 46px;
-    min-width: 46px;
-    font-size: 18px;
-    border-radius: 14px;
-  }
-
-  .contact-card-title {
-    font-size: 24px;
-  }
-
-  .contact-link {
-    font-size: 15px;
-    line-height: 1.45;
-  }
-
-  .mobile-menu {
-    padding: 80px 16px 20px;
-  }
-
-  .mobile-card {
-    width: 100%;
-  }
-}
-
-@media (max-width: 420px) {
-  :root {
-    --page-pad: 16px;
-  }
-
-  .brand {
-    font-size: 15px;
-    max-width: 92px;
-  }
-
-  .hero-title {
-    font-size: 26px;
-  }
-
-  .projects-row {
-    grid-auto-columns: calc(100vw - (var(--page-pad) * 2));
-  }
-
-  .contact-card,
-  .project-body,
-  .skill-card {
-    padding: 18px;
-  }
-}
-
-/* =================================
-   MOBILE FIX FINAL
-================================= */
-@media (max-width: 768px) {
-  :root {
-    --page-pad: 18px;
-  }
-
-  body {
-    overflow-x: hidden;
-  }
-
-  main,
-  section {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .container {
-    width: calc(100% - 32px);
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* Header */
-  .topbar {
-    padding: 14px 0;
-  }
-
-  .nav {
-    gap: 8px;
-  }
-
-  .brand {
-    font-size: 17px;
-    max-width: 110px;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-
-  .actions {
-    gap: 8px;
-  }
-
-  .icon-btn,
-  .pill-btn,
-  .burger {
-    width: 42px;
-    height: 42px;
-    min-width: 42px;
-    flex-shrink: 0;
-  }
-
-  .pill-btn {
-    padding: 0;
-    font-size: 14px;
-  }
-
-  /* Hero */
-  .hero {
-    padding-top: 22px;
-    padding-bottom: 30px;
-  }
-
-  .hero-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
+  .skill-card { padding: 26px; border-radius: 20px; }
 
-  .hero-left,
-  .hero-right {
-    width: 100%;
+  /* Boutons hero côte à côte */
+  .hero-buttons { flex-direction: row; flex-wrap: wrap; }
+  .btn { width: auto; }
+
+  .hero-title { font-size: clamp(30px, 6vw, 48px); }
+
+  .projects-row { grid-auto-columns: minmax(320px, 88%); }
+}
+
+/* ================================================================
+   6. TABLETTE LARGE (min-width: 768px)
+================================================================ */
+@media (min-width: 768px) {
+  :root {
+    --nav-h: 80px;
+    --page-pad: 20px;
   }
 
-  .hero-title {
-    font-size: clamp(28px, 8vw, 42px);
-    line-height: 1.08;
+  .topbar { padding: 16px 0; }
+  .brand { font-size: 18px; max-width: none; }
+
+  /* Contact : 2 colonnes */
+  .contact-grid { grid-template-columns: 0.9fr 1.1fr; gap: 34px; }
+  .contact-card { padding: 30px; }
+  .contact-card-title { font-size: 28px; }
+  .contact-item { align-items: flex-start; }
+  .contact-icon { width: 52px; height: 52px; font-size: 20px; border-radius: 16px; }
+  .contact-link { font-size: 16px; }
+
+  .projects-row { grid-auto-columns: minmax(340px, 420px); }
+  .about { padding-top: 90px; padding-bottom: 90px; }
+  .contact { padding: 100px 0; }
+  .skills-subtitle { margin-bottom: 60px; }
+}
+
+/* ================================================================
+   7. DESKTOP (min-width: 1024px)
+   Navigation complète + 2 colonnes pour hero/about/contact
+================================================================ */
+@media (min-width: 1024px) {
+  :root {
+    --nav-h: 86px;
+    --page-pad: 18px;
   }
 
-  .hero-desc {
-    max-width: 100%;
-    line-height: 1.75;
+  .topbar { padding: 18px 0; }
+  .brand { font-size: 20px; }
+
+  /* Afficher les liens desktop */
+  .links {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--stroke);
+    background: rgba(0, 0, 0, 0.18);
+    box-shadow: var(--shadow);
+  }
+  html[data-theme="light"] .links { background: rgba(255, 255, 255, 0.65); }
+
+  /* Cacher le burger */
+  .burger { display: none; }
+
+  /* Afficher le CTA */
+  .actions .pill-cta { display: inline-flex; }
+
+  .icon-btn, .pill-btn {
+    width: 42px;
+    height: 42px;
   }
 
-  .hero-buttons {
-    flex-direction: column;
-    gap: 12px;
+  /* Hero : 2 colonnes */
+  .hero {
+    padding-top: calc(var(--nav-h) - 10px);
+    padding-bottom: 40px;
   }
+  .hero-grid { grid-template-columns: 1.15fr 0.85fr; gap: 44px; }
+  .hero-title { font-size: clamp(32px, 4.4vw, 58px); line-height: 1.05; }
+  .hero-desc { max-width: 70ch; }
+  .avatar-wrap { width: min(380px, 100%); margin-left: auto; }
 
-  .hero-buttons .btn {
-    width: 100%;
-  }
+  /* About : 2 colonnes */
+  .about-grid { grid-template-columns: 1fr 1fr; gap: 60px; text-align: left; }
+  .about-text { max-width: 520px; }
+  .about-stats { justify-content: flex-start; gap: 40px; }
+  /* Même largeur max que le hero pour que les deux carrés soient identiques */
+  .about-image { width: min(380px, 100%); margin-right: auto; }
+  .about-image img { max-width: 100%; }
 
-  .avatar-wrap {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-  }
-
-  /* About */
-  .about {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
-
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 22px;
-    text-align: center;
-  }
-
-  .about-image,
-  .about-text {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-  }
-
-  .about-stats {
-    justify-content: center;
-    gap: 24px;
-  }
-
-  /* Skills */
-  .skills {
-    padding: 80px 0;
-  }
-
-  .skills-grid {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-  .skill-card {
-    padding: 22px;
-  }
+  /* Skills : grille auto */
+  .skills { padding: 100px var(--page-pad); }
+  .skills-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+  .skill-card { padding: 30px; border-radius: 20px; }
 
   /* Projects */
-  .projects {
-    padding: 80px 0;
-  }
+  .projects { padding: 100px 0; }
+  .projects-title-row { align-items: flex-end; }
+  .projects-tabs { width: auto; overflow-x: visible; flex-wrap: nowrap; }
+  .projects-group-title { font-size: 20px; }
 
-  .projects-head {
-    margin-bottom: 18px;
-  }
-
-  .projects-title-row {
-    gap: 14px;
-  }
-
-  .projects-tabs {
-    width: 100%;
-    justify-content: flex-start;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    padding: 10px;
-    scrollbar-width: none;
-  }
-
-  .projects-tabs::-webkit-scrollbar {
-    display: none;
-  }
-
-  .tab {
-    flex: 0 0 auto;
-  }
-
-  .projects-row {
-    grid-auto-columns: calc(100vw - 56px);
-    gap: 16px;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .projects-banner,
-  .project-card,
-  .contact-card,
-  .contact-image-wrap,
-  .avatar-wrap,
-  .about-image,
-  .skill-card {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .project-media {
-    height: 170px;
-  }
-
-  .project-body {
-    padding: 16px;
-  }
-
+  /* Afficher les boutons ‹ › sur desktop */
   .projects-arrows {
-    display: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
   }
 
   /* Contact */
-  .contact {
-    padding: 80px 0;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 22px;
-  }
-
-  .contact-card {
-    padding: 22px;
-  }
-
-  .contact-item {
-    gap: 12px;
-  }
-
-  .contact-icon {
-    width: 46px;
-    height: 46px;
-    min-width: 46px;
-    font-size: 18px;
-  }
-
-  .contact-link {
-    font-size: 15px;
-    line-height: 1.45;
-  }
+  .contact-card-title { font-size: 34px; }
 }
 
-/* Très petits écrans */
-@media (max-width: 420px) {
+/* ================================================================
+   8. GRAND ÉCRAN (min-width: 1200px)
+================================================================ */
+@media (min-width: 1200px) {
   .container {
-    width: calc(100% - 24px);
-  }
-
-  .brand {
-    max-width: 95px;
-    font-size: 16px;
-  }
-
-  .icon-btn,
-  .pill-btn,
-  .burger {
-    width: 40px;
-    height: 40px;
-    min-width: 40px;
-  }
-
-  .hero-title {
-    font-size: 26px;
-  }
-
-  .projects-row {
-    grid-auto-columns: calc(100vw - 40px);
-  }
-
-  .contact-card,
-  .project-body,
-  .skill-card {
-    padding: 18px;
+    width: min(var(--container-max), calc(100% - 48px));
   }
 }
