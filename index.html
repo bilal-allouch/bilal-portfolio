@@ -8,14 +8,13 @@
   <title>Bilal Allouch | Ingénieur informatique — Alternance 2026</title>
 
   <meta name="description"
-    content="Portfolio de Bilal Allouch, étudiant en ingénierie informatique au CESI à Rouen. Actuellement stagiaire XR & Digital Twin Engineering au CESI LINEACT sur le projet VLF4EU. Recherche une alternance de 3 ans à partir d'octobre 2026 en développement logiciel et systèmes informatiques." />
+    content="Portfolio de Bilal Allouch, étudiant ingénieur informatique au CESI Rouen. Stagiaire XR & Digital Twin Engineering au CESI LINEACT. Recherche une alternance de 3 ans à partir de septembre 2026." />
   <meta name="author" content="Bilal Allouch" />
   <meta name="keywords"
     content="alternance informatique, ingénieur informatique, développement logiciel, systèmes informatiques, XR, Digital Twin, OPC UA, Unity, CESI, Rouen, portfolio" />
 
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
 
-  <!-- PRELOAD : charge l'image hero en priorité absolue pour le score LCP -->
   <link rel="preload" as="image" href="assets/img/bilal-avatar.webp" type="image/webp" />
 
   <link rel="stylesheet" href="assets/css/style.css" />
@@ -32,10 +31,10 @@
 
 <body>
 
-  <!-- Skip link — Accessibilité clavier -->
+  <!-- Skip link -->
   <a class="skip-link" href="#main-content">Aller au contenu principal</a>
 
-  <!-- NAVBAR -->
+  <!-- ======== NAVBAR ======== -->
   <header class="topbar" role="banner">
     <div class="nav container">
       <a class="brand" href="#home" aria-label="Bilal Allouch — Retour à l'accueil">
@@ -50,22 +49,23 @@
       </button>
 
       <nav class="links" id="desktop-nav" aria-label="Navigation principale">
-        <a class="link is-active" href="#home" data-i18n="home">Accueil</a>
-        <a class="link" href="#about" data-i18n="about">À propos</a>
-        <a class="link" href="#skills" data-i18n="skills">Compétences</a>
-        <a class="link" href="#projects" data-i18n="projects">Projets</a>
-        <a class="link" href="#contact" data-i18n="contact">Contact</a>
+        <a class="link is-active" href="#home"       data-i18n="home">Accueil</a>
+        <a class="link"           href="#about"      data-i18n="about">À propos</a>
+        <a class="link"           href="#experience" data-i18n="experience">Expérience</a>
+        <a class="link"           href="#skills"     data-i18n="skills">Compétences</a>
+        <a class="link"           href="#projects"   data-i18n="projects">Projets</a>
+        <a class="link"           href="#contact"    data-i18n="contact">Contact</a>
       </nav>
 
       <div class="actions" role="group" aria-label="Paramètres et contact">
         <button class="icon-btn" id="theme-btn" aria-label="Basculer thème clair/sombre" type="button">☀️</button>
-        <button class="pill-btn" id="lang-btn" aria-label="Changer la langue" type="button">EN</button>
+        <button class="pill-btn" id="lang-btn"  aria-label="Changer la langue"            type="button">EN</button>
         <a class="pill-cta" href="#contact" data-i18n="hire">Me contacter</a>
       </div>
     </div>
   </header>
 
-  <!-- MENU MOBILE -->
+  <!-- ======== MENU MOBILE ======== -->
   <div class="mobile-menu" id="mobile-menu" aria-hidden="true"
     role="dialog" aria-label="Menu de navigation mobile">
     <div class="mobile-card">
@@ -74,24 +74,25 @@
 
         <div class="mobile-actions">
           <button class="icon-btn" id="theme-btn-m" aria-label="Basculer le thème" type="button">☀️</button>
-          <button class="pill-btn" id="lang-btn-m" aria-label="Changer la langue" type="button">EN</button>
-          <button class="close-btn" id="close-menu" aria-label="Fermer le menu" type="button">✕</button>
+          <button class="pill-btn" id="lang-btn-m"  aria-label="Changer la langue" type="button">EN</button>
+          <button class="close-btn" id="close-menu" aria-label="Fermer le menu"    type="button">✕</button>
         </div>
       </div>
 
       <nav class="mobile-links" aria-label="Navigation mobile">
-        <a class="m-link" href="#home" data-i18n="home">Accueil</a>
-        <a class="m-link" href="#about" data-i18n="about">À propos</a>
-        <a class="m-link" href="#skills" data-i18n="skills">Compétences</a>
-        <a class="m-link" href="#projects" data-i18n="projects">Projets</a>
-        <a class="m-link" href="#contact" data-i18n="contact">Contact</a>
+        <a class="m-link" href="#home"       data-i18n="home">Accueil</a>
+        <a class="m-link" href="#about"      data-i18n="about">À propos</a>
+        <a class="m-link" href="#experience" data-i18n="experience">Expérience</a>
+        <a class="m-link" href="#skills"     data-i18n="skills">Compétences</a>
+        <a class="m-link" href="#projects"   data-i18n="projects">Projets</a>
+        <a class="m-link" href="#contact"    data-i18n="contact">Contact</a>
       </nav>
 
       <a class="mobile-cta" href="#contact" data-i18n="hire">Me contacter</a>
     </div>
   </div>
 
-  <!-- CONTENU PRINCIPAL -->
+  <!-- ======== CONTENU PRINCIPAL ======== -->
   <main id="main-content">
 
     <!-- ======== HERO ======== -->
@@ -119,11 +120,11 @@
           </h1>
 
           <p class="hero-desc">
-            <span data-i18n="descriptionStart">Étudiant en ingénierie informatique au CESI à Rouen, je suis actuellement </span>
-            <strong class="highlight" data-i18n="descriptionStrong1">stagiaire XR & Digital Twin Engineering au CESI LINEACT</strong>
-            <span data-i18n="descriptionMiddle"> sur le projet VLF4EU, où je travaille sur le développement d'un jumeau numérique sous Unity, la communication industrielle OPC UA et l'intégration d'architectures distribuées. Je recherche désormais une </span>
-            <strong class="highlight" data-i18n="descriptionStrong2">alternance de 3 ans à partir d'octobre 2026</strong>
-            <span data-i18n="descriptionEnd"> dans le domaine du développement logiciel et des systèmes informatiques.</span>
+            <span data-i18n="descriptionStart">Étudiant ingénieur informatique au CESI Rouen — actuellement </span>
+            <strong class="highlight" data-i18n="descriptionStrong1">stagiaire XR &amp; Digital Twin Engineering au CESI LINEACT</strong>
+            <span data-i18n="descriptionMiddle"> sur le projet VLF4EU. Je recherche une </span>
+            <strong class="highlight" data-i18n="descriptionStrong2">alternance de 3 ans à partir de septembre 2026</strong>
+            <span data-i18n="descriptionEnd"> en développement logiciel et systèmes informatiques.</span>
           </p>
 
           <div class="hero-buttons">
@@ -138,7 +139,6 @@
           </div>
         </div>
 
-        <!-- Photo hero : eager + fetchpriority pour le LCP — PAS de lazy -->
         <div class="hero-right" aria-hidden="true">
           <div class="avatar-wrap">
             <img
@@ -174,28 +174,77 @@
           </h2>
 
           <p class="about-text" data-i18n="aboutDescription">
-            Je suis étudiant en ingénierie informatique au CESI à Rouen, actuellement en deuxième année du cycle préparatoire. Passionné par le développement logiciel, les systèmes informatiques et les nouvelles technologies, j'ai réalisé plusieurs projets techniques dans différents domaines comme le développement web, les réseaux, les bases de données, les systèmes embarqués et la programmation.
-          </p>
-
-          <p class="about-text" data-i18n="internshipExperience">
-            Je suis actuellement stagiaire XR & Digital Twin Engineering au CESI LINEACT dans le cadre du projet VLF4EU. Mon stage consiste à développer un jumeau numérique sous Unity, implémenter une communication industrielle OPC UA avec synchronisation temps réel, intégrer des architectures distribuées avec Docker, API et asyncua, et concevoir des systèmes interconnectés temps réel entre environnement physique et virtuel. Je recherche maintenant une alternance de 3 ans à partir d'octobre 2026.
+            Étudiant ingénieur en informatique au CESI Rouen, je maîtrise un large spectre technique : développement logiciel (C/C++, Python, C#), architectures distribuées, réseaux &amp; systèmes, et simulation temps réel (Unity, OPC UA). Actuellement en stage XR &amp; Digital Twin Engineering au CESI LINEACT sur le projet VLF4EU, je recherche une alternance de 3 ans à partir de septembre 2026.
           </p>
 
           <div class="about-stats" role="list">
             <div class="stat" role="listitem">
-              <h3>4+</h3>
+              <h3>2+</h3>
               <p data-i18n="education">Années d'étude</p>
             </div>
 
             <div class="stat" role="listitem">
-              <h3>3+</h3>
-              <p data-i18n="experience">Année d'expérience</p>
+              <h3>1+</h3>
+              <p data-i18n="expStat">Année d'expérience</p>
             </div>
 
             <div class="stat" role="listitem">
               <h3>10+</h3>
               <p data-i18n="projectsDone">Projets réalisés</p>
             </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======== EXPERIENCE ======== -->
+    <section class="experience" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+
+        <h2 class="section-title center" id="experience-title">
+          <span data-i18n="experienceTitle">Expérience</span>
+        </h2>
+
+        <p class="experience-subtitle" data-i18n="experienceSubtitle">
+          Mon parcours professionnel.
+        </p>
+
+        <div class="experience-timeline">
+          <div class="experience-card">
+
+            <div class="experience-header">
+              <div class="experience-icon" aria-hidden="true">💻</div>
+              <div class="experience-meta">
+                <h3 class="experience-role" data-i18n="expRole">
+                  Stagiaire — XR &amp; Digital Twin Engineering
+                </h3>
+                <p class="experience-company" data-i18n="expCompany">
+                  CESI LINEACT — Projet VLF4EU
+                </p>
+                <span class="experience-period" data-i18n="expPeriod">
+                  2026 — En cours (fin prévue : 31/07/2026)
+                </span>
+              </div>
+            </div>
+
+            <ul class="experience-missions" aria-label="Missions">
+              <li data-i18n="expMission1">Refactoring et restructuration d'une architecture logicielle Unity vers un design modulaire et extensible</li>
+              <li data-i18n="expMission2">Conception et intégration de composants temps réel au sein d'un système de jumeau numérique XR</li>
+              <li data-i18n="expMission3">Contribution au déploiement d'une architecture distribuée en environnement industriel (Docker, API REST, OPC UA)</li>
+            </ul>
+
+            <div class="experience-tags">
+              <span class="tag">Unity</span>
+              <span class="tag">C#</span>
+              <span class="tag">OPC UA</span>
+              <span class="tag">Docker</span>
+              <span class="tag">API REST</span>
+              <span class="tag">Digital Twin</span>
+              <span class="tag">XR</span>
+              <span class="tag">asyncua</span>
+            </div>
+
           </div>
         </div>
 
@@ -215,91 +264,88 @@
 
         <div class="skills-grid">
 
+          <!-- 1. Langages -->
           <div class="skill-card">
-            <h3 data-i18n="programming">Programmation</h3>
+            <h3 data-i18n="programming">Langages</h3>
             <div class="chips">
-              <span class="chip">C</span>
-              <span class="chip">C++</span>
+              <span class="chip">C/C++</span>
               <span class="chip">C#</span>
               <span class="chip">Python</span>
-              <span class="chip">PHP</span>
+              <span class="chip">Java</span>
               <span class="chip">JavaScript</span>
-              <span class="chip">SQL</span>
-              <span class="chip" data-i18n="tagOOP">POO</span>
-              <span class="chip" data-i18n="tagDataStructures">Structures de données</span>
-              <span class="chip" data-i18n="tagAlgorithms">Algorithmes</span>
+              <span class="chip">PHP</span>
             </div>
           </div>
 
+          <!-- 2. Développement logiciel -->
+          <div class="skill-card">
+            <h3 data-i18n="softdev">Développement logiciel</h3>
+            <div class="chips">
+              <span class="chip" data-i18n="tagOOP">POO</span>
+              <span class="chip" data-i18n="tagMVC">Architecture MVC</span>
+              <span class="chip" data-i18n="tagAPI">API REST</span>
+              <span class="chip" data-i18n="tagDistributed">Systèmes distribués</span>
+              <span class="chip" data-i18n="tagRefactoring">Refactoring</span>
+            </div>
+          </div>
+
+          <!-- 3. Développement Web -->
           <div class="skill-card">
             <h3 data-i18n="webdev">Développement Web</h3>
             <div class="chips">
               <span class="chip">HTML5</span>
               <span class="chip">CSS3</span>
-              <span class="chip">JavaScript</span>
-              <span class="chip">PHP</span>
-              <span class="chip">MVC</span>
-              <span class="chip" data-i18n="tagResponsive">Responsive</span>
-              <span class="chip">REST</span>
+              <span class="chip" data-i18n="tagResponsive">Responsive Design</span>
             </div>
           </div>
 
+          <!-- 4. Bases de données -->
           <div class="skill-card">
             <h3 data-i18n="databases">Bases de données</h3>
             <div class="chips">
-              <span class="chip">MySQL</span>
               <span class="chip">PostgreSQL</span>
+              <span class="chip">MySQL</span>
               <span class="chip">SQLite</span>
+              <span class="chip">MS SQL Server</span>
               <span class="chip">MongoDB</span>
-              <span class="chip" data-i18n="tagSqlQueries">Requêtes SQL</span>
             </div>
           </div>
 
+          <!-- 5. Systèmes & Réseaux -->
           <div class="skill-card">
-            <h3 data-i18n="networks">Réseaux & Systèmes</h3>
+            <h3 data-i18n="networks">Systèmes &amp; Réseaux</h3>
             <div class="chips">
+              <span class="chip">Linux (Ubuntu)</span>
+              <span class="chip">Bash</span>
               <span class="chip">TCP/IP</span>
               <span class="chip">VLAN</span>
               <span class="chip">DHCP</span>
               <span class="chip">DNS</span>
-              <span class="chip">NAT/PAT</span>
-              <span class="chip">Linux</span>
-              <span class="chip">Bash</span>
+              <span class="chip">IPv6</span>
             </div>
           </div>
 
+          <!-- 6. Simulation & Temps réel -->
           <div class="skill-card">
-            <h3 data-i18n="embedded">Systèmes embarqués</h3>
+            <h3 data-i18n="simulation">Simulation &amp; Temps réel</h3>
             <div class="chips">
-              <span class="chip">Arduino</span>
-              <span class="chip">ATmega328</span>
-              <span class="chip" data-i18n="tagSensors">Capteurs</span>
-              <span class="chip">UART</span>
-              <span class="chip">I2C</span>
-              <span class="chip">SPI</span>
+              <span class="chip">Unity (XR)</span>
+              <span class="chip">Digital Twin</span>
+              <span class="chip">OPC UA</span>
+              <span class="chip">asyncua</span>
             </div>
           </div>
 
+          <!-- 7. Outils -->
           <div class="skill-card">
             <h3 data-i18n="tools">Outils</h3>
             <div class="chips">
               <span class="chip">Git</span>
               <span class="chip">GitHub</span>
+              <span class="chip">GitLab (CI/CD)</span>
+              <span class="chip">Docker</span>
+              <span class="chip">Visual Studio</span>
               <span class="chip">VS Code</span>
-              <span class="chip">VirtualBox</span>
-              <span class="chip">Wireshark</span>
-              <span class="chip">Packet Tracer</span>
-            </div>
-          </div>
-
-          <div class="skill-card">
-            <h3 data-i18n="teamwork">Travail en équipe</h3>
-            <div class="chips">
-              <span class="chip" data-i18n="tagCollaboration">Collaboration</span>
-              <span class="chip" data-i18n="tagCommunication">Communication</span>
-              <span class="chip" data-i18n="tagOrganization">Organisation</span>
-              <span class="chip" data-i18n="tagProblemSolving">Problem Solving</span>
-              <span class="chip" data-i18n="tagTeamwork">Travail en groupe</span>
             </div>
           </div>
 
@@ -321,16 +367,20 @@
 
             <div class="projects-tabs" role="tablist" aria-label="Filtrer les projets">
               <button class="tab is-active" type="button" role="tab"
-                data-project-tab="a1" aria-selected="true" aria-controls="group-a1"
+                data-project-tab="dist" aria-selected="true" aria-controls="group-dist"
+                data-i18n="projectsTabDist">DIST</button>
+
+              <button class="tab" type="button" role="tab"
+                data-project-tab="indi" aria-selected="false" aria-controls="group-indi"
+                data-i18n="projectsTabIndi">INDI</button>
+
+              <button class="tab" type="button" role="tab"
+                data-project-tab="a1" aria-selected="false" aria-controls="group-a1"
                 data-i18n="projectsTabA1">A1</button>
 
               <button class="tab" type="button" role="tab"
                 data-project-tab="a2" aria-selected="false" aria-controls="group-a2"
                 data-i18n="projectsTabA2">A2</button>
-
-              <button class="tab" type="button" role="tab"
-                data-project-tab="indi" aria-selected="false" aria-controls="group-indi"
-                data-i18n="projectsTabIndi">INDI</button>
             </div>
           </div>
 
@@ -339,8 +389,129 @@
           </p>
         </div>
 
-        <!-- GROUPE A1 -->
-        <div class="projects-group is-active" id="group-a1" data-project-group="a1" role="tabpanel">
+        <!-- ===== GROUPE DIST ===== -->
+        <div class="projects-group" id="group-dist" data-project-group="dist" role="tabpanel">
+          <div class="projects-banner">
+            <h3 class="projects-group-title" data-i18n="distTitle">Projet Distinctif — Hackathon</h3>
+            <p class="projects-group-desc" data-i18n="distDesc">Projets réalisés lors d'un hackathon sur des problématiques réelles.</p>
+          </div>
+
+          <div class="projects-row" data-project-row="dist" role="list" aria-label="Projets Distinctifs">
+
+            <!-- EcoPrompt -->
+            <article class="project-card" role="listitem">
+              <div class="project-media">
+                <!-- Image à placer : assets/img/projects/dist/ecoprompt.jpg -->
+                <img src="assets/img/projects/dist/ecoprompt.jpg"
+                  alt="EcoPrompt — Analyse impact environnemental IA"
+                  width="400" height="170" />
+              </div>
+
+              <div class="project-body">
+                <h4 class="project-title" data-i18n="pDistEcoPromptTitle">EcoPrompt — Impact environnemental de l'IA</h4>
+                <p class="project-meta" data-i18n="pDistEcoPromptMeta">HTML / CSS / JavaScript</p>
+                <p class="project-desc" data-i18n="pDistEcoPromptDesc">Outil web développé lors du Hackathon Hack4Good/ADEME pour analyser l'impact énergétique et environnemental des prompts envoyés aux modèles d'IA.</p>
+
+                <div class="project-actions">
+                  <a class="project-btn" href="https://github.com/bilal-allouch/HACK4GOOD"
+                    target="_blank" rel="noopener noreferrer" aria-label="Code source sur GitHub">GitHub</a>
+                </div>
+
+                <div class="project-tags">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">Hackathon</span>
+                  <span class="tag">CO₂</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- NeuroChat -->
+            <article class="project-card" role="listitem">
+              <div class="project-media">
+                <!-- Image à placer : assets/img/projects/dist/neurochat.jpg -->
+                <img src="assets/img/projects/dist/neurochat.jpg"
+                  alt="NeuroChat — Adaptation dynamique de modèle IA"
+                  width="400" height="170" />
+              </div>
+
+              <div class="project-body">
+                <h4 class="project-title" data-i18n="pDistNeuroChatTitle">NeuroChat — Adaptation Dynamique de Modèle d'IA</h4>
+                <p class="project-meta" data-i18n="pDistNeuroChatMeta">Python / Gemini API / CustomTkinter</p>
+                <p class="project-desc" data-i18n="pDistNeuroChatDesc">Assistant conversationnel sélectionnant automatiquement le modèle Gemini optimal selon la complexité du prompt (score 0–100). Moteur d'analyse multi-critères avec fallback automatique.</p>
+
+                <div class="project-actions">
+                  <a class="project-btn" href="https://github.com/Neipee/adaptation-dynamique-de-mod-le-d-ia"
+                    target="_blank" rel="noopener noreferrer" aria-label="Code source sur GitHub">GitHub</a>
+                </div>
+
+                <div class="project-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">Gemini API</span>
+                  <span class="tag">CustomTkinter</span>
+                  <span class="tag">Hackathon</span>
+                  <span class="tag">IA</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+          <div class="projects-arrows" role="group" aria-label="Navigation projets Distinctifs">
+            <button class="arrow-btn" type="button" data-project-prev="dist" aria-label="Précédent">‹</button>
+            <button class="arrow-btn" type="button" data-project-next="dist" aria-label="Suivant">›</button>
+          </div>
+        </div>
+
+        <!-- ===== GROUPE INDI ===== -->
+        <div class="projects-group is-hidden" id="group-indi" data-project-group="indi" role="tabpanel">
+          <div class="projects-banner">
+            <h3 class="projects-group-title" data-i18n="indiTitle">Individuel — Projets personnels</h3>
+            <p class="projects-group-desc" data-i18n="indiDesc">Projets réalisés en autonomie pour progresser et expérimenter.</p>
+          </div>
+
+          <div class="projects-row" data-project-row="indi" role="list" aria-label="Projets individuels">
+
+            <article class="project-card" role="listitem">
+              <div class="project-media">
+                <img src="assets/img/projects/indi/snake.jpg"
+                  alt="Snake C++17 SFML architecture propre"
+                  width="400" height="170" />
+              </div>
+
+              <div class="project-body">
+                <h4 class="project-title" data-i18n="pIndiSnakeTitle">Snake — SFML (C++17) : jeu rétro, architecture propre</h4>
+                <p class="project-meta" data-i18n="pIndiSnakeMeta">C++17 / SFML / Clean Architecture / UML</p>
+                <p class="project-desc" data-i18n="pIndiSnakeDesc">Reproduction moderne du Snake en C++17 avec SFML : boucle de jeu, gestion d'états, collisions, génération de nourriture, score et difficulté progressive. Documenté avec UML et commits structurés.</p>
+
+                <div class="project-actions">
+                  <a class="project-btn" href="https://github.com/bilal-allouch/snake-sfml"
+                    target="_blank" rel="noopener noreferrer" aria-label="Code source sur GitHub">GitHub</a>
+                </div>
+
+                <div class="project-tags">
+                  <span class="tag">C++17</span>
+                  <span class="tag">SFML</span>
+                  <span class="tag">OOP</span>
+                  <span class="tag">Game Loop</span>
+                  <span class="tag">State Machine</span>
+                  <span class="tag">UML</span>
+                  <span class="tag">CMake</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+          <div class="projects-arrows" role="group" aria-label="Navigation projets individuels">
+            <button class="arrow-btn" type="button" data-project-prev="indi" aria-label="Précédent">‹</button>
+            <button class="arrow-btn" type="button" data-project-next="indi" aria-label="Suivant">›</button>
+          </div>
+        </div>
+
+        <!-- ===== GROUPE A1 ===== -->
+        <div class="projects-group is-hidden" id="group-a1" data-project-group="a1" role="tabpanel">
           <div class="projects-banner">
             <h3 class="projects-group-title" data-i18n="a1Title">A1 — Projets académiques (Ingénierie / Sciences)</h3>
             <p class="projects-group-desc" data-i18n="a1Desc">Projets CESI en équipe : électronique, simulation, signal et bases de données.</p>
@@ -354,12 +525,10 @@
                   alt="Prototype Strongbox 3000 — Coffre-fort sécurisé Arduino"
                   width="400" height="170" />
               </div>
-
               <div class="project-body">
                 <h4 class="project-title" data-i18n="pA1StrongboxTitle">Strongbox 3000 — Prototype de coffre-fort sécurisé</h4>
                 <p class="project-meta" data-i18n="pA1StrongboxMeta">Arduino / Logique / Électronique</p>
                 <p class="project-desc" data-i18n="pA1StrongboxDesc">Conception d'un prototype de coffre-fort sécurisé : modélisation logique (tables de vérité, Karnaugh), réalisation d'un circuit de validation, et développement Arduino pour identifier le modèle de carte et gérer l'authentification.</p>
-
                 <div class="project-tags">
                   <span class="tag">Arduino</span>
                   <span class="tag" data-i18n="tagElectronics">Électronique</span>
@@ -375,12 +544,10 @@
                   alt="Simulation numérique Fast & Furious"
                   width="400" height="170" />
               </div>
-
               <div class="project-body">
-                <h4 class="project-title" data-i18n="pA1FastTitle">Fast & Furious — Simulation numérique d'un circuit</h4>
+                <h4 class="project-title" data-i18n="pA1FastTitle">Fast &amp; Furious — Simulation numérique d'un circuit</h4>
                 <p class="project-meta" data-i18n="pA1FastMeta">Python / Jupyter / Modélisation</p>
-                <p class="project-desc" data-i18n="pA1FastDesc">Étude physique d'un circuit (pente, looping, saut) et résolution numérique sous Python : calcul des vitesses minimales, tracés (vitesse, trajectoire), comparaison de modèles et recommandations à partir des résultats.</p>
-
+                <p class="project-desc" data-i18n="pA1FastDesc">Étude physique d'un circuit (pente, looping, saut) et résolution numérique sous Python : calcul des vitesses minimales, tracés, comparaison de modèles et recommandations.</p>
                 <div class="project-tags">
                   <span class="tag">Python</span>
                   <span class="tag">Jupyter</span>
@@ -396,12 +563,10 @@
                   alt="Escape No Game — Signal sonore haute fréquence"
                   width="400" height="170" />
               </div>
-
               <div class="project-body">
                 <h4 class="project-title" data-i18n="pA1EscapeTitle">Escape No Game — Communication discrète par signal sonore</h4>
                 <p class="project-meta" data-i18n="pA1EscapeMeta">Traitement du signal / Jupyter / Simulation</p>
-                <p class="project-desc" data-i18n="pA1EscapeDesc">POC de transmission d'un message via hautes fréquences : définition de la chaîne émission/réception, filtrage et analyse fréquentielle, puis modélisation numérique sous Python (trames, détection d'erreur, reconstruction du message).</p>
-
+                <p class="project-desc" data-i18n="pA1EscapeDesc">POC de transmission d'un message via hautes fréquences : définition de la chaîne émission/réception, filtrage et analyse fréquentielle, puis modélisation numérique sous Python.</p>
                 <div class="project-tags">
                   <span class="tag" data-i18n="tagSignal">Signal</span>
                   <span class="tag">Python</span>
@@ -417,12 +582,10 @@
                   alt="Base de données qualité de l'air"
                   width="400" height="170" />
               </div>
-
               <div class="project-body">
                 <h4 class="project-title" data-i18n="pA1AirTitle">Qualité de l'air — Base de données relationnelle</h4>
                 <p class="project-meta" data-i18n="pA1AirMeta">MySQL / Modélisation / SQL</p>
-                <p class="project-desc" data-i18n="pA1AirDesc">Conception et réalisation d'une base relationnelle pour centraliser des données publiques de capteurs : modélisation MCD/MLD/MPD, peuplement réaliste, requêtes SQL avancées (jointures, agrégats) et gestion des droits (admin/user).</p>
-
+                <p class="project-desc" data-i18n="pA1AirDesc">Conception et réalisation d'une base relationnelle pour centraliser des données publiques de capteurs : modélisation MCD/MLD/MPD, requêtes SQL avancées et gestion des droits.</p>
                 <div class="project-tags">
                   <span class="tag">MySQL</span>
                   <span class="tag">SQL</span>
@@ -440,7 +603,7 @@
           </div>
         </div>
 
-        <!-- GROUPE A2 -->
+        <!-- ===== GROUPE A2 ===== -->
         <div class="projects-group is-hidden" id="group-a2" data-project-group="a2" role="tabpanel">
           <div class="projects-banner">
             <h3 class="projects-group-title" data-i18n="a2Title">A2 — Projets académiques (Développement / Embarqué / Réseau)</h3>
@@ -455,17 +618,14 @@
                   alt="Station météo embarquée Worldwide Weather Watcher"
                   width="400" height="170" />
               </div>
-
               <div class="project-body">
                 <h4 class="project-title" data-i18n="pA2WeatherTitle">Worldwide Weather Watcher — Station météo embarquée</h4>
                 <p class="project-meta" data-i18n="pA2WeatherMeta">Arduino (ATmega328P) / Capteurs / SD / RTC</p>
-                <p class="project-desc" data-i18n="pA2WeatherDesc">Développement d'un prototype de station météo embarquée : acquisition capteurs (BME280 + luminosité), horodatage RTC, enregistrement CSV sur carte SD, LED de diagnostic, console série, gestion de modes et sauvegarde des paramètres en EEPROM avec contrôle CRC. Travail en équipe.</p>
-
+                <p class="project-desc" data-i18n="pA2WeatherDesc">Prototype de station météo embarquée : acquisition capteurs (BME280 + luminosité), horodatage RTC, enregistrement CSV sur carte SD, gestion de modes et sauvegarde EEPROM avec contrôle CRC. Travail en équipe.</p>
                 <div class="project-actions">
                   <a class="project-btn" href="https://github.com/bilal-allouch/worldwide-weather-watcher"
                     target="_blank" rel="noopener noreferrer" aria-label="Code source sur GitHub">GitHub</a>
                 </div>
-
                 <div class="project-tags">
                   <span class="tag">Arduino</span>
                   <span class="tag" data-i18n="tagEmbedded">Embarqué</span>
@@ -484,17 +644,14 @@
                   alt="Game of Life C++ SFML"
                   width="400" height="170" />
               </div>
-
               <div class="project-body">
                 <h4 class="project-title" data-i18n="pA2GOLTitle">Game of Life — Application C++ (POO) avec SFML</h4>
                 <p class="project-meta" data-i18n="pA2GOLMeta">C++ / SFML / MVC / Design Patterns</p>
-                <p class="project-desc" data-i18n="pA2GOLDesc">Implémentation du Jeu de la Vie avec une architecture orientée objet et extensible : MVC, patterns Observer & Strategy, lecture de grille depuis fichier, double rendu (console + SFML), arrêt automatique et tests unitaires intégrés.</p>
-
+                <p class="project-desc" data-i18n="pA2GOLDesc">Implémentation du Jeu de la Vie avec une architecture orientée objet et extensible : MVC, patterns Observer &amp; Strategy, double rendu (console + SFML) et tests unitaires intégrés.</p>
                 <div class="project-actions">
                   <a class="project-btn" href="https://github.com/bilal-allouch/game-of-life-poo-cpp"
                     target="_blank" rel="noopener noreferrer" aria-label="Code source sur GitHub">GitHub</a>
                 </div>
-
                 <div class="project-tags">
                   <span class="tag">C++</span>
                   <span class="tag">SFML</span>
@@ -513,12 +670,10 @@
                   alt="FunkyTown réseau multi-sites Cisco"
                   width="400" height="170" />
               </div>
-
               <div class="project-body">
-                <h4 class="project-title" data-i18n="pA2FunkyTitle">FunkyTown — Conception & déploiement d'un réseau multi-sites</h4>
+                <h4 class="project-title" data-i18n="pA2FunkyTitle">FunkyTown — Conception &amp; déploiement d'un réseau multi-sites</h4>
                 <p class="project-meta" data-i18n="pA2FunkyMeta">Cisco Packet Tracer / VLAN / Routage / IPv6</p>
-                <p class="project-desc" data-i18n="pA2FunkyDesc">Réalisation d'une maquette réseau complète pour plusieurs organisations : segmentation VLAN (VTP, VLSM), routage inter-VLAN, DHCP/DNS, Wi-Fi, sécurisation (SSH/telnet), EtherChannel, et interconnexion IPv6 via tunnel vers un datacenter cloud.</p>
-
+                <p class="project-desc" data-i18n="pA2FunkyDesc">Maquette réseau complète : segmentation VLAN (VTP, VLSM), routage inter-VLAN, DHCP/DNS, Wi-Fi, sécurisation SSH/telnet, EtherChannel et interconnexion IPv6 via tunnel vers un datacenter cloud.</p>
                 <div class="project-tags">
                   <span class="tag" data-i18n="tagNetworking">Réseaux</span>
                   <span class="tag">Cisco</span>
@@ -532,55 +687,39 @@
               </div>
             </article>
 
+            <!-- Projet Web -->
+            <article class="project-card" role="listitem">
+              <div class="project-media">
+                <!-- Image à placer : assets/img/projects/a2/projet-web.jpg -->
+                <img src="assets/img/projects/a2/projet-web.jpg"
+                  alt="Projet Web — Plateforme de recherche de stages"
+                  width="400" height="170" />
+              </div>
+              <div class="project-body">
+                <h4 class="project-title" data-i18n="pA2WebTitle">Projet Web — Plateforme de recherche de stages</h4>
+                <p class="project-meta" data-i18n="pA2WebMeta">PHP / MySQL / HTML / CSS / JavaScript / Docker</p>
+                <p class="project-desc" data-i18n="pA2WebDesc">Application web centralisant les offres de stage avec gestion des rôles (Administrateur, Pilote, Étudiant, Anonyme), moteur de recherche avancé, système de candidatures et wish-list. Architecture MVC, responsive design, sécurité et Docker.</p>
+                <div class="project-actions">
+                  <a class="project-btn" href="https://github.com/juDev-ske/ProjetWeb"
+                    target="_blank" rel="noopener noreferrer" aria-label="Code source sur GitHub">GitHub</a>
+                </div>
+                <div class="project-tags">
+                  <span class="tag">PHP</span>
+                  <span class="tag">MySQL</span>
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">MVC</span>
+                  <span class="tag">Docker</span>
+                  <span class="tag">Responsive</span>
+                  <span class="tag">REST</span>
+                </div>
+              </div>
+            </article>
+
           </div>
 
           <div class="projects-arrows" role="group" aria-label="Navigation projets A2">
             <button class="arrow-btn" type="button" data-project-prev="a2" aria-label="Précédent">‹</button>
             <button class="arrow-btn" type="button" data-project-next="a2" aria-label="Suivant">›</button>
-          </div>
-        </div>
-
-        <!-- GROUPE INDI -->
-        <div class="projects-group is-hidden" id="group-indi" data-project-group="indi" role="tabpanel">
-          <div class="projects-banner">
-            <h3 class="projects-group-title" data-i18n="indiTitle">Individuel — Projets personnels</h3>
-            <p class="projects-group-desc" data-i18n="indiDesc">Projets réalisés en autonomie pour progresser et expérimenter.</p>
-          </div>
-
-          <div class="projects-row" data-project-row="indi" role="list" aria-label="Projets individuels">
-            <article class="project-card" role="listitem">
-              <div class="project-media">
-                <img src="assets/img/projects/indi/snake.jpg"
-                  alt="Snake C++17 SFML architecture propre"
-                  width="400" height="170" />
-              </div>
-
-              <div class="project-body">
-                <h4 class="project-title" data-i18n="pIndiSnakeTitle">Snake — SFML (C++17) : jeu rétro, architecture propre</h4>
-                <p class="project-meta" data-i18n="pIndiSnakeMeta">C++17 / SFML / Clean Architecture / UML</p>
-                <p class="project-desc" data-i18n="pIndiSnakeDesc">Reproduction moderne du Snake en C++17 avec SFML : boucle de jeu, gestion d'états (Start/Playing/Pause/Game Over), collisions, génération de nourriture, score et difficulté progressive. Documenté avec UML et commits structurés.</p>
-
-                <div class="project-actions">
-                  <a class="project-btn" href="#" target="_blank" rel="noopener noreferrer"
-                    aria-label="Code source sur GitHub">GitHub</a>
-                </div>
-
-                <div class="project-tags">
-                  <span class="tag">C++17</span>
-                  <span class="tag">SFML</span>
-                  <span class="tag">OOP</span>
-                  <span class="tag">Game Loop</span>
-                  <span class="tag">State Machine</span>
-                  <span class="tag">UML</span>
-                  <span class="tag">CMake</span>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <div class="projects-arrows" role="group" aria-label="Navigation projets individuels">
-            <button class="arrow-btn" type="button" data-project-prev="indi" aria-label="Précédent">‹</button>
-            <button class="arrow-btn" type="button" data-project-next="indi" aria-label="Suivant">›</button>
           </div>
         </div>
 
@@ -616,7 +755,7 @@
             <h3 class="contact-card-title" data-i18n="contactInfoTitle">Coordonnées</h3>
 
             <p class="contact-card-subtitle" data-i18n="contactInfoSubtitle">
-              Actuellement en stage jusqu'au 31/07/2026 — recherche une alternance à partir d'octobre 2026.
+              Actuellement en stage jusqu'au 31/07/2026 — recherche une alternance à partir de septembre 2026.
             </p>
 
             <address class="contact-list" style="font-style: normal;">
@@ -626,9 +765,7 @@
                 <div class="contact-text">
                   <span class="contact-label" data-i18n="emailLabel">Email</span>
                   <a href="mailto:bilalallouch20@hotmail.com" class="contact-link"
-                    aria-label="Envoyer un email">
-                    bilalallouch20@hotmail.com
-                  </a>
+                    aria-label="Envoyer un email">bilalallouch20@hotmail.com</a>
                 </div>
               </div>
 
@@ -643,12 +780,10 @@
               <div class="contact-item">
                 <div class="contact-icon" aria-hidden="true"><i class="fab fa-github"></i></div>
                 <div class="contact-text">
-                  <span class="contact-label">GitHub</span>
+                  <span class="contact-label" data-i18n="githubLabel">GitHub</span>
                   <a href="https://github.com/bilal-allouch" class="contact-link"
                     target="_blank" rel="noopener noreferrer"
-                    aria-label="Profil GitHub (ouvre un nouvel onglet)">
-                    github.com/bilal-allouch
-                  </a>
+                    aria-label="Profil GitHub (ouvre un nouvel onglet)">github.com/bilal-allouch</a>
                 </div>
               </div>
 
@@ -658,9 +793,7 @@
                   <span class="contact-label" data-i18n="linkedinLabel">LinkedIn</span>
                   <a href="https://linkedin.com/in/bilalallouch" class="contact-link"
                     target="_blank" rel="noopener noreferrer"
-                    aria-label="Profil LinkedIn (ouvre un nouvel onglet)">
-                    linkedin.com/in/bilalallouch
-                  </a>
+                    aria-label="Profil LinkedIn (ouvre un nouvel onglet)">linkedin.com/in/bilalallouch</a>
                 </div>
               </div>
 
@@ -670,9 +803,7 @@
                   <span class="contact-label" data-i18n="vimeoLabel">Vimeo</span>
                   <a href="https://vimeo.com/user249616007" class="contact-link"
                     target="_blank" rel="noopener noreferrer"
-                    aria-label="Profil Vimeo (ouvre un nouvel onglet)">
-                    vimeo.com/user249616007
-                  </a>
+                    aria-label="Profil Vimeo (ouvre un nouvel onglet)">vimeo.com/user249616007</a>
                 </div>
               </div>
 
@@ -689,4 +820,3 @@
 
 </body>
 </html>
-<!-- reload GitHub Pages: update 08/05/2026 -->

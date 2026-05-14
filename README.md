@@ -1,87 +1,96 @@
-# Bilal Allouch – Portfolio
+# Bilal Allouch — Portfolio
 
-Portfolio personnel présentant mes projets académiques et personnels en informatique.
+Portfolio personnel développé en HTML / CSS / JavaScript, hébergé sur GitHub Pages.
 
-Ce site a été développé pour présenter mes compétences, mes projets et faciliter la prise de contact dans le cadre de ma recherche de stage et d'alternance.
+## Présentation
 
-## Aperçu du site
+Étudiant ingénieur informatique au CESI Rouen, actuellement stagiaire XR & Digital Twin Engineering au CESI LINEACT sur le projet VLF4EU.
 
-Le portfolio contient plusieurs sections :
+Recherche une **alternance de 3 ans à partir de septembre 2026** en développement logiciel et systèmes informatiques.
 
-* Accueil (présentation rapide)
-* À propos
-* Compétences techniques
-* Projets (académiques et personnels)
-* Contact
+## Sections du portfolio
 
-Le site est responsive et fonctionne sur ordinateur, tablette et mobile.
+- **Accueil** — Présentation rapide et liens de contact
+- **À propos** — Profil technique et parcours
+- **Expérience** — Stage CESI LINEACT / Projet VLF4EU
+- **Compétences** — Stack technique complète
+- **Projets** — Projets distinctifs, personnels, académiques A1 et A2
+- **Contact** — Coordonnées et réseaux
+
+## Fonctionnalités
+
+- Mode sombre / clair
+- Traduction français / anglais
+- Navigation fluide avec highlight de section active
+- Design responsive (mobile, tablette, desktop)
+- Scroll horizontal des projets avec boutons et molette souris
+- Onglets de filtrage des projets (DIST / INDI / A1 / A2)
 
 ## Technologies utilisées
 
-* HTML5
-* CSS3
-* JavaScript
-* Git / GitHub
-* GitHub Pages (déploiement)
+- HTML5
+- CSS3 (Mobile-first, variables CSS, media queries)
+- JavaScript (vanilla)
+- Git / GitHub / GitHub Pages
 
 ## Structure du projet
 
 ```
 .
 ├── index.html
-├── assets
-│   ├── css
-│   │   └── style.css
-│   ├── js
-│   │   ├── script.js
-│   │   └── translate.js
-│   └── img
-│       └── projects
+└── assets
+    ├── css
+    │   └── style.css
+    ├── js
+    │   ├── script.js
+    │   └── translate.js
+    ├── img
+    │   ├── bilal-avatar.webp
+    │   ├── bilal-avatar2.webp
+    │   ├── contact-avatar.webp
+    │   └── projects
+    │       ├── dist
+    │       │   ├── ecoprompt.jpg
+    │       │   └── neurochat.jpg
+    │       ├── indi
+    │       │   └── snake.jpg
+    │       ├── a1
+    │       │   ├── strongbox3000.jpg
+    │       │   ├── fast-and-furious.jpg
+    │       │   ├── escape-no-game.jpg
+    │       │   └── qualite-air.jpg
+    │       └── a2
+    │           ├── worldwide-weather-watcher.jpg
+    │           ├── game-of-life.jpg
+    │           ├── funkytown.jpg
+    │           └── projet-web.jpg
+    └── docs
+        └── Bilal-Allouch-CV.pdf
 ```
-
-## Fonctionnalités
-
-* Mode sombre / clair
-* Traduction français / anglais
-* Navigation fluide
-* Affichage responsive
-* Présentation des projets avec images et technologies
 
 ## Déploiement
 
-Le site est hébergé avec **GitHub Pages**.
+Le site est hébergé sur **GitHub Pages**.
 
-Lien du site :
-
-[https://bilal-allouch.github.io/bilal-portfolio/](https://bilal-allouch.github.io/bilal-portfolio/)
+🔗 [https://bilal-allouch.github.io/bilal-portfolio/](https://bilal-allouch.github.io/bilal-portfolio/)
 
 Pour mettre à jour le site :
 
-```
+```bash
 git add .
 git commit -m "update portfolio"
 git push
 ```
 
-GitHub Pages met automatiquement le site à jour.
+GitHub Pages met automatiquement le site à jour après chaque push.
 
 ## Contact
 
-Email : [bilalallouch20@hotmail.com](mailto:bilalallouch20@hotmail.com)
-
-GitHub : [https://github.com/bilal-allouch](https://github.com/bilal-allouch)
-
-LinkedIn : [https://linkedin.com/in/bilalallouch](https://linkedin.com/in/bilalallouch)
-
-Vimeo : [https://vimeo.com/user249616007](https://vimeo.com/user249616007)
+- **Email** : bilalallouch20@hotmail.com
+- **GitHub** : [github.com/bilal-allouch](https://github.com/bilal-allouch)
+- **LinkedIn** : [linkedin.com/in/bilalallouch](https://linkedin.com/in/bilalallouch)
+- **Vimeo** : [vimeo.com/user249616007](https://vimeo.com/user249616007)
 
 ## Auteur
 
-Bilal Allouch
-
-Étudiant en informatique – CESI Rouen
-
-Recherche actuellement :
-
-* Stage informatique (12–15 semaines)
-* Alternance en informatique
+**Bilal Allouch** — Étudiant ingénieur informatique, CESI Rouen

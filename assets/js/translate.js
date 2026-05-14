@@ -12,30 +12,31 @@ const translations = {
   fr: {
 
     /* --- Navigation --- */
-    home:     "Accueil",
-    about:    "À propos",
-    skills:   "Compétences",
-    projects: "Projets",
-    contact:  "Contact",
-    hire:     "Me contacter",
+    home:       "Accueil",
+    about:      "À propos",
+    experience: "Expérience",
+    skills:     "Compétences",
+    projects:   "Projets",
+    contact:    "Contact",
+    hire:       "Me contacter",
 
     /* --- Hero --- */
     hi: "Bonjour, je suis",
 
     descriptionStart:
-      "Étudiant en ingénierie informatique au CESI à Rouen, je suis actuellement ",
+      "Étudiant ingénieur informatique au CESI Rouen — actuellement ",
 
     descriptionStrong1:
       "stagiaire XR & Digital Twin Engineering au CESI LINEACT",
 
     descriptionMiddle:
-      " sur le projet VLF4EU, où je travaille sur le développement d'un jumeau numérique sous Unity, la communication industrielle OPC UA et l'intégration d'architectures distribuées. Je recherche désormais une ",
+      " sur le projet VLF4EU. Je recherche une ",
 
     descriptionStrong2:
-      "alternance de 3 ans à partir d'octobre 2026",
+      "alternance de 3 ans à partir de septembre 2026",
 
     descriptionEnd:
-      " dans le domaine du développement logiciel et des systèmes informatiques.",
+      " en développement logiciel et systèmes informatiques.",
 
     download:  "Télécharger CV",
     contactme: "Me contacter",
@@ -44,47 +45,75 @@ const translations = {
     aboutTitle: "À propos de moi",
 
     aboutDescription:
-      "Je suis étudiant en ingénierie informatique au CESI à Rouen, actuellement en deuxième année du cycle préparatoire. Passionné par le développement logiciel, les systèmes informatiques et les nouvelles technologies, j'ai réalisé plusieurs projets techniques dans différents domaines comme le développement web, les réseaux, les bases de données, les systèmes embarqués et la programmation.",
-
-    internshipExperience:
-      "Je suis actuellement stagiaire XR & Digital Twin Engineering au CESI LINEACT dans le cadre du projet VLF4EU. Mon stage consiste à développer un jumeau numérique sous Unity, implémenter une communication industrielle OPC UA avec synchronisation temps réel, intégrer des architectures distribuées avec Docker, API et asyncua, et concevoir des systèmes interconnectés temps réel entre environnement physique et virtuel. Je recherche maintenant une alternance de 3 ans à partir d'octobre 2026.",
+      "Étudiant ingénieur en informatique au CESI Rouen, je maîtrise un large spectre technique : développement logiciel (C/C++, Python, C#), architectures distribuées, réseaux & systèmes, et simulation temps réel (Unity, OPC UA). Actuellement en stage XR & Digital Twin Engineering au CESI LINEACT sur le projet VLF4EU, je recherche une alternance de 3 ans à partir de septembre 2026.",
 
     education:    "Années d'étude",
-    experience:   "Année d'expérience",
+    expStat:      "Année d'expérience",
     projectsDone: "Projets réalisés",
+
+    /* --- Section Expérience --- */
+    experienceTitle:    "Expérience",
+    experienceSubtitle: "Mon parcours professionnel.",
+
+    expRole:    "Stagiaire — XR & Digital Twin Engineering",
+    expCompany: "CESI LINEACT — Projet VLF4EU",
+    expPeriod:  "2026 — En cours (fin prévue : 31/07/2026)",
+
+    expMission1: "Refactoring et restructuration d'une architecture logicielle Unity vers un design modulaire et extensible",
+    expMission2: "Conception et intégration de composants temps réel au sein d'un système de jumeau numérique XR",
+    expMission3: "Contribution au déploiement d'une architecture distribuée en environnement industriel (Docker, API REST, OPC UA)",
 
     /* --- Section Compétences --- */
     skillsTitle:    "Mes compétences",
     skillsSubtitle: "Technologies et outils que j'utilise dans mes projets.",
 
-    programming: "Programmation",
+    programming: "Langages",
+    softdev:     "Développement logiciel",
     webdev:      "Développement Web",
     databases:   "Bases de données",
-    networks:    "Réseaux & Systèmes",
-    embedded:    "Systèmes embarqués",
+    networks:    "Systèmes & Réseaux",
+    simulation:  "Simulation & Temps réel",
     tools:       "Outils",
-    teamwork:    "Travail en équipe",
 
-    tagOOP:            "POO",
-    tagDataStructures: "Structures de données",
-    tagAlgorithms:     "Algorithmes",
-    tagResponsive:     "Responsive",
-    tagSqlQueries:     "Requêtes SQL",
-    tagSensors:        "Capteurs",
-    tagCollaboration:  "Collaboration",
-    tagCommunication:  "Communication",
-    tagOrganization:   "Organisation",
-    tagProblemSolving: "Résolution de problèmes",
-    tagTeamwork:       "Travail en groupe",
+    tagOOP:         "POO",
+    tagMVC:         "Architecture MVC",
+    tagAPI:         "API REST",
+    tagDistributed: "Systèmes distribués",
+    tagRefactoring: "Refactoring",
+    tagResponsive:  "Responsive Design",
 
     /* --- Section Projets --- */
     projectsKicker:   "PROJECTS / PROJETS",
     projectsTitle:    "Projets",
     projectsSubtitle: "Sélection de projets académiques et personnels.",
 
+    projectsTabDist: "DIST",
+    projectsTabIndi: "INDI",
     projectsTabA1:   "A1",
     projectsTabA2:   "A2",
-    projectsTabIndi: "INDI",
+
+    /* --- Groupe DIST --- */
+    distTitle: "Projet Distinctif — Hackathon",
+    distDesc:  "Projets réalisés lors d'un hackathon sur des problématiques réelles.",
+
+    pDistEcoPromptTitle: "EcoPrompt — Impact environnemental de l'IA",
+    pDistEcoPromptMeta:  "HTML / CSS / JavaScript",
+    pDistEcoPromptDesc:
+      "Outil web développé lors du Hackathon Hack4Good/ADEME pour analyser l'impact énergétique et environnemental des prompts envoyés aux modèles d'IA. Calcul de consommation d'énergie, émissions CO₂, score écologique et comparaisons avec des équivalences du quotidien.",
+
+    pDistNeuroChatTitle: "NeuroChat — Adaptation Dynamique de Modèle d'IA",
+    pDistNeuroChatMeta:  "Python / Gemini API / CustomTkinter",
+    pDistNeuroChatDesc:
+      "Assistant conversationnel sélectionnant automatiquement le modèle Gemini optimal selon la complexité du prompt (score 0–100). Moteur d'analyse multi-critères (longueur, syntaxe, sémantique, structure) avec fallback automatique en cas d'erreur.",
+
+    /* --- Groupe INDI --- */
+    indiTitle: "Individuel — Projets personnels",
+    indiDesc:  "Projets réalisés en autonomie pour progresser et expérimenter.",
+
+    pIndiSnakeTitle: "Snake — SFML (C++17) : jeu rétro, architecture propre",
+    pIndiSnakeMeta:  "C++17 / SFML / Clean Architecture / UML",
+    pIndiSnakeDesc:
+      "Reproduction moderne du Snake en C++17 avec SFML : boucle de jeu, gestion d'états (Start/Playing/Pause/Game Over), collisions, génération de nourriture, score et difficulté progressive. Documenté avec UML et commits structurés.",
 
     /* --- Groupe A1 --- */
     a1Title: "A1 — Projets académiques (Ingénierie / Sciences)",
@@ -123,37 +152,33 @@ const translations = {
     pA2WeatherTitle: "Worldwide Weather Watcher — Station météo embarquée",
     pA2WeatherMeta:  "Arduino (ATmega328P) / Capteurs / SD / RTC",
     pA2WeatherDesc:
-      "Développement d'un prototype de station météo embarquée : acquisition capteurs (BME280 + luminosité), horodatage RTC, enregistrement CSV sur carte SD, LED de diagnostic, console série, gestion de modes (Standard/Économique/Maintenance/Configuration) et sauvegarde des paramètres en EEPROM avec contrôle CRC. Travail en équipe (coordination/intégration).",
+      "Développement d'un prototype de station météo embarquée : acquisition capteurs (BME280 + luminosité), horodatage RTC, enregistrement CSV sur carte SD, LED de diagnostic, console série, gestion de modes et sauvegarde des paramètres en EEPROM avec contrôle CRC. Travail en équipe.",
 
     pA2GOLTitle: "Game of Life — Application C++ (POO) avec SFML",
     pA2GOLMeta:  "C++ / SFML / MVC / Design Patterns",
     pA2GOLDesc:
-      "Implémentation du Jeu de la Vie avec une architecture orientée objet et extensible : MVC, patterns Observer & Strategy, lecture de grille depuis fichier, double rendu (console + SFML), arrêt automatique (stabilité / itérations max) et tests unitaires intégrés pour valider les évolutions de la grille.",
+      "Implémentation du Jeu de la Vie avec une architecture orientée objet et extensible : MVC, patterns Observer & Strategy, lecture de grille depuis fichier, double rendu (console + SFML), arrêt automatique et tests unitaires intégrés.",
 
     pA2FunkyTitle: "FunkyTown — Conception & déploiement d'un réseau multi-sites",
     pA2FunkyMeta:  "Cisco Packet Tracer / VLAN / Routage / IPv6",
     pA2FunkyDesc:
-      "Réalisation d'une maquette réseau complète pour plusieurs organisations : segmentation VLAN (VTP, VLSM), routage inter-VLAN, DHCP/DNS, Wi-Fi (invités/entreprise), sécurisation (accès SSH/telnet, durcissement), EtherChannel, et interconnexion IPv6 via tunnel vers un datacenter cloud. Livrables : cartographie, plan d'adressage et stratégie de déploiement.",
+      "Réalisation d'une maquette réseau complète pour plusieurs organisations : segmentation VLAN (VTP, VLSM), routage inter-VLAN, DHCP/DNS, Wi-Fi, sécurisation (SSH/telnet), EtherChannel, et interconnexion IPv6 via tunnel vers un datacenter cloud.",
+
+    pA2WebTitle: "Projet Web — Plateforme de recherche de stages",
+    pA2WebMeta:  "PHP / MySQL / HTML / CSS / JavaScript / Docker",
+    pA2WebDesc:
+      "Application web centralisant les offres de stage avec gestion des rôles (Administrateur, Pilote, Étudiant, Anonyme), moteur de recherche avancé, système de candidatures et wish-list. Architecture MVC, responsive design, sécurité et Docker.",
 
     tagEmbedded:   "Embarqué",
     tagNetworking: "Réseaux",
     tagRouting:    "Routage",
     tagTesting:    "Tests",
 
-    /* --- Groupe INDI --- */
-    indiTitle: "Individuel — Projets personnels",
-    indiDesc:  "Projets réalisés en autonomie pour progresser et expérimenter.",
-
-    pIndiSnakeTitle: "Snake — SFML (C++17) : jeu rétro, architecture propre",
-    pIndiSnakeMeta:  "C++17 / SFML / Clean Architecture / UML",
-    pIndiSnakeDesc:
-      "Reproduction moderne du Snake en C++17 avec SFML, construite avec une architecture orientée objet claire : boucle de jeu, gestion d'états (Start/Playing/Pause/Game Over), collisions (murs + self), génération de nourriture sur cases libres, score et difficulté progressive. Projet documenté avec UML et commits structurés afin de mettre en avant la maintenabilité et l'extensibilité.",
-
     /* --- Section Contact --- */
     contactTitle:        "Contact",
     contactSubtitle:     "Retrouvez ici mes coordonnées pour échanger au sujet d'une alternance en informatique.",
     contactInfoTitle:    "Coordonnées",
-    contactInfoSubtitle: "Actuellement en stage jusqu'au 31/07/2026 — recherche une alternance à partir d'octobre 2026.",
+    contactInfoSubtitle: "Actuellement en stage jusqu'au 31/07/2026 — recherche une alternance à partir de septembre 2026.",
 
     emailLabel:    "Email",
     phoneLabel:    "Téléphone",
@@ -168,27 +193,28 @@ const translations = {
   en: {
 
     /* --- Navigation --- */
-    home:     "Home",
-    about:    "About",
-    skills:   "Skills",
-    projects: "Projects",
-    contact:  "Contact",
-    hire:     "Contact Me",
+    home:       "Home",
+    about:      "About",
+    experience: "Experience",
+    skills:     "Skills",
+    projects:   "Projects",
+    contact:    "Contact",
+    hire:       "Contact Me",
 
     /* --- Hero --- */
     hi: "Hi, I'm",
 
     descriptionStart:
-      "Computer engineering student at CESI in Rouen, I am currently a ",
+      "Computer engineering student at CESI Rouen — currently a ",
 
     descriptionStrong1:
       "XR & Digital Twin Engineering intern at CESI LINEACT",
 
     descriptionMiddle:
-      " on the VLF4EU project, where I work on Unity digital twin development, OPC UA industrial communication and distributed architecture integration. I am now looking for a ",
+      " on the VLF4EU project. I am looking for a ",
 
     descriptionStrong2:
-      "3-year work-study program starting in October 2026",
+      "3-year work-study program starting September 2026",
 
     descriptionEnd:
       " in software development and information systems.",
@@ -200,49 +226,77 @@ const translations = {
     aboutTitle: "About Me",
 
     aboutDescription:
-      "I am a computer engineering student at CESI in Rouen, currently in the second year of the preparatory cycle. Passionate about software development, information systems and new technologies, I have completed several technical projects in areas such as web development, networking, databases, embedded systems and programming.",
-
-    internshipExperience:
-      "I am currently an XR & Digital Twin Engineering intern at CESI LINEACT as part of the VLF4EU project. My internship involves developing a digital twin with Unity, implementing OPC UA industrial communication with real-time synchronization, integrating distributed architectures with Docker, APIs and asyncua, and designing real-time interconnected systems between physical and virtual environments. I am now looking for a 3-year work-study program starting in October 2026.",
+      "Computer engineering student at CESI Rouen, I have a broad technical skillset: software development (C/C++, Python, C#), distributed architectures, networks & systems, and real-time simulation (Unity, OPC UA). Currently doing an XR & Digital Twin Engineering internship at CESI LINEACT on the VLF4EU project, I am looking for a 3-year work-study program starting September 2026.",
 
     education:    "Years of Study",
-    experience:   "Years of Experience",
+    expStat:      "Year of Experience",
     projectsDone: "Projects Completed",
 
-    /* --- Section Skills --- */
+    /* --- Experience --- */
+    experienceTitle:    "Experience",
+    experienceSubtitle: "My professional background.",
+
+    expRole:    "Intern — XR & Digital Twin Engineering",
+    expCompany: "CESI LINEACT — VLF4EU Project",
+    expPeriod:  "2026 — Ongoing (end: 31/07/2026)",
+
+    expMission1: "Refactoring and restructuring of a Unity software architecture toward a modular and extensible design",
+    expMission2: "Design and integration of real-time components within an XR digital twin system",
+    expMission3: "Contribution to the deployment of a distributed architecture in an industrial environment (Docker, API REST, OPC UA)",
+
+    /* --- Skills --- */
     skillsTitle:    "My Skills",
     skillsSubtitle: "Technologies and tools I use in my projects.",
 
-    programming: "Programming",
+    programming: "Languages",
+    softdev:     "Software Development",
     webdev:      "Web Development",
     databases:   "Databases",
-    networks:    "Networks & Systems",
-    embedded:    "Embedded Systems",
+    networks:    "Systems & Networks",
+    simulation:  "Simulation & Real-time",
     tools:       "Tools",
-    teamwork:    "Team Work",
 
-    tagOOP:            "OOP",
-    tagDataStructures: "Data Structures",
-    tagAlgorithms:     "Algorithms",
-    tagResponsive:     "Responsive",
-    tagSqlQueries:     "SQL Queries",
-    tagSensors:        "Sensors",
-    tagCollaboration:  "Collaboration",
-    tagCommunication:  "Communication",
-    tagOrganization:   "Organization",
-    tagProblemSolving: "Problem Solving",
-    tagTeamwork:       "Teamwork",
+    tagOOP:         "OOP",
+    tagMVC:         "MVC Architecture",
+    tagAPI:         "REST API",
+    tagDistributed: "Distributed Systems",
+    tagRefactoring: "Refactoring",
+    tagResponsive:  "Responsive Design",
 
-    /* --- Section Projects --- */
+    /* --- Projects --- */
     projectsKicker:   "PROJECTS",
     projectsTitle:    "Projects",
     projectsSubtitle: "A selection of academic and personal projects.",
 
+    projectsTabDist: "DIST",
+    projectsTabIndi: "INDI",
     projectsTabA1:   "A1",
     projectsTabA2:   "A2",
-    projectsTabIndi: "INDI",
 
-    /* --- Groupe A1 --- */
+    /* --- DIST --- */
+    distTitle: "Distinctive Project — Hackathon",
+    distDesc:  "Projects built during a hackathon, solving real-world problems.",
+
+    pDistEcoPromptTitle: "EcoPrompt — AI Environmental Impact Analyzer",
+    pDistEcoPromptMeta:  "HTML / CSS / JavaScript",
+    pDistEcoPromptDesc:
+      "Web tool developed during the Hack4Good/ADEME hackathon to analyze the energy and environmental impact of prompts sent to AI models. Calculates energy consumption, CO₂ emissions, an ecological score, and compares results to everyday equivalents.",
+
+    pDistNeuroChatTitle: "NeuroChat — Dynamic AI Model Selection",
+    pDistNeuroChatMeta:  "Python / Gemini API / CustomTkinter",
+    pDistNeuroChatDesc:
+      "Conversational assistant that automatically selects the optimal Gemini model based on prompt complexity (score 0–100). Multi-criteria analysis engine (length, syntax, semantics, structure) with automatic fallback on error.",
+
+    /* --- INDI --- */
+    indiTitle: "Individual — Personal Projects",
+    indiDesc:  "Projects developed independently to experiment and improve skills.",
+
+    pIndiSnakeTitle: "Snake — SFML (C++17): Retro Game with Clean Architecture",
+    pIndiSnakeMeta:  "C++17 / SFML / Clean Architecture / UML",
+    pIndiSnakeDesc:
+      "Modern Snake implementation in C++17 using SFML: game loop, state management (Start/Playing/Pause/Game Over), collisions, food spawning, scoring and progressive difficulty. Documented with UML and structured commits.",
+
+    /* --- A1 --- */
     a1Title: "A1 — Academic Projects (Engineering / Science)",
     a1Desc:  "CESI team projects: electronics, simulation, signal processing, and databases.",
 
@@ -272,44 +326,40 @@ const translations = {
     tagModeling:    "Modeling",
     tagSignal:      "Signal",
 
-    /* --- Groupe A2 --- */
+    /* --- A2 --- */
     a2Title: "A2 — Academic Projects (Software / Embedded / Networking)",
     a2Desc:  "CESI projects focused on software development, embedded systems, and networking.",
 
     pA2WeatherTitle: "Worldwide Weather Watcher — Embedded Weather Station",
     pA2WeatherMeta:  "Arduino (ATmega328P) / Sensors / SD / RTC",
     pA2WeatherDesc:
-      "Built an embedded weather-station prototype: sensor acquisition (BME280 + light), RTC timestamping, CSV logging to SD card, diagnostic LED, serial console, multi-mode management (Standard/Eco/Maintenance/Configuration), and settings persistence in EEPROM with CRC validation. Teamwork (coordination/integration).",
+      "Built an embedded weather-station prototype: sensor acquisition (BME280 + light), RTC timestamping, CSV logging to SD card, diagnostic LED, serial console, multi-mode management, and EEPROM settings persistence with CRC validation. Teamwork.",
 
     pA2GOLTitle: "Game of Life — C++ OOP Application with SFML",
     pA2GOLMeta:  "C++ / SFML / MVC / Design Patterns",
     pA2GOLDesc:
-      "Implemented Conway's Game of Life with a clean, extensible OOP architecture: MVC, Observer & Strategy patterns, file-based grid loading, dual rendering (console + SFML), auto-stop conditions (stable state / max iterations), and built-in unit tests to validate grid evolution.",
+      "Implemented Conway's Game of Life with a clean, extensible OOP architecture: MVC, Observer & Strategy patterns, file-based grid loading, dual rendering (console + SFML), auto-stop conditions, and built-in unit tests.",
 
     pA2FunkyTitle: "FunkyTown — Multi-site Network Design & Deployment",
     pA2FunkyMeta:  "Cisco Packet Tracer / VLAN / Routing / IPv6",
     pA2FunkyDesc:
-      "Designed a complete multi-organization network lab: VLAN segmentation (VTP, VLSM), inter-VLAN routing, DHCP/DNS, Wi-Fi (guest/enterprise), security hardening (SSH/telnet access controls), EtherChannel, and IPv6 tunneling to a cloud datacenter. Deliverables: topology maps, addressing plan, and deployment strategy.",
+      "Designed a complete multi-organization network lab: VLAN segmentation (VTP, VLSM), inter-VLAN routing, DHCP/DNS, Wi-Fi, security hardening (SSH/telnet), EtherChannel, and IPv6 tunneling to a cloud datacenter.",
+
+    pA2WebTitle: "Web Project — Internship Search Platform",
+    pA2WebMeta:  "PHP / MySQL / HTML / CSS / JavaScript / Docker",
+    pA2WebDesc:
+      "Web application centralizing internship offers with role-based access (Administrator, Pilot, Student, Anonymous), advanced search engine, application system and wish-list. MVC architecture, responsive design, security, and Docker.",
 
     tagEmbedded:   "Embedded",
     tagNetworking: "Networking",
     tagRouting:    "Routing",
     tagTesting:    "Testing",
 
-    /* --- Groupe INDI --- */
-    indiTitle: "Individual — Personal Projects",
-    indiDesc:  "Projects developed independently to experiment and improve skills.",
-
-    pIndiSnakeTitle: "Snake — SFML (C++17): Retro Game with Clean Architecture",
-    pIndiSnakeMeta:  "C++17 / SFML / Clean Architecture / UML",
-    pIndiSnakeDesc:
-      "Modern Snake implementation in C++17 using SFML, built with a clear object-oriented architecture: game loop, state management (Start/Playing/Pause/Game Over), wall and self-collisions, food spawning on free cells, scoring system and progressive difficulty. The project is documented with UML diagrams and structured commits to highlight maintainability and extensibility.",
-
-    /* --- Section Contact --- */
+    /* --- Contact --- */
     contactTitle:        "Contact",
     contactSubtitle:     "Here are my contact details to discuss a work-study opportunity in computer science.",
     contactInfoTitle:    "Contact Information",
-    contactInfoSubtitle: "Currently doing an internship until 31/07/2026 — looking for a work-study program starting in October 2026.",
+    contactInfoSubtitle: "Currently doing an internship until 31/07/2026 — looking for a work-study program starting September 2026.",
 
     emailLabel:    "Email",
     phoneLabel:    "Phone",

@@ -2,15 +2,6 @@
    STYLE.CSS — Portfolio Bilal Allouch
    ----------------------------------------------------------------
    APPROCHE : MOBILE-FIRST
-   On écrit d'abord les styles pour mobile (le plus petit écran),
-   puis on ajoute des media queries avec min-width pour agrandir.
-
-   CORRECTIONS INCLUSES :
-   ✅ Navbar mobile : padding horizontal ajouté
-   ✅ Cartes projets : GitHub et tags toujours au même niveau
-   ✅ Image avatar : border-radius concentriques + object-fit
-   ✅ Boutons ronds : icônes parfaitement centrées
-   ✅ Menu mobile : ne déborde plus à gauche
 
    STRUCTURE :
      1. Reset & Variables CSS
@@ -52,13 +43,11 @@ html {
   --shadow: 0 18px 60px rgba(0, 0, 0, 0.45);
   --radius: 22px;
 
-  /* Layout mobile */
   --nav-h: 70px;
   --page-pad: 16px;
   --container-max: 1180px;
 }
 
-/* Thème clair */
 html[data-theme="light"] {
   --bg: #f6f7fb;
   --text: #0c1326;
@@ -93,7 +82,7 @@ main, section {
   margin: 0 auto;
 }
 
-#home, #about, #skills, #projects, #contact {
+#home, #about, #experience, #skills, #projects, #contact {
   scroll-margin-top: calc(var(--nav-h) + 18px);
 }
 
@@ -101,7 +90,6 @@ main, section {
 .highlight { font-weight: 900; }
 .center { text-align: center; }
 
-/* Skip link — Accessibilité clavier */
 .skip-link {
   position: absolute;
   top: -100%;
@@ -115,16 +103,14 @@ main, section {
   text-decoration: none;
   transition: top 0.2s;
 }
-.skip-link:focus {
-  top: 16px;
-}
+.skip-link:focus { top: 16px; }
 
 /* ================================================================
    4. BASE — MOBILE (320px+)
 ================================================================ */
 
 /* ===================
-   NAVBAR — Mobile
+   NAVBAR
 =================== */
 .topbar {
   position: sticky;
@@ -135,8 +121,6 @@ main, section {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent);
 }
 
-/* FIX MOBILE — padding horizontal pour éviter que la navbar
-   soit collée aux bords gauche et droite de l'écran */
 .topbar .container {
   padding-left: var(--page-pad);
   padding-right: var(--page-pad);
@@ -161,10 +145,7 @@ main, section {
   white-space: nowrap;
 }
 
-/* Liens desktop — cachés sur mobile */
-.links {
-  display: none;
-}
+.links { display: none; }
 
 .link {
   text-decoration: none;
@@ -185,13 +166,8 @@ main, section {
   flex-shrink: 0;
 }
 
-/* Bouton CTA "Me contacter" — caché sur mobile */
-.actions .pill-cta {
-  display: none;
-}
+.actions .pill-cta { display: none; }
 
-/* FIX CENTRAGE ICÔNES — les émojis et textes sont parfaitement
-   centrés dans les boutons ronds grâce à inline-flex + line-height */
 .icon-btn,
 .pill-btn {
   width: 40px;
@@ -203,8 +179,8 @@ main, section {
   color: var(--text);
   cursor: pointer;
   font-weight: 900;
-  font-size: 16px;        /* Taille fixe pour l'icône */
-  line-height: 1;         /* Supprime l'espace vertical autour du texte */
+  font-size: 16px;
+  line-height: 1;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -225,7 +201,6 @@ main, section {
   box-shadow: 0 12px 34px rgba(255, 138, 0, 0.24);
 }
 
-/* Burger — visible sur mobile uniquement */
 .burger {
   display: inline-flex;
   align-items: center;
@@ -267,12 +242,8 @@ main, section {
   z-index: 2000;
 }
 
-.mobile-menu.is-open {
-  display: grid;
-}
+.mobile-menu.is-open { display: grid; }
 
-/* FIX MENU MOBILE — utilisation de calc(100vw) pour éviter
-   que la carte déborde à gauche ou à droite de l'écran */
 .mobile-card {
   width: min(420px, calc(100vw - 32px));
   border-radius: 22px;
@@ -306,7 +277,6 @@ html[data-theme="light"] .mobile-card {
   gap: 10px;
 }
 
-/* FIX CENTRAGE — même correctif que .icon-btn */
 .close-btn {
   width: 42px;
   height: 42px;
@@ -357,7 +327,7 @@ html[data-theme="light"] .mobile-card {
 }
 
 /* ===================
-   HERO — Mobile (1 colonne)
+   HERO — Mobile
 =================== */
 .hero {
   padding-top: 22px;
@@ -406,7 +376,6 @@ html[data-theme="light"] .mobile-card {
   max-width: 100%;
 }
 
-/* Boutons empilés sur mobile */
 .hero-buttons {
   display: flex;
   flex-direction: column;
@@ -440,31 +409,26 @@ html[data-theme="light"] .mobile-card {
 }
 .btn.ghost:hover { background: rgba(255, 138, 0, 0.1); }
 
-/* Cadre de la photo de profil */
 .avatar-wrap {
   width: 100%;
   padding: 18px;
-  border-radius: calc(var(--radius) + 6px); /* = 28px */
+  border-radius: calc(var(--radius) + 6px);
   border: 1px solid var(--stroke);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
   box-shadow: var(--shadow);
 }
 
-/* FIX CARRÉ HERO IMAGE :
-   aspect-ratio: 1 → cadre carré
-   object-fit: cover → remplit le carré (rogne le bas de la photo portrait)
-   object-position: center top → garde le visage visible */
 .avatar-wrap img {
   width: 100%;
   display: block;
-  border-radius: calc(var(--radius) + 6px - 18px); /* = 10px */
+  border-radius: calc(var(--radius) + 6px - 18px);
   object-fit: cover;
   object-position: center top;
-  aspect-ratio: 1; /* CARRÉ */
+  aspect-ratio: 1;
 }
 
 /* ===================
-   ABOUT — Mobile (1 colonne)
+   ABOUT — Mobile
 =================== */
 .about {
   padding-top: 70px;
@@ -503,17 +467,13 @@ html[data-theme="light"] .mobile-card {
   justify-content: center;
 }
 
-/* FIX CARRÉ ABOUT IMAGE :
-   aspect-ratio: 1 → même format carré que la photo hero
-   object-fit: contain → montre l'illustration complète (Python, puce)
-   sans la rogner, avec fond transparent autour si besoin */
 .about-image img {
   width: 100%;
   max-width: 320px;
-  border-radius: calc(var(--radius) + 6px - 18px); /* = 10px */
+  border-radius: calc(var(--radius) + 6px - 18px);
   display: block;
   object-fit: contain;
-  aspect-ratio: 1; /* MÊME CARRÉ que le hero */
+  aspect-ratio: 1;
 }
 
 .about-stats {
@@ -528,11 +488,134 @@ html[data-theme="light"] .mobile-card {
 .stat p { color: var(--muted); font-size: 14px; }
 
 /* ===================
-   SKILLS — Mobile (1 colonne)
+   EXPERIENCE — Mobile
 =================== */
-.skills {
+.experience {
   padding: 80px 0;
 }
+
+.experience-subtitle {
+  text-align: center;
+  color: var(--muted);
+  max-width: 600px;
+  margin: 10px auto 34px;
+  line-height: 1.7;
+}
+
+.experience-timeline {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.experience-card {
+  padding: 24px;
+  border-radius: calc(var(--radius) + 6px);
+  border: 1px solid var(--stroke);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+  box-shadow: var(--shadow);
+  transition: 0.25s;
+}
+.experience-card:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.04));
+}
+
+.experience-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.experience-icon {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  border-radius: 14px;
+  border: 1px solid var(--stroke);
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 20px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.experience-meta { flex: 1; min-width: 0; }
+
+.experience-role {
+  font-size: 17px;
+  font-weight: 900;
+  margin-bottom: 5px;
+  line-height: 1.3;
+}
+
+.experience-company {
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.experience-period {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+  display: block;
+}
+
+.experience-missions {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.experience-missions li {
+  color: var(--muted);
+  line-height: 1.7;
+  padding-left: 22px;
+  position: relative;
+  font-size: 14px;
+}
+
+.experience-missions li::before {
+  content: "▸";
+  color: var(--accent);
+  position: absolute;
+  left: 0;
+  top: 1px;
+  font-size: 13px;
+}
+
+.experience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.experience-tags .tag {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--stroke);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  font-weight: 800;
+  font-size: 12px;
+  color: var(--text);
+}
+
+html[data-theme="light"] .experience-tags .tag {
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* ===================
+   SKILLS — Mobile
+=================== */
+.skills { padding: 80px 0; }
 
 .skills-subtitle {
   text-align: center;
@@ -587,11 +670,9 @@ html[data-theme="light"] .chip { background: rgba(255, 255, 255, 0.65); }
 .chip:hover { transform: translateY(-2px); background: rgba(255, 255, 255, 0.1); }
 
 /* ===================
-   PROJECTS — Mobile (scroll horizontal)
+   PROJECTS — Mobile
 =================== */
-.projects {
-  padding: 80px 0;
-}
+.projects { padding: 80px 0; }
 
 .projects-head { margin-bottom: 18px; }
 
@@ -670,11 +751,11 @@ html[data-theme="light"] .projects-tabs { background: rgba(255, 255, 255, 0.65);
 .projects-group-title { font-size: 18px; font-weight: 950; margin-bottom: 6px; }
 .projects-group-desc { color: var(--muted); line-height: 1.7; }
 
-/* Scroll horizontal des cartes */
 .projects-row {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: calc(100vw - (var(--page-pad) * 2) - 6px);
+  align-items: stretch;
   justify-content: start;
   gap: 16px;
   overflow-x: auto;
@@ -690,6 +771,7 @@ html[data-theme="light"] .projects-tabs { background: rgba(255, 255, 255, 0.65);
 .project-card {
   scroll-snap-align: start;
   width: 100%;
+  height: 100%;
   border-radius: calc(var(--radius) + 6px);
   border: 1px solid var(--stroke);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.03));
@@ -705,7 +787,6 @@ html[data-theme="light"] .projects-tabs { background: rgba(255, 255, 255, 0.65);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.04));
 }
 
-/* Image du projet */
 .project-media {
   height: 170px;
   background: rgba(255, 255, 255, 0.05);
@@ -718,31 +799,24 @@ html[data-theme="light"] .projects-tabs { background: rgba(255, 255, 255, 0.65);
   display: block;
 }
 
-/* Corps de la carte */
 .project-body {
   padding: 16px;
   display: flex;
   flex-direction: column;
-  flex: 1; /* Prend tout l'espace disponible */
+  flex: 1;
 }
 
 .project-title { font-size: 18px; font-weight: 950; line-height: 1.25; margin-bottom: 8px; }
 .project-meta { color: var(--muted); font-weight: 800; font-size: 13px; margin-bottom: 12px; }
 
-/* FIX ALIGNEMENT CARTES :
-   flex: 1 fait grandir la description pour remplir l'espace.
-   Résultat → le bouton GitHub et les tags sont toujours
-   au même niveau sur toutes les cartes, quelle que soit
-   la longueur du texte */
 .project-desc {
-  flex: 1;
   color: var(--muted);
   line-height: 1.75;
 }
 
-/* Bouton GitHub — espace au-dessus après la description */
 .project-actions {
-  margin-top: 16px;
+  margin-top: auto;
+  padding-top: 16px;
   display: flex;
   justify-content: flex-end;
 }
@@ -766,7 +840,6 @@ html[data-theme="light"] .projects-tabs { background: rgba(255, 255, 255, 0.65);
 }
 .project-btn:hover { transform: translateY(-1px); background: rgba(255, 255, 255, 0.1); }
 
-/* Tags — espace constant au-dessus (après GitHub ou après desc) */
 .project-tags {
   margin-top: 14px;
   display: flex;
@@ -790,7 +863,6 @@ html[data-theme="light"] .project-tags .tag {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* Boutons ‹ › — cachés sur mobile */
 .projects-arrows { display: none; }
 
 .arrow-btn {
@@ -811,7 +883,7 @@ html[data-theme="light"] .project-tags .tag {
 .arrow-btn:hover { background: var(--panel-2); transform: translateY(-1px); }
 
 /* ===================
-   CONTACT — Mobile (1 colonne)
+   CONTACT — Mobile
 =================== */
 .contact { padding: 80px 0; }
 .contact-head { text-align: center; margin-bottom: 40px; }
@@ -835,12 +907,11 @@ html[data-theme="light"] .project-tags .tag {
   box-shadow: var(--shadow);
 }
 
-/* FIX BORDER-RADIUS — image contact suit le cadre */
 .contact-image-wrap img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: calc(var(--radius) + 6px - 18px); /* = 10px */
+  border-radius: calc(var(--radius) + 6px - 18px);
   object-fit: cover;
 }
 
@@ -897,14 +968,9 @@ html[data-theme="light"] .project-tags .tag {
 @media (min-width: 640px) {
   :root { --page-pad: 18px; }
 
-  /* Skills : 2 colonnes */
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
+  .skills-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .skill-card { padding: 26px; border-radius: 20px; }
 
-  /* Boutons hero côte à côte */
   .hero-buttons { flex-direction: row; flex-wrap: wrap; }
   .btn { width: auto; }
 
@@ -925,7 +991,6 @@ html[data-theme="light"] .project-tags .tag {
   .topbar { padding: 16px 0; }
   .brand { font-size: 18px; max-width: none; }
 
-  /* Contact : 2 colonnes */
   .contact-grid { grid-template-columns: 0.9fr 1.1fr; gap: 34px; }
   .contact-card { padding: 30px; }
   .contact-card-title { font-size: 28px; }
@@ -937,11 +1002,14 @@ html[data-theme="light"] .project-tags .tag {
   .about { padding-top: 90px; padding-bottom: 90px; }
   .contact { padding: 100px 0; }
   .skills-subtitle { margin-bottom: 60px; }
+
+  .experience-card { padding: 32px; }
+  .experience-role { font-size: 20px; }
+  .experience-missions li { font-size: 15px; }
 }
 
 /* ================================================================
    7. DESKTOP (min-width: 1024px)
-   Navigation complète + 2 colonnes pour hero/about/contact
 ================================================================ */
 @media (min-width: 1024px) {
   :root {
@@ -952,7 +1020,6 @@ html[data-theme="light"] .project-tags .tag {
   .topbar { padding: 18px 0; }
   .brand { font-size: 20px; }
 
-  /* Afficher les liens desktop */
   .links {
     display: flex;
     gap: 10px;
@@ -965,18 +1032,11 @@ html[data-theme="light"] .project-tags .tag {
   }
   html[data-theme="light"] .links { background: rgba(255, 255, 255, 0.65); }
 
-  /* Cacher le burger */
   .burger { display: none; }
-
-  /* Afficher le CTA */
   .actions .pill-cta { display: inline-flex; }
 
-  .icon-btn, .pill-btn {
-    width: 42px;
-    height: 42px;
-  }
+  .icon-btn, .pill-btn { width: 42px; height: 42px; }
 
-  /* Hero : 2 colonnes */
   .hero {
     padding-top: calc(var(--nav-h) - 10px);
     padding-bottom: 40px;
@@ -986,26 +1046,25 @@ html[data-theme="light"] .project-tags .tag {
   .hero-desc { max-width: 70ch; }
   .avatar-wrap { width: min(380px, 100%); margin-left: auto; }
 
-  /* About : 2 colonnes */
   .about-grid { grid-template-columns: 1fr 1fr; gap: 60px; text-align: left; }
   .about-text { max-width: 520px; }
   .about-stats { justify-content: flex-start; gap: 40px; }
-  /* Même largeur max que le hero pour que les deux carrés soient identiques */
   .about-image { width: min(380px, 100%); margin-right: auto; }
   .about-image img { max-width: 100%; }
 
-  /* Skills : grille auto */
+  .experience { padding: 100px var(--page-pad); }
+  .experience-header { gap: 22px; }
+  .experience-icon { width: 56px; height: 56px; font-size: 24px; border-radius: 16px; }
+
   .skills { padding: 100px var(--page-pad); }
   .skills-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
   .skill-card { padding: 30px; border-radius: 20px; }
 
-  /* Projects */
   .projects { padding: 100px 0; }
   .projects-title-row { align-items: flex-end; }
   .projects-tabs { width: auto; overflow-x: visible; flex-wrap: nowrap; }
   .projects-group-title { font-size: 20px; }
 
-  /* Afficher les boutons ‹ › sur desktop */
   .projects-arrows {
     display: flex;
     justify-content: flex-end;
@@ -1013,7 +1072,6 @@ html[data-theme="light"] .project-tags .tag {
     margin-top: 10px;
   }
 
-  /* Contact */
   .contact-card-title { font-size: 34px; }
 }
 
